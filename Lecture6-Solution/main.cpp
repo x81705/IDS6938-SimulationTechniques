@@ -60,12 +60,12 @@ This implements the RK4 method equation
 */
 double rk4(double y, double h, double x)
 {
-	double h_half = h/2;
+	double h_half = h/2.0;
 	double k1 = df(x, y);
 	double k2 = df(x+ h_half, y + (h_half * k1));
 	double k3 = df(x + h_half, y + (h_half * k2));;
 	double k4 = df(x + h, y + (h * k3));;
-    return  y + h * (1.0 / 6.0)*(k1 + 2 * k2 + 2 * k3 + k4);
+    return  y + h * (1.0 / 6.0)*(k1 + 2.0 * k2 + 2.0 * k3 + k4);
 }
 
 
