@@ -23,14 +23,20 @@ ANS: y(x) = e^(x/2)sin(5x)
 b. Translate mathematical formulas into df and exact functions.
 
 ANS:
-double df(double x, double y)            
+Compute the dy/dx
+*/
+double df(double x, double y)            //function for defining dy/dx
 {
-    return y - (1 / 2)*exp(x / 2)*sin(5 * x) + 5 * exp(x / 2)*cos(5 * x);
+    return y - (1.0 / 2.0)*exp(x / 2.0)*sin(5.0 * x) + 5.0 * exp(x / 2.0)*cos(5.0 * x);
 }
 
-double exact (double x)
+
+/*
+Compute the exact answer
+*/
+double exact(double x)            //function for defining dy/dx
 {
-	return exp(x / 2)*sin(5 * x);
+    return exp(x / 2.0)*sin(5.0 * x);
 }
 
 *Utilized Lecture6 Solution; could only get the answer to flash on screen for about half a second
@@ -38,7 +44,7 @@ double exact (double x)
 c. Run 3 numerical integration solutions: RK1, RK2, and RK4 to generate numerical and exact values; use h=.1 for x = <0.0,
  10.0>. Graph results and exact solution.
 
-*Use the helloworld project from Lecture6 Solution?  How to input H values? H = .1 -> 10.0 = 100?
+*Use the helloworld from Lecture6 Solution?  How to input H values? H = .1 -> 10.0 = 100?
 How to define?  Use same program as for answer b?
 
 d. Plot error percentages for RK1, RK2, and RK4 in another graph.  Error defined by %error = |exact-apprx|/exact.
@@ -59,3 +65,32 @@ account in the solution).
 *3. Kind of related to 2, the more steps we take the better, but the further apart they are
 the more errors we'll have
 *4. RK4 is most accurate; refer to the solution graph
+
+
+References
+Almodovar, Alex. Multiple conversations (both in-person and via email) regarding both Part I and Part II, 9-21FEB17. 
+Alex provided guidance in how to fork repositories, offered troubleshooting advice and guidance for running code for Part I
+integration solutions...allowed to view/compare my solution to his.   
+
+
+
+Part 2.
+
+a. Forward Euler, midpoint integration, and RK4.  Implement JelloMesh::EulerIntegration(), 
+JelloMesh::MidpointIntegration(), and JelloMesh::RK4Integration()
+
+ANS: See jelloMesh.cpp; essentially took the Lecture6 Solution and integrated into jellowMesh.cpp from lines
+488-605.
+
+b. Implement spring forces in JelloMesh::ComputerForces(ParticleGrid&grid), find good spring constants
+
+c. Test collisions/contacts with ground and cylyndrical objects in scene.  Look at 
+JelloMesh::CheckForCollisions(ParticleGrid&grid) and implement JelloMesh::CylinderCollision() and 
+JelloMesh::FloorCollision()
+
+d. Collision and penetration response.  Implement JelloMesh::ResolveContacts(ParticleGrid&grid) and
+JelloMesh::ResolveCollisions(ParticleGrid&grid)
+
+e. Extra springs that simulate shear/bending resistance.  Modify JelloMesh::InitJellowMesh()
+
+f. Implement two extra features - X and Y

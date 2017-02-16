@@ -487,12 +487,20 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 
 void JelloMesh::EulerIntegrate(double dt)
 {
-    // TODO
+	double rk1(double y, double h, double x)
+	{
+		return y + h * df(x, y);
+	} // TODO - from Lecture6 Solution
 }
 
 void JelloMesh::MidPointIntegrate(double dt)
 {
-    // TODO
+	double rk2(double y, double h, double x)
+	{
+		double k1 = df(x, y);
+		double h_half = h / 2.0;
+		return  y + h * df(x + h_half, y + (h_half * k1));
+	} // TODO - from Lecture6 Solution
 }
 
 void JelloMesh::RK4Integrate(double dt)
@@ -586,7 +594,16 @@ void JelloMesh::RK4Integrate(double dt)
         }
     }
 
-    // Put it all together
+	double rk4(double y, double h, double x)
+	{
+		double h_half = h / 2.0;
+		double k1 = df(x, y);
+		double k2 = df(x + h_half, y + (h_half * k1));
+		double k3 = df(x + h_half, y + (h_half * k2));;
+		double k4 = df(x + h, y + (h * k3));;
+		return  y + h * (1.0 / 6.0)*(k1 + 2.0 * k2 + 2.0 * k3 + k4);
+	}// Put it all together---From Lecture6 Solution
+
     double asixth = 1/6.0;
     double athird = 1/3.0;
     for (int i = 0; i < m_rows+1; i++)
