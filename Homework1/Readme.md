@@ -13,10 +13,13 @@ The assignment is due: Monday, February 27 at 11:59PM (EST)
 
 
 
-Part 1. Numerical Analysis of Integration Functions
+## Part 1. Numerical Analysis of Integration Functions
 a. Take integral of dy/dx = y-1/2*e^x/2*sin(5x)+5e^x/2*cos(5x), where initial condition for ODE is defined by y(0)=0.
 
+~~~
 ANS: y(x) = e^(x/2)sin(5x)
+~~~
+
 
 *Utilized Wolfram Alpha; by inputting y'(x)=y-1/2*e^(x/2)*sin(5x)+5e^(x/2)*cos(5x) , y(0)=0
 
@@ -30,7 +33,7 @@ double df(double x, double y)            //function for defining dy/dx
     return y - (1.0 / 2.0)*exp(x / 2.0)*sin(5.0 * x) + 5.0 * exp(x / 2.0)*cos(5.0 * x);
 }
 
-
+~~~
 /*
 Compute the exact answer
 */
@@ -38,11 +41,20 @@ double exact(double x)            //function for defining dy/dx
 {
     return exp(x / 2.0)*sin(5.0 * x);
 }
+~~~
 
 *Utilized Lecture6 Solution; could only get the answer to flash on screen for about half a second
 
 c. Run 3 numerical integration solutions: RK1, RK2, and RK4 to generate numerical and exact values; use h=.1 for x = <0.0,
  10.0>. Graph results and exact solution.
+
+| RK1 | RK2 | RK4 | Exact |
+| --- | --- | --- | ----- |
+| 0.0 | 0.0 | 0.0 | 0.0 |
+| 0.5 | ttt | ttt | ttt |
+
+
+
 
 *Use the helloworld from Lecture6 Solution?  How to input H values? H = .1 -> 10.0 = 100?
 How to define?  Use same program as for answer b?
