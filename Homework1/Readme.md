@@ -43,7 +43,7 @@ double exact(double x)            //function for defining dy/dx
 }
 ~~~
 
-*Utilized Lecture6 Solution; could only get the answer to flash on screen for about half a second
+*Utilized Lecture6 Solution
 
 c. Run 3 numerical integration solutions: RK1, RK2, and RK4 to generate numerical and exact values; use h=.1 for x = <0.0,
  10.0>. Graph results and exact solution.
