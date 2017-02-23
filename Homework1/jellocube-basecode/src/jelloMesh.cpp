@@ -438,7 +438,7 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
 		Particle& a = GetParticle(grid, spring.m_p1);
 		Particle& b = GetParticle(grid, spring.m_p2);
 
-		// TODO - Joe helped below; also referenced code Joe provided on piazza 
+		// TODO - Joe helped below; also referenced code Joe provided on piazza...almost there 
 		vec3 diff = a.position - b.position;
 		vec3 vdiff = a.velocity - b.velocity;
 		double dist = diff.Length();
@@ -446,7 +446,7 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
 		{
 			vec3 force = -(spring.m_Ks*(dist - spring.m_restLen) + spring.m_Kd*((vdiff * diff) / dist))* (diff / dist);
 			a.force += force;
-			b.force += -force; //Newtons third law 
+			b.force += -force; //Newtons third law; applly equal and opposite reaction 
 		}
 	}
 }
