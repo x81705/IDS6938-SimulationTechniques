@@ -169,8 +169,9 @@ Fairly; seems a bit.......RK4?
 
 ~~~
 ANS: 
-Likely would use particle to simulate the water molecules; we would have to delve
-into the laws of physics as they relate to water and how it moves and what can cause that movement (Author Unknown, Date Unknown).
+Likely would use particles to simulate the water molecules; we would have to delve
+into the laws of physics as they relate to water and how it moves and what can cause that movement (Author Unknown, Date Unknown).  Additionally, could use the Lagragian
+method to tracking the motion and particles over time in the simulation.
 ~~~
 
 | RK1 | RK2 | RK4 | Exact |
