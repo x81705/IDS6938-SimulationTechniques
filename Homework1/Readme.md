@@ -105,7 +105,7 @@ I was on the right track.
 
 Kider, Joseph.  Conversations via email and during office hours on 22-27FEB17 regarding errors compiling code, printing functions, and general help determining if      solution was correct.
 ~~~
-Part 2.
+##Part 2.
 
 a. Forward Euler, midpoint integration, and RK4.  Implement JelloMesh::EulerIntegration(), 
 JelloMesh::MidpointIntegration(), and JelloMesh::RK4Integration()
@@ -126,7 +126,69 @@ e. Extra springs that simulate shear/bending resistance.  Modify JelloMesh::Init
 
 f. Implement two extra features - X and Y
 
+
+##Part 3
+1.What is the effect of Ks and Kd parameters on the jello?
+
+~~~
+ANS: 
+Ks is the spring constant and Kd is the dampening constant; therefore, they are
+two opposing forces that come into effect when the jello hits the surface.
+~~~
+
+
+2.What are the benefits and the drawbacks of the collision system used here?
+What are some different ways in which it could be improved?
+
+~~~
+ANS: 
+The benefits are X...the drawbacks are Y.  The system could be improved by
+the utilization of better integration methods beyond RK4 to give a more realistic
+simulation; granted, more realism is probably not needed given the nature of this
+project.
+~~~
+
+3.What are some example systems you could model with Mass-spring simulations?
+Explain how you would construct the model.
+
+~~~
+ANS: 
+ Cloth is an example of a system you could model with mass spring simulations; for the model, you would have to incorporate structural, shear, and bend springs and take into consideration that most cloth is not very elastic (Author Unknown, Date       Unknown).  To construct the model, cloth should be model as a triangle mesh of      particles, with the aforementioned spring forces formulated per triangle and in 
+edge-adjacent triangles; additionally, an advanced technique called "flypapering" is utilized to give particles more freedom and thus realism (Baraff et. al, 2003).    Also, models involving cloth will usually utilize the Euler method.                 (Baraff et. al, 2003)
+~~~
+
+4.Does the jello behave realistically?  What integration method did you choose
+to make the jello stable?
+
+~~~
+ANS: 
+Fairly; seems a bit.......RK4?
+~~~
+
+5.How would you model and simulate water (in terms of continuous simulation)?
+
+~~~
+ANS: 
+Likely would use particle to simulate the water molecules; we would have to delve
+into the laws of physics as they relate to water and how it moves and what can cause that movement (Author Unknown, Date Unknown).
+~~~
+
 | RK1 | RK2 | RK4 | Exact |
 | --- | --- | --- | ----- |
 | 0.0 | 0.0 | 0.0 | 0.0 |
 | 0.5 | ttt | ttt | ttt |
+
+~~~
+References
+
+Almodovar, Alex. Multiple conversations (both in-person and via email) regarding both Part I and Part II, 9-27FEB17. Alex provided guidance in how to fork repositories, and offered troubleshooting advice and guidance for running code for Part I
+integration solutions; generally compared my solution to his in order to see if
+I was on the right track.
+
+Baraff, D., Witkin, A., and Kass, M.  (2003).  Untangling Cloth.  Pixar Animation   Studios.  Retrieved from http://graphics.pixar.com/library/UntanglingCloth/paper.pdf
+
+Kider, Joseph.  Conversations via email and during office hours on 22-27FEB17 regarding errors compiling code, printing functions, and general help determining if      solution was correct.
+
+Author Unknown. (Date Unknown).  Mass-Spring Systems PowerPoint.  Rensselaer          Polytechnic Institute.  Retrieved from https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf.
+~~~
+
