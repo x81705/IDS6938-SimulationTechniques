@@ -2,7 +2,7 @@
 #include <GL/glut.h>
 #include <algorithm>
 
-// TODO
+// TODO - can modify all to modify how jello interacts with environment?
 double JelloMesh::g_structuralKs = 0.0;
 double JelloMesh::g_structuralKd = 0.0;
 double JelloMesh::g_attachmentKs = 0.0;
@@ -418,7 +418,7 @@ void JelloMesh::CheckForCollisions(ParticleGrid& grid, const World& world)
 
 void JelloMesh::ComputeForces(ParticleGrid& grid)
 {
-	// Add external froces to all points
+	// Add external froces to all points - change i,j,k...but to what?
 	for (int i = 0; i < m_rows + 1; i++)
 	{
 		for (int j = 0; j < m_cols + 1; j++)
@@ -438,10 +438,15 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
 		Particle& a = GetParticle(grid, spring.m_p1);
 		Particle& b = GetParticle(grid, spring.m_p2);
 
-		// TODO - Joe helped below
-
-		vec3 force = - (spring.m_Ks*(distance - spring.m_restLen) +  spring.m_Kd*((difference of initial velocities * distance)/distance)* (distance/distance)
-
+		// TODO - Joe helped below; also referenced code Joe provided on piazza
+		vec3 diff = a.position - b.position;
+		double dist = diff.Length();
+		if (dist != 0)
+		{
+			vec3 force = -(spring.m_Ks*(dist - spring.m_restLen) + spring.m_Kd*((difference of initial velocities * dist) / dist)* (dist / dist);
+			a.force += force;
+			b.force += force; //Newtons third law
+		}
 	}
 }
 
@@ -453,7 +458,7 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		Particle& p = GetParticle(grid, contact.m_p);
 		vec3 normal = contact.m_normal;
 
-		// TODO
+		// TODO - possibly use the particle collision code again?  maybe this refers to bouncing motion?
 	}
 }
 
@@ -466,13 +471,17 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 		vec3 normal = result.m_normal;
 		float dist = result.m_distance;
 
-		// TODO
+		// TODO - Code below based on collision detection with ground; referenced module
+
+		if Intersection = FLOOR
+				
 	}
 }
 
 bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 {
-	// TODO
+	// TODO - Code below based on collisison detection with ground; referenced module
+	if Intersection = FLOOR
 	return false;
 }
 
@@ -484,7 +493,7 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 	vec3 cylinderAxis = cylinderEnd - cylinderStart;
 	double cylinderRadius = cylinder->r;
 
-	// TODO
+	// TODO - no idea
 	return false;
 }
 
@@ -501,7 +510,7 @@ void JelloMesh::EulerIntegrate(double dt)
 
 				p.velocity = p.velocity + dt * p.force;
 
-				p.position = p.position + dt * p.velocity;
+				p.position = p.position + dt * p.velocity; //Joe helped with this code
 			}
 		}
 	}
