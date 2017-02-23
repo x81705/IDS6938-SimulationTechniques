@@ -438,14 +438,15 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
 		Particle& a = GetParticle(grid, spring.m_p1);
 		Particle& b = GetParticle(grid, spring.m_p2);
 
-		// TODO - Joe helped below; also referenced code Joe provided on piazza
+		// TODO - Joe helped below; also referenced code Joe provided on piazza 
 		vec3 diff = a.position - b.position;
+		vec3 vdiff = a.velocity - b.velocity;
 		double dist = diff.Length();
 		if (dist != 0)
 		{
-			vec3 force = -(spring.m_Ks*(dist - spring.m_restLen) + spring.m_Kd*((difference of initial velocities * dist) / dist)* (dist / dist);
+			vec3 force = -(spring.m_Ks*(dist - spring.m_restLen) + spring.m_Kd*((vdiff * diff) / dist))* (diff / dist);
 			a.force += force;
-			b.force += force; //Newtons third law
+			b.force += -force; //Newtons third law 
 		}
 	}
 }
@@ -458,7 +459,13 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		Particle& p = GetParticle(grid, contact.m_p);
 		vec3 normal = contact.m_normal;
 
-		// TODO - possibly use the particle collision code again?  maybe this refers to bouncing motion?
+		// TODO - possibly use the particle collision code again?  maybe this refers to bouncing motion? On Webcourses
+		// take contact.m_normal and divide...
+		// Bounciness restitution - Velocity - 2 * Velocity * Normal * Restitution equation ---> code! ON collision response
+		// bouncing page on Webcourses; call RESTITUTION like COLLISION DELTA (a distance function) and make different variables; will have .normal
+
+		// Push velocity straight up in the direction of the normal; a couple ways to do it...put spring force?
+		//TRY DIFFERENT THINGS; velocity of normal, reflect back up
 	}
 }
 
@@ -471,19 +478,31 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 		vec3 normal = result.m_normal;
 		float dist = result.m_distance;
 
-		// TODO - Code below based on collision detection with ground; referenced module
+		// TODO - Code below based on collision detection with ground; referenced module; USE THE EQUATION ABOVE!!!
+		// pt.velocity?
+		pt.velocity-2*(pt.velocity*normal)*normal
 
-		if p.position[1] = ground->pos[1]
-			bounce
 	}
 }
 
 bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 {
 	// TODO - Code below based on collisison detection with ground; referenced module
-	if Intersection = FLOOR
-		bounce?
-	return false;
+	float COLLISION_DELTA = .05;
+
+	if (p.position[1] < 0.0)
+	{
+		intersection.m_type Jellomesh::CONTACT; //Joe helped with this code
+	}
+	return true
+
+	else if (p.position[1] < COLLISION_DELTA)
+	{
+		intersection.m_distance = p.position[1];
+		intersection.m_p = .....//-fill in
+	}
+		return true
+		;
 }
 
 bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
@@ -494,7 +513,7 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 	vec3 cylinderAxis = cylinderEnd - cylinderStart;
 	double cylinderRadius = cylinder->r;
 
-	// TODO - no idea
+	// TODO - no idea; have to take into consideration the axes and length
 	return false;
 }
 
@@ -511,7 +530,7 @@ void JelloMesh::EulerIntegrate(double dt)
 
 				p.velocity = p.velocity + dt * p.force;
 
-				p.position = p.position + dt * p.velocity; //Joe helped with this code
+				p.position = p.position + dt * p.velocity; //Joe helped with this code 
 			}
 		}
 	}
@@ -519,7 +538,7 @@ void JelloMesh::EulerIntegrate(double dt)
 
 void JelloMesh::MidPointIntegrate(double dt)
 {
-	// TODO - using piazza entry and help from Joe; assume we have done Paricle&k1?
+	// TODO - using piazza entry and help from Joe; assume we have done Paricle&k1? 
 	double halfdt = 0.5 * dt;
 	ParticleGrid target = m_vparticles;  // target is a copy!
 	ParticleGrid& source = m_vparticles;  // source is a ptr!
@@ -635,7 +654,7 @@ void JelloMesh::MidPointIntegrate(double dt)
 		}
 	}
 
-} //So for the above code, do we need to modify further for line 629-633?
+} //So for the above code, do we need to modify further for line 629-633? 
 
 void JelloMesh::RK4Integrate(double dt)
 {
@@ -752,7 +771,7 @@ void JelloMesh::RK4Integrate(double dt)
 		}
 	}
 } // What is the difference between this and code in/around lines 629?  Are we only doing RK4 and Midpoint,
-  // do we need to write code for Euler as well? 
+  // do we need to write code for Euler as well?  
 
 
 //---------------------------------------------------------------------
