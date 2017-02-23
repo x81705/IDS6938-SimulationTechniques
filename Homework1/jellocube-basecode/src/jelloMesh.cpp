@@ -474,7 +474,7 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 		// TODO - Code below based on collision detection with ground; referenced module
 
 		if Intersection = FLOOR
-				
+				bounce?
 	}
 }
 
@@ -482,6 +482,7 @@ bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 {
 	// TODO - Code below based on collisison detection with ground; referenced module
 	if Intersection = FLOOR
+		bounce?
 	return false;
 }
 
