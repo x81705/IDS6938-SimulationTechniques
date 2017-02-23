@@ -96,13 +96,15 @@ ANS:
 4. RK4 is most accurate; again, through comparison of all integration methods and the exact solution, we can see that RK4 is most accurate; the reason it is most accurate is................................
 ~~~
 
+~~~
 References
-Almodovar, Alex. Multiple conversations (both in-person and via email) regarding both Part I and Part II, 9-21FEB17. 
-Alex provided guidance in how to fork repositories, offered troubleshooting advice and guidance for running code for Part I
-integration solutions...allowed to view/compare my solution to his.   
 
+Almodovar, Alex. Multiple conversations (both in-person and via email) regarding both Part I and Part II, 9-27FEB17. Alex provided guidance in how to fork repositories, and offered troubleshooting advice and guidance for running code for Part I
+integration solutions; generally compared my solution to his in order to see if
+I was on the right track.
 
-
+Kider, Joseph.  Conversations via email and during office hours on 22-27FEB17 regarding errors compiling code, printing functions, and general help determining if      solution was correct.
+~~~
 Part 2.
 
 a. Forward Euler, midpoint integration, and RK4.  Implement JelloMesh::EulerIntegration(), 

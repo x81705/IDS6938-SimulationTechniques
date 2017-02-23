@@ -438,9 +438,9 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
 		Particle& a = GetParticle(grid, spring.m_p1);
 		Particle& b = GetParticle(grid, spring.m_p2);
 
-		// TODO
+		// TODO - Joe helped below
 
-		//vec3 force = - (spring.m_Ks*(dist - spring.m_restLen) +  .... )
+		vec3 force = - (spring.m_Ks*(distance - spring.m_restLen) +  spring.m_Kd*((difference of initial velocities * distance)/distance)* (distance/distance)
 
 	}
 }
