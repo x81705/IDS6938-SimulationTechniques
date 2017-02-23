@@ -473,8 +473,8 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 
 		// TODO - Code below based on collision detection with ground; referenced module
 
-		if Intersection = FLOOR
-				bounce?
+		if p.position[1] = ground->pos[1]
+			bounce
 	}
 }
 
@@ -519,12 +519,12 @@ void JelloMesh::EulerIntegrate(double dt)
 
 void JelloMesh::MidPointIntegrate(double dt)
 {
-	// TODO
+	// TODO - using piazza entry and help from Joe; assume we have done Paricle&k1?
 	double halfdt = 0.5 * dt;
 	ParticleGrid target = m_vparticles;  // target is a copy!
 	ParticleGrid& source = m_vparticles;  // source is a ptr!
 
-										  // Step 1
+										  // Step 1 - remove which code?
 	ParticleGrid accum1 = m_vparticles;
 	for (int i = 0; i < m_rows + 1; i++)
 	{
@@ -541,6 +541,8 @@ void JelloMesh::MidPointIntegrate(double dt)
 				Particle& t = GetParticle(target, i, j, k);
 				t.velocity = s.velocity + k1.force;
 				t.position = s.position + k1.velocity;
+
+				
 			}
 		}
 	}
@@ -633,7 +635,7 @@ void JelloMesh::MidPointIntegrate(double dt)
 		}
 	}
 
-}
+} //So for the above code, do we need to modify further for line 629-633?
 
 void JelloMesh::RK4Integrate(double dt)
 {
@@ -749,7 +751,8 @@ void JelloMesh::RK4Integrate(double dt)
 			}
 		}
 	}
-}
+} // What is the difference between this and code in/around lines 629?  Are we only doing RK4 and Midpoint,
+  // do we need to write code for Euler as well? 
 
 
 //---------------------------------------------------------------------
