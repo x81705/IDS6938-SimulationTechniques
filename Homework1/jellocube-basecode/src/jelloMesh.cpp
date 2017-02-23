@@ -477,10 +477,11 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 		Particle& pt = GetParticle(grid, result.m_p);
 		vec3 normal = result.m_normal;
 		float dist = result.m_distance;
+		float r = 3.0;
 
 		// TODO - Code below based on collision detection with ground; referenced module; USE THE EQUATION ABOVE!!!
 		// pt.velocity?
-		pt.velocity-2*(pt.velocity*normal)*normal
+		pt.velocity = pt.velocity - 2 * (pt.velocity*normal)*normal*r;
 
 	}
 }
@@ -528,7 +529,7 @@ void JelloMesh::EulerIntegrate(double dt)
 			{
 				Particle& p = GetParticle(m_vparticles, i, j, k);
 
-				p.velocity = p.velocity + dt * p.force;
+				p.velocity = p.velocity + dt * p.force * (1/p.mass);//Alex/Joe helped with this code
 
 				p.position = p.position + dt * p.velocity; //Joe helped with this code 
 			}
