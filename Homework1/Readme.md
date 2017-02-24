@@ -57,6 +57,8 @@ program, and transposed to the values to excel. I then utilized excel to graph t
 ![(image/graph1.png?raw=true)]![](http://)!
 
 IMAGE DOESNT DISPLAYYYY!!!!!!!!!!!!!!!!!!!!!!!!
+ALSO, JUST REFORMATTED TO INCLUDE 5 DECIMEL PLACES IN EXCEL; STILL CANNOT SEE 
+ANY REAL DIFFERENCE, LIKELY NEED TO REFORMAT HOW THE CHART/GRAPH IS SETUP
 ~~~
 
 --
