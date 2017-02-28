@@ -3,16 +3,16 @@
 #include <algorithm>
 
 // TODO - can modify all to modify how jello interacts with environment?
-double JelloMesh::g_structuralKs = 0.0;
-double JelloMesh::g_structuralKd = 0.0;
-double JelloMesh::g_attachmentKs = 0.0;
-double JelloMesh::g_attachmentKd = 0.0;
-double JelloMesh::g_shearKs = 0.0;
-double JelloMesh::g_shearKd = 0.0;
-double JelloMesh::g_bendKs = 0.0;
-double JelloMesh::g_bendKd = 0.0;
-double JelloMesh::g_penaltyKs = 0.0;
-double JelloMesh::g_penaltyKd = 0.0;
+double JelloMesh::g_structuralKs = 1.0;
+double JelloMesh::g_structuralKd = 1.0;
+double JelloMesh::g_attachmentKs = 1.0;
+double JelloMesh::g_attachmentKd = 1.0;
+double JelloMesh::g_shearKs = 1.0;
+double JelloMesh::g_shearKd = 1.0;
+double JelloMesh::g_bendKs = 1.0;
+double JelloMesh::g_bendKd = 1.0;
+double JelloMesh::g_penaltyKs = 2.0;
+double JelloMesh::g_penaltyKd = 2.0;
 
 JelloMesh::JelloMesh() :
 	m_integrationType(JelloMesh::RK4), m_drawflags(MESH | STRUCTURAL),
@@ -196,6 +196,51 @@ void JelloMesh::InitJelloMesh()
 				if (j < m_cols) AddStructuralSpring(GetParticle(g, i, j, k), GetParticle(g, i, j + 1, k));
 				if (i < m_rows) AddStructuralSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j, k));
 				if (k < m_stacks) AddStructuralSpring(GetParticle(g, i, j, k), GetParticle(g, i, j, k + 1));
+			}
+		}
+	}
+
+	// Setup shear springs - from Joe's note on Piazza; do we integrate the rows/cols/stacks differently below?
+	for (int i = 0; i < m_rows + 1; i++)
+	{
+		for (int j = 0; j < m_cols + 1; j++)
+		{
+			for (int k = 0; k < m_stacks + 1; k++)
+			{
+				if (j < m_cols && i < m_rows) AddShearSpring(GetParticle(g, i, j, k),
+					GetParticle(g, i + 1, j + 1, k + 1));
+			//	if (j > 0 && j < m_cols + 1 && i > 0 && i < m_rows + 1)
+				//	if (j < m_cols && k < m_stacks) AddShearSpring (g, i, j, k),
+					//	GetParticle(g, i + 1, j + 1, k);
+			}
+		}
+	}
+
+	// Setup bend springs - from Joe's notes on Piazza
+	for (int i = 0; i < m_rows + 1; i++)
+	{
+		for (int j = 0; j < m_cols + 1; j++)
+		{
+			for (int k = 0; k < m_stacks + 1; k++)
+			{
+				if (i < m_rows - 1) AddBendSpring(GetParticle(g, i, j, k),
+					GetParticle(g, i + 2, j, k));
+				if (i < m_cols - 1) AddBendSpring(GetParticle(g, i, j, k),
+					GetParticle(g, i + 2, j, k));
+				if (i < m_stacks - 1) AddBendSpring(GetParticle(g, i, j, k),
+					GetParticle(g, i + 2, j, k));
+				if (i < m_rows - 2) AddBendSpring(GetParticle(g, i, j, k),
+					GetParticle(g, i + 3, j, k));
+				if (i < m_cols - 2) AddBendSpring(GetParticle(g, i, j, k),
+					GetParticle(g, i + 3, j, k));
+				if (i < m_stacks - 2) AddBendSpring(GetParticle(g, i, j, k),
+					GetParticle(g, i + 3, j, k));
+				if (i < m_rows - 3) AddBendSpring(GetParticle(g, i, j, k),
+					GetParticle(g, i + 4, j, k));
+				if(i < m_cols - 3) AddBendSpring(GetParticle(g, i, j, k),
+					GetParticle(g, i + 4, j, k));
+				if(i < m_stacks - 3) AddBendSpring(GetParticle(g, i, j, k),
+					GetParticle(g, i + 4, j, k));
 			}
 		}
 	}
@@ -431,7 +476,7 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
 		}
 	}
 
-	// Update springs
+	// Update springs - do we have to add code for bend and shear springs?
 	for (unsigned int i = 0; i < m_vsprings.size(); i++)
 	{
 		Spring& spring = m_vsprings[i];
@@ -461,8 +506,6 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 
 		// TODO - possibly use the particle collision code again?  maybe this refers to bouncing motion? On Webcourses
 		// take contact.m_normal and divide...
-		// Bounciness restitution - Velocity - 2 * Velocity * Normal * Restitution equation ---> code! ON collision response
-		// bouncing page on Webcourses; call RESTITUTION like COLLISION DELTA (a distance function) and make different variables; will have .normal
 
 		// Push velocity straight up in the direction of the normal; a couple ways to do it...put spring force?
 		//TRY DIFFERENT THINGS; velocity of normal, reflect back up
@@ -479,8 +522,11 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 		float dist = result.m_distance;
 		float r = 3.0;
 
+		// Bounciness restitution - Velocity - 2 * Velocity * Normal * Restitution equation ---> code! ON collision response
+		// bouncing page on Webcourses; call RESTITUTION like COLLISION DELTA (a distance function) and make different variables; will have .normal
 		// TODO - Code below based on collision detection with ground; referenced module; USE THE EQUATION ABOVE!!!
 		// pt.velocity?
+
 		pt.velocity = pt.velocity - 2 * (pt.velocity*normal)*normal*r;
 
 	}
@@ -493,17 +539,16 @@ bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 
 	if (p.position[1] < 0.0)
 	{
-		intersection.m_type Jellomesh::CONTACT; //Joe helped with this code
+		intersection.m_type = JelloMesh::CONTACT; //Joe helped with this code
 	}
-	return true
+	return true;
 
 	else if (p.position[1] < COLLISION_DELTA)
 	{
 		intersection.m_distance = p.position[1];
-		intersection.m_p = .....//-fill in
+		intersection.m_p = COLLISION_DELTA;
 	}
-		return true
-		;
+	return true;
 }
 
 bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
