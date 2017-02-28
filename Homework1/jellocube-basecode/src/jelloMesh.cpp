@@ -200,7 +200,7 @@ void JelloMesh::InitJelloMesh()
 		}
 	}
 
-	// Setup shear springs - from Joe's note on Piazza; do we integrate the rows/cols/stacks differently below?
+	//Setup shear springs - from Joe's note on Piazza; do we integrate the rows/cols/stacks differently below?
 	for (int i = 0; i < m_rows + 1; i++)
 	{
 		for (int j = 0; j < m_cols + 1; j++)
@@ -209,9 +209,9 @@ void JelloMesh::InitJelloMesh()
 			{
 				if (j < m_cols && i < m_rows) AddShearSpring(GetParticle(g, i, j, k),
 					GetParticle(g, i + 1, j + 1, k + 1));
-			//	if (j > 0 && j < m_cols + 1 && i > 0 && i < m_rows + 1)
-				//	if (j < m_cols && k < m_stacks) AddShearSpring (g, i, j, k),
-					//	GetParticle(g, i + 1, j + 1, k);
+				if (j > 0 && j < m_cols + 1 && i > 0 && i < m_rows + 1)
+					if (j < m_cols && k < m_stacks) AddShearSpring (g, i, j, k),
+						GetParticle(g, i + 1, j + 1, k);
 			}
 		}
 	}
@@ -296,10 +296,10 @@ unsigned int JelloMesh::GetDrawFlags() const
 void JelloMesh::DrawMesh(const vec3& eyePos)
 {
 	const ParticleGrid& g = m_vparticles;
-	float red[4] = { 1.0,0.4,0.4,0.8 };
+	float red[4] = { 1.0,0.4,0.4,0.8 }; //changed from float to double, didn't help
 	float white[4] = { 1.0,1.0,1.0,1.0 };
 	float pink[4] = { 0.5,0.0,0.0,1.0 };
-	float black[4] = { 0.0,0.0,0.0,1.0 };
+	float black[4] = { 0.0,0.0,0.0,1.0 }; //changed from float to double, didn't help
 	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, red);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, black);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, black);
