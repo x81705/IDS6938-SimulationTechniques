@@ -1,18 +1,19 @@
 #include "JelloMesh.h"
 #include <GL/glut.h>
 #include <algorithm>
+#include <math.h>
 
-// TODO - can modify all to modify how jello interacts with environment?
-double JelloMesh::g_structuralKs = 10.0;
-double JelloMesh::g_structuralKd = 10.0;
-double JelloMesh::g_attachmentKs = 10.0;
-double JelloMesh::g_attachmentKd = 10.0;
-double JelloMesh::g_shearKs = 1.0;
-double JelloMesh::g_shearKd = 1.0;
-double JelloMesh::g_bendKs = 1.0;
-double JelloMesh::g_bendKd = 1.0;
-double JelloMesh::g_penaltyKs = 0.70;
-double JelloMesh::g_penaltyKd = 0.70;
+// TODO - can modify all to modify how jello interacts with environment? Alex helped with constant manipulation as well
+double JelloMesh::g_structuralKs = 2000.0;
+double JelloMesh::g_structuralKd = 5.0;
+double JelloMesh::g_attachmentKs = 2000.0;
+double JelloMesh::g_attachmentKd = 5.0;
+double JelloMesh::g_shearKs = 2000.0;
+double JelloMesh::g_shearKd = 5.0;
+double JelloMesh::g_bendKs = 2000.0;
+double JelloMesh::g_bendKd = 5.0;
+double JelloMesh::g_penaltyKs = 100000.0;
+double JelloMesh::g_penaltyKd = 5.0;
 
 JelloMesh::JelloMesh() :
 	m_integrationType(JelloMesh::RK4), m_drawflags(MESH | STRUCTURAL),
@@ -515,7 +516,15 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		// Alex helped understand application of penalties to account for 
 		//resolution of contacts
 		
-		p.force += (g_penaltyKs * (normal * dist)) + (g_penaltyKd * (normal * dist)); 
+	//	p.force += (g_penaltyKs * (normal * dist)) + (g_penaltyKd * (normal * dist)); 
+
+		
+		double elastic = JelloMesh::g_penaltyKs * (contact.m_distance);
+		double dampening = g_penaltyKd * g_penaltyKs; //Joe helped through g_penaltyKd; Alex with contact.m_distance 
+		vec3 normalizedPosition = contact.m_normal * contact.m_distance / abs(contact.m_distance);
+
+		p.force += (elastic + dampening) * (normalizedPosition);
+		p.velocity = p.position - contact.m_normal * contact.m_distance; //Joe helped through -contact.m_normal * 
 		
 	}
 }
@@ -528,15 +537,15 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 		Particle& pt = GetParticle(grid, result.m_p);
 		vec3 normal = result.m_normal;
 		float dist = result.m_distance;
-		float r = 3.0;
+		float r = 0.5;
 
 		// Bounciness restitution - Velocity - 2 * Velocity * Normal * Restitution equation ---> code! ON collision response
 		// bouncing page on Webcourses; call RESTITUTION like COLLISION DELTA (a distance function) and make different variables; will have .normal
 		// TODO - Code below based on collision detection with ground; referenced module; USE THE EQUATION ABOVE!!!
 		// pt.velocity?
 
-		pt.velocity = pt.velocity - 2 * (pt.velocity*normal)*normal*r;
-		pt.position = dist * normal;
+		pt.velocity = pt.velocity - 2 * Dot(pt.velocity, normal)*normal*r;
+		//pt.position = dist * normal;
 	}
 }
 
