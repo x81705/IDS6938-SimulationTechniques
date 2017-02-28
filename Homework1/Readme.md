@@ -5,7 +5,7 @@
 
 This is the framework for homework #1. Please first read the [homework writeup](HomeWork%231.pdf).
 
-The assignment is due: Monday, February 27 at 11:59PM (EST)
+The assignment is due: Wednesday, February 27 at 11:59PM (EST)
 
 | undeformed jello  | deformed jello |
 | ------------- | ------------- |
@@ -51,14 +51,17 @@ c. Run 3 numerical integration solutions: RK1, RK2, and RK4 to generate numerica
 
 ~~~
 ANS: 
-Joe and I set up an example.txt file, which contained the printed values from the 
-program, and transposed to the values to excel. I then utilized excel to graph the values.  The graph below depicts RK1, RK2, RK4, and the exact solution.
+Dr. Kider and I set up an example.txt file, which contained the printed values from the program, and transposed to the values to excel. I then utilized excel to graph the values.  The graph below depicts RK1, RK2, RK4, and the exact solution.
 
-![(image/graph1.png?raw=true)]![](http://)!
+![](images/graph1.png?raw=true)
+![](http://)
+
+
 
 IMAGE DOESNT DISPLAYYYY!!!!!!!!!!!!!!!!!!!!!!!!
 ALSO, JUST REFORMATTED TO INCLUDE 5 DECIMEL PLACES IN EXCEL; STILL CANNOT SEE 
 ANY REAL DIFFERENCE, LIKELY NEED TO REFORMAT HOW THE CHART/GRAPH IS SETUP
+
 ~~~
 
 --
@@ -101,11 +104,10 @@ ANS:
 ~~~
 References
 
-Almodovar, Alex. Multiple conversations (both in-person and via email) regarding both Part I and Part II, 9-27FEB17. Alex provided guidance in how to fork repositories, and offered troubleshooting advice and guidance for running code for Part I
-integration solutions; generally compared my solution to his in order to see if
-I was on the right track.
+Almodovar, Alex. Multiple conversations (both in-person and via email/text) regarding both Part I and Part II, 9FEB-2MAR17. For Part I, Alex provided guidance in how to fork repositories, and offered troubleshooting advice and guidance for running  code for integration solutions; generally compared my solution to his in order to 
+see if I was on the right track.
 
-Kider, Joseph.  Conversations via email and during office hours on 22-27FEB17 regarding errors compiling code, printing functions, and general help determining if      solution was correct.
+Kider, Joseph.  Multiple conversations via email and during office hours on 22FEB-2MAR17 regarding errors compiling code, printing functions, and general help        determining if solution was correct.
 ~~~
 ##Part 2.
 
@@ -184,14 +186,13 @@ method to tracking the motion and particles over time in the simulation.
 ~~~
 References
 
-Almodovar, Alex. Multiple conversations (both in-person and via email) regarding both Part I and Part II, 9-27FEB17. Alex provided guidance in how to fork repositories, and offered troubleshooting advice and guidance for running code for Part I
-integration solutions; generally compared my solution to his in order to see if
-I was on the right track.
+Almodovar, Alex. Multiple conversations (both in-person and via email/text) regarding both Part I and Part II, 9FEB-2MAR17. For Part II, Alex provided guidance/help in resolving contacts and help with floor interesections, as well as general help   compiling/fixing coding errors.
 
-Baraff, D., Witkin, A., and Kass, M.  (2003).  Untangling Cloth.  Pixar Animation   Studios.  Retrieved from http://graphics.pixar.com/library/UntanglingCloth/paper.pdf
+Baraff, D., Witkin, A., and Kass, M.  (2003).  Untangling Cloth.  Pixar Animation  Studios.  
+Retrieved from http://graphics.pixar.com/library/UntanglingCloth/paper.pdf
 
-Kider, Joseph.  Conversations via email and during office hours on 22-27FEB17 regarding errors compiling code, printing functions, and general help determining if      solution was correct.
+Kider, Joseph.  Conversations via email and during office hours on 22FEB-2MAR17 regarding errors compiling code, finding correct solutions for functions, and general help with the composition/functionality of the JelloCube program.
 
-Author Unknown. (Date Unknown).  Mass-Spring Systems PowerPoint.  Rensselaer          Polytechnic Institute.  Retrieved from https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf.
+Author Unknown. (Date Unknown).  Mass-Spring Systems PowerPoint.  Rensselaer       Polytechnic Institute.  Retrieved from https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf.
 ~~~
 
