@@ -509,14 +509,11 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 
 		// TODO - possibly use the particle collision code again?  maybe this refers to bouncing motion? On Webcourses
 		// take contact.m_normal and divide...
-
 		// Push velocity straight up in the direction of the normal; a couple ways to do it...put spring force?
 		//TRY DIFFERENT THINGS; velocity of normal, reflect back up
-
 		// Alex helped understand application of penalties to account for 
 		//resolution of contacts
-		
-	//	p.force += (g_penaltyKs * (normal * dist)) + (g_penaltyKd * (normal * dist)); 
+		//	p.force += (g_penaltyKs * (normal * dist)) + (g_penaltyKd * (normal * dist)); 
 
 		
 		double elastic = JelloMesh::g_penaltyKs * (contact.m_distance);
