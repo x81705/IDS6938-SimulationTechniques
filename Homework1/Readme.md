@@ -13,6 +13,7 @@ The assignment is due: Wednesday, February 27 at 11:59PM (EST)
 
 
 
+<<<<<<< HEAD
 ## Part 1. Numerical Analysis of Integration Functions
 a. Take integral of dy/dx = y-1/2*e^x/2*sin(5x)+5e^x/2*cos(5x), where initial condition for ODE is defined by y(0)=0.
 
@@ -196,3 +197,13 @@ Kider, Joseph.  Conversations via email and during office hours on 22FEB-2MAR17 
 Author Unknown. (Date Unknown).  Mass-Spring Systems PowerPoint.  Rensselaer       Polytechnic Institute.  Retrieved from https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf.
 ~~~
 
+=======
+Something
+
+| RK1  | RK2 | RK4 | Exact |
+| ------------- | ------------- | ------------- | ------------- |
+| 0.1  | 0.2 | 0.3 | 0.4 |
+| 0.1  | 0.2 | 0.3 | 0.4 | 
+| 0.1  | 0.2 | 0.3 | 0.4 | 
+| 0.1  | 0.2 | 0.3 | 0.4 | 
+>>>>>>> 7141ba4ae284621f3de83014a7292ffb90cc22e7
