@@ -3,16 +3,16 @@
 #include <algorithm>
 
 // TODO - can modify all to modify how jello interacts with environment?
-double JelloMesh::g_structuralKs = 1.0;
-double JelloMesh::g_structuralKd = 1.0;
-double JelloMesh::g_attachmentKs = 1.0;
-double JelloMesh::g_attachmentKd = 1.0;
+double JelloMesh::g_structuralKs = 10.0;
+double JelloMesh::g_structuralKd = 10.0;
+double JelloMesh::g_attachmentKs = 10.0;
+double JelloMesh::g_attachmentKd = 10.0;
 double JelloMesh::g_shearKs = 1.0;
 double JelloMesh::g_shearKd = 1.0;
 double JelloMesh::g_bendKs = 1.0;
 double JelloMesh::g_bendKd = 1.0;
-double JelloMesh::g_penaltyKs = 2.0;
-double JelloMesh::g_penaltyKd = 2.0;
+double JelloMesh::g_penaltyKs = 0.70;
+double JelloMesh::g_penaltyKd = 0.70;
 
 JelloMesh::JelloMesh() :
 	m_integrationType(JelloMesh::RK4), m_drawflags(MESH | STRUCTURAL),
@@ -201,7 +201,7 @@ void JelloMesh::InitJelloMesh()
 	}
 
 	//Setup shear springs - from Joe's note on Piazza; do we integrate the rows/cols/stacks differently below?
-	for (int i = 0; i < m_rows + 1; i++)
+	/*for (int i = 0; i < m_rows + 1; i++)
 	{
 		for (int j = 0; j < m_cols + 1; j++)
 		{
@@ -215,6 +215,7 @@ void JelloMesh::InitJelloMesh()
 			}
 		}
 	}
+	*/
 
 	// Setup bend springs - from Joe's notes on Piazza
 	for (int i = 0; i < m_rows + 1; i++)
@@ -503,6 +504,7 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		const Intersection& contact = m_vcontacts[i];
 		Particle& p = GetParticle(grid, contact.m_p);
 		vec3 normal = contact.m_normal;
+		double dist = contact.m_distance;
 
 		// TODO - possibly use the particle collision code again?  maybe this refers to bouncing motion? On Webcourses
 		// take contact.m_normal and divide...
@@ -513,7 +515,7 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		// Alex helped understand application of penalties to account for 
 		//resolution of contacts
 		
-		p.force += (g_penaltyKd * normal) + (g_penaltyKs * normal); 
+		p.force += (g_penaltyKs * (normal * dist)) + (g_penaltyKd * (normal * dist)); 
 		
 	}
 }
@@ -534,7 +536,7 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 		// pt.velocity?
 
 		pt.velocity = pt.velocity - 2 * (pt.velocity*normal)*normal*r;
-
+		pt.position = dist * normal;
 	}
 }
 
@@ -543,18 +545,26 @@ bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 	// TODO - Code below based on collisison detection with ground; referenced module
 	float COLLISION_DELTA = .05;
 
-	if (p.position[1] < 0.0)
+	if (p.position[1] <= 0.0)
 	{
-		intersection.m_type = JelloMesh::CONTACT; //Joe helped with this code during office hours
+		intersection.m_type = JelloMesh::CONTACT;//Joe helped with this code during office hours; also Alex for below
+		intersection.m_distance = -p.position[1];
+			intersection.m_normal = vec3(0.0, 1.0 , 0.0);
+			intersection.m_p = p.index;
+			return true;
 	}
-	return true;
 
-	else if (p.position[1] < COLLISION_DELTA) //add 0.0?
+	else if (p.position[1] < COLLISION_DELTA) //Alex helped with construction of below
 	{
-		intersection.m_distance = p.position[1];
-		intersection.m_p = COLLISION_DELTA;
+		intersection.m_type = JelloMesh::COLLISION;
+		intersection.m_distance = COLLISION_DELTA-p.position[1];
+		intersection.m_normal = vec3(0.0, 1.0, 0.0);
+		intersection.m_p = p.index;
+		return true;
 	}
-	return true;
+
+	else 
+		return false;
 }
 
 bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
