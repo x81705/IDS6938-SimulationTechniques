@@ -483,13 +483,13 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
 		Particle& a = GetParticle(grid, spring.m_p1);
 		Particle& b = GetParticle(grid, spring.m_p2);
 
-		// TODO - Joe helped below; also referenced code Joe provided on piazza...almost there 
+		// TODO - Joe helped below; also referenced code Joe provided on piazza 
 		vec3 diff = a.position - b.position;
 		vec3 vdiff = a.velocity - b.velocity;
 		double dist = diff.Length();
 		if (dist != 0)
 		{
-			vec3 force = -(spring.m_Ks*(dist - spring.m_restLen) + spring.m_Kd*((vdiff * diff) / dist))* (diff / dist);
+			vec3 force = -(spring.m_Ks*(dist - spring.m_restLen) + spring.m_Kd*((vdiff * diff) / dist)) * (diff / dist);
 			a.force += force;
 			b.force += -force; //Newtons third law; applly equal and opposite reaction 
 		}
@@ -509,6 +509,12 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 
 		// Push velocity straight up in the direction of the normal; a couple ways to do it...put spring force?
 		//TRY DIFFERENT THINGS; velocity of normal, reflect back up
+
+		// Alex helped understand application of penalties to account for 
+		//resolution of contacts
+		
+		p.force += (g_penaltyKd * normal) + (g_penaltyKs * normal); 
+		
 	}
 }
 
@@ -539,11 +545,11 @@ bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 
 	if (p.position[1] < 0.0)
 	{
-		intersection.m_type = JelloMesh::CONTACT; //Joe helped with this code
+		intersection.m_type = JelloMesh::CONTACT; //Joe helped with this code during office hours
 	}
 	return true;
 
-	else if (p.position[1] < COLLISION_DELTA)
+	else if (p.position[1] < COLLISION_DELTA) //add 0.0?
 	{
 		intersection.m_distance = p.position[1];
 		intersection.m_p = COLLISION_DELTA;
@@ -574,7 +580,7 @@ void JelloMesh::EulerIntegrate(double dt)
 			{
 				Particle& p = GetParticle(m_vparticles, i, j, k);
 
-				p.velocity = p.velocity + dt * p.force * (1/p.mass);//Alex/Joe helped with this code
+				p.velocity = p.velocity + dt * p.force * (1/p.mass);//Joe/Alex helped with this code - office hours
 
 				p.position = p.position + dt * p.velocity; //Joe helped with this code 
 			}
