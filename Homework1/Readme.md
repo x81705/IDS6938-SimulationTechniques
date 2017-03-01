@@ -1,15 +1,11 @@
 #Charlie Timm -- Taking 1 Alibi Day
-#Homework 1 : The Jello Cube (Continuous Simulation Assignment
+#Homework 1 : The Jello Cube (Continuous Simulation Assignment)
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
 
 
-This is the framework for homework #1. Please first read the [homework writeup](HomeWork%231.pdf).
 
 The assignment is due: Wednesday, February 27 at 11:59PM (EST); with alibi, and extension, March 2 at 11:59PM (EST)
 
-| undeformed jello  | deformed jello |
-| ------------- | ------------- |
-| ![](images/undeformed3.png?raw=true)  | ![](images/deformed3.png?raw=true) |
 
 
 
@@ -60,8 +56,10 @@ acquired values and the graph below depicts
 RK1, RK2, RK4, and the exact solution.  
 
 ~~~
+## Integration Values - RK1, RK2, RK4, and Exact Solution 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/chart1.PNG?raw=true)
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/chart2.PNG?raw=true)
+## Graph - RK1, RK2, RK4, and Exact Solution  
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/graph1.PNG?raw=true)
 
 --
@@ -75,6 +73,7 @@ error percentages from the program (this utilzed the formula
 %error = |exact-approx|/exact).  The graph below depicts 
 error percentage for RK1, RK2, and RK4.
 ~~~
+## Graph - Error Percentages
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/graph2.PNG?raw=true)
 
 
@@ -112,11 +111,14 @@ RK4 is most accurate; the reason it is most accurate is......
 ~~~
 References
 
-Almodovar, Alex. Multiple conversations (both in-person and via email/text) regarding both Part I and Part II, 9FEB-2MAR17. For Part I, Alex provided guidance in how to fork repositories, and offered troubleshooting advice and guidance for running  code for integration solutions; generally compared my solution to his in order to 
-see if I was on the right track.
+Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
+regarding both Part I and Part II, 9FEB-2MAR17. For Part I, Alex provided 
+guidance in how to fork repositories, and offered troubleshooting advice and 
+guidance for running  code for integration solutions; generally compared my solution to his in order to see if I was on the right track.
 
 Kider, Joseph.  Multiple conversations via email and during office hours on 22FEB-2MAR17 regarding errors compiling code, printing functions, and general help        determining if solution was correct.
 ~~~
+
 ##Part 2.
 
 a. Forward Euler, midpoint integration, and RK4.  Implement JelloMesh::EulerIntegration(), 
@@ -136,7 +138,7 @@ JelloMesh::ResolveCollisions(ParticleGrid&grid)
 
 e. Extra springs that simulate shear/bending resistance.  Modify JelloMesh::InitJellowMesh()
 
-f. Implement two extra features - Uploaded Movie using Icecream (www.xyz) and Y
+f. Implement two extra features - Uploaded Movie using Icecream (www.xyz) and attempted Sphere Collision
 
 ##Part 3
 1.What is the effect of Ks and Kd parameters on the jello?
@@ -155,8 +157,7 @@ What are some different ways in which it could be improved?
 ANS: 
 The benefits are X...the drawbacks are Y.  The system could be improved by
 the utilization of better integration methods beyond RK4 to give a more realistic
-simulation; granted, more realism is probably not needed given the nature of this
-project, as opposed to a NASA simulation testing the capabilities of a spacecraft.
+simulation; granted, more realism/accuracy is probably not needed given the nature of this project, as opposed to a NASA simulation testing the capabilities of a spacecraft.
 ~~~
 
 3.What are some example systems you could model with Mass-spring simulations?
@@ -164,7 +165,7 @@ Explain how you would construct the model.
 
 ~~~
 ANS: 
- Cloth is an example of a system you could model with mass spring simulations; for the model, you would have to incorporate structural, shear, and bend springs and take into consideration that most cloth is not very elastic (Author Unknown, Date       Unknown).  To construct the model, cloth should be model as a triangle mesh of      particles, with the aforementioned spring forces formulated per triangle and in 
+Cloth is an example of a system you could model with mass spring simulations; for the model, you would have to incorporate structural, shear, and bend springs and take into consideration that most cloth is not very elastic (Author Unknown, Date       Unknown).  To construct the model, cloth should be model as a triangle mesh of      particles, with the aforementioned spring forces formulated per triangle and in 
 edge-adjacent triangles; additionally, an advanced technique called "flypapering" is utilized to give particles more freedom and thus realism (Baraff et. al, 2003).    Also, models involving cloth will usually utilize the Euler method.                 (Baraff et. al, 2003)
 ~~~
 
@@ -173,7 +174,11 @@ to make the jello stable?
 
 ~~~
 ANS: 
-Fairly; seems a bit.......RK4?
+The jello behaves fairly realistically, although when it hits an object it 
+tends to have more oscillation/jiggling than what I've experienced anecdotally.
+I utilized RK4 to integrate, basically due to the fact that it was the default 
+and appeared to have a good degree of accuracy; using other methods would have
+decreased the accuracy of the simulation so I decided to stay with RK4.
 ~~~
 
 5.How would you model and simulate water (in terms of continuous simulation)?
@@ -190,23 +195,15 @@ method to tracking the motion and particles over time in the simulation.
 ~~~
 References
 
-Almodovar, Alex. Multiple conversations (both in-person and via email/text) regarding both Part I and Part II, 9FEB-2MAR17. For Part II, Alex provided guidance/help in resolving contacts and help with floor interesections, as well as general help   compiling/fixing coding errors.
+Almodovar, Alex. Multiple conversations (both in-person and via email/text) regarding both Part I and Part II, 9FEB-2MAR17. For Part II, Alex provided guidance/help in resolving contacts, help with floor interesections, as well as general help   compiling/fixing coding errors.
 
 Baraff, D., Witkin, A., and Kass, M.  (2003).  Untangling Cloth.  Pixar Animation  Studios.  
 Retrieved from http://graphics.pixar.com/library/UntanglingCloth/paper.pdf
 
-Kider, Joseph.  Conversations via email and during office hours on 22FEB-2MAR17 regarding errors compiling code, finding correct solutions for functions, and general help with the composition/functionality of the JelloCube program.
+Kider, Joseph.  Conversations via email and during office hours on 22FEB-2MAR17 regarding errors compiling code, finding correct solutions for all functions, and general help with the composition/functionality of the JelloCube program.
 
 Author Unknown. (Date Unknown).  Mass-Spring Systems PowerPoint.  Rensselaer       Polytechnic Institute.  Retrieved from https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf.
 ~~~
 
 =======
-Something
 
-| RK1  | RK2 | RK4 | Exact |
-| ------------- | ------------- | ------------- | ------------- |
-| 0.1  | 0.2 | 0.3 | 0.4 |
-| 0.1  | 0.2 | 0.3 | 0.4 | 
-| 0.1  | 0.2 | 0.3 | 0.4 | 
-| 0.1  | 0.2 | 0.3 | 0.4 | 
->>>>>>> 7141ba4ae284621f3de83014a7292ffb90cc22e7
