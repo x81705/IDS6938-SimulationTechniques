@@ -54,12 +54,7 @@ c. Run 3 numerical integration solutions: RK1, RK2, and RK4 to generate numerica
 ANS: 
 Dr. Kider and I set up an example.txt file, which contained the printed values from the program, and transposed to the values to excel. I then utilized excel to graph the values.  The graph below depicts RK1, RK2, RK4, and the exact solution.
 
-![](images/graph1.png?raw=true)
-![](http://)
 
-
-
-IMAGE DOESNT DISPLAYYYY!!!!!!!!!!!!!!!!!!!!!!!!
 ALSO, JUST REFORMATTED TO INCLUDE 5 DECIMEL PLACES IN EXCEL; STILL CANNOT SEE 
 ANY REAL DIFFERENCE, LIKELY NEED TO REFORMAT HOW THE CHART/GRAPH IS SETUP
 
@@ -74,10 +69,9 @@ d. Plot error percentages for RK1, RK2, and RK4 in another graph.  Error defined
 ~~~
 ANS:
 Utilized the same excel spreadsheet and graphed the error percentages from the program (this utilzed the formula %error = |exact-approx|/exact).  The graph below depicts error percentage for RK1, RK2, and RK4.
-
-![(image/graph2.png?raw=true)]![](http://)!
-IMAGE DOESN"T DISPLAY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ~~~
+![](images/graph2.png?raw=true)
+
 
 --
 
