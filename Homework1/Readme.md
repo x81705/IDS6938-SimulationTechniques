@@ -83,13 +83,16 @@ e. Vary step size h = n where you define three n values for x = <0.0, 10.0>. Plo
 
 ~~~
 ANS:
-For this, I reran the program utilizing N =0.5, N=1.0, and N=5.0, by modifying the h variable.  For each iteration, I copied/pasted the RK4 and Error Data into a separate excel spreadsheet and graphed.
-
-INSERT IMAGES!!!!!!!!!!!!!!!!!!!!!!!!!
-
+For this, I reran the program utilizing N =0.5, N=1.0, and N=5.0, 
+by modifying the h variable.  For each iteration, I copied/pasted 
+the RK4 and Error Data into a separate excel spreadsheet and graphed.
 ~~~
+INSERT IMAGES!!!!!!!!!!!!!!!
+
 
 --
+
+
 f. Analyze results: 1. Describe how varying integration method changes accuracy, 2. What happens as you increase x value
 to the accuracy, 3. How does varying step size effect accuracy, 4. Which method is most accurage and why (what is taken into
 account in the solution). 
@@ -121,6 +124,7 @@ Kider, Joseph.  Multiple conversations via email and during
 office hours on 22FEB-2MAR17 regarding errors compiling code,
 printing functions, and general help determining if solution was correct.
 ~~~
+
 
 ##Part 2.
 
