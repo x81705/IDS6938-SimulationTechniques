@@ -507,6 +507,7 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		Particle& p = GetParticle(grid, contact.m_p);
 		vec3 normal = contact.m_normal;
 		double dist = contact.m_distance;
+		vec3 normalizedPosition = contact.m_normal * contact.m_distance / abs(contact.m_distance);
 
 		// TODO - possibly use the particle collision code again?  maybe this refers to bouncing motion? On Webcourses
 		// take contact.m_normal and divide...
@@ -517,13 +518,13 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		//	p.force += (g_penaltyKs * (normal * dist)) + (g_penaltyKd * (normal * dist)); 
 
 		double elastic = JelloMesh::g_penaltyKs * (contact.m_distance);
-		double dampening = g_penaltyKd * dist; //Joe helped through g_penaltyKd; 
-		vec3 normalizedPosition = contact.m_normal * contact.m_distance / abs(contact.m_distance);
+		double dampening = g_penaltyKd; //Joe helped through g_penaltyKd; Alex helped with rearranging/restructuring of code
+		
 
 		p.force += (elastic + dampening) * (normalizedPosition);
-		p.velocity = p.position - contact.m_normal * dist; //Joe helped through -contact.m_normal * 
+		//p.velocity = p.position - contact.m_normal * dist; //Joe helped through -contact.m_normal * 
 
-		p.position = dist * normal;//Alex helped
+		//p.position = dist * normal;//Alex helped
 		
 	}
 }
