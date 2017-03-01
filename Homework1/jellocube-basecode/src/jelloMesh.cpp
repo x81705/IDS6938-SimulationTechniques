@@ -3,9 +3,9 @@
 #include <algorithm>
 #include <math.h>
 
-// TODO - can modify all to modify how jello interacts with environment? Alex helped with constant manipulation
-double JelloMesh::g_structuralKs = 2000.0;
-double JelloMesh::g_structuralKd = 1.0;
+// TODO - can modify all to modify how jello interacts with environment? Alex/Joe helped with constant manipulation
+double JelloMesh::g_structuralKs = 3000.0;
+double JelloMesh::g_structuralKd = 5.0;
 double JelloMesh::g_attachmentKs = 2000.0;
 double JelloMesh::g_attachmentKd = 1.0;
 double JelloMesh::g_shearKs = 2000.0;
@@ -246,6 +246,7 @@ void JelloMesh::InitJelloMesh()
 			}
 		}
 	}
+	
 
 	// Init mesh geometry
 	m_mesh.clear();
@@ -298,10 +299,10 @@ unsigned int JelloMesh::GetDrawFlags() const
 void JelloMesh::DrawMesh(const vec3& eyePos)
 {
 	const ParticleGrid& g = m_vparticles;
-	float red[4] = { 1.0,0.4,0.4,0.8 }; //changed from float to double, didn't help
+	float red[4] = { 1.0,0.4,0.4,0.8 }; 
 	float white[4] = { 1.0,1.0,1.0,1.0 };
 	float pink[4] = { 0.5,0.0,0.0,1.0 };
-	float black[4] = { 0.0,0.0,0.0,1.0 }; //changed from float to double, didn't help
+	float black[4] = { 0.0,0.0,0.0,1.0 }; 
 	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, red);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, black);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, black);
@@ -506,6 +507,7 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		Particle& p = GetParticle(grid, contact.m_p);
 		vec3 normal = contact.m_normal;
 		double dist = contact.m_distance;
+		float r = 0.8; //Alex helped
 
 		// TODO - possibly use the particle collision code again?  maybe this refers to bouncing motion? On Webcourses
 		// take contact.m_normal and divide...
@@ -519,8 +521,11 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		double dampening = g_penaltyKd * dist; //Joe helped through g_penaltyKd; 
 		vec3 normalizedPosition = contact.m_normal * contact.m_distance / abs(contact.m_distance);
 
+		
 		p.force += (elastic + dampening) * (normalizedPosition);
 		p.velocity = p.position - contact.m_normal * dist; //Joe helped through -contact.m_normal * 
+
+		p.position = dist * normal;//Alex helped
 		
 	}
 }
@@ -533,15 +538,15 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 		Particle& pt = GetParticle(grid, result.m_p);
 		vec3 normal = result.m_normal;
 		float dist = result.m_distance;
-		float r = 0.5;
+		float r = 0.8;
 
 		// Bounciness restitution - Velocity - 2 * Velocity * Normal * Restitution equation ---> code! ON collision response
 		// bouncing page on Webcourses; call RESTITUTION like COLLISION DELTA (a distance function) and make different variables; will have .normal
 		// TODO - Code below based on collision detection with ground; referenced module; USE THE EQUATION ABOVE!!!
-		// pt.velocity?
+		// pt.velocity?  Joe helped.
 
-		pt.velocity = pt.velocity - 2.0 * Dot(pt.velocity, normal)*normal*r;
-		//pt.position = dist * normal;
+		pt.velocity = pt.velocity - 2.0 * Dot(pt.velocity, normal)*normal*r; 
+		pt.position = dist * normal;
 	}
 }
 
