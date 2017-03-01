@@ -97,10 +97,16 @@ account in the solution).
 
 ~~~
 ANS:
-1. From class, in general as we go from RK1-RK4 the accuracy increases; this evidenced by a comparison between the values for each integration method as compared with the exact value obtained. 
-2. Increasing X value should increase the accuracy, as we're allowing more iterations to occur.
-3. Kind of related to 2, the more steps we take the better, so as we decrease H value, the more steps we have and the more accuracy.
-4. RK4 is most accurate; again, through comparison of all integration methods and the exact solution, we can see that RK4 is most accurate; the reason it is most accurate is................................
+1. From class, in general as we go from RK1-RK4 
+the accuracy increases; this evidenced by a comparison 
+between the values for each integration method as compared with the exact value obtained. 
+2. Increasing X value should increase the accuracy, 
+as we're allowing more iterations to occur.
+3. Kind of related to 2, the more steps we take the better, 
+so as we decrease H value, the more steps we have and the more accuracy.
+4. RK4 is most accurate; again, through comparison of all 
+integration methods and the exact solution, we can see that 
+RK4 is most accurate; the reason it is most accurate is......
 ~~~
 
 ~~~
