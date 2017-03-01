@@ -3,11 +3,11 @@
 #include <algorithm>
 #include <math.h>
 
-// TODO - can modify all to modify how jello interacts with environment? Alex helped with constant manipulation as well
+// TODO - can modify all to modify how jello interacts with environment? Alex helped with constant manipulation
 double JelloMesh::g_structuralKs = 2000.0;
-double JelloMesh::g_structuralKd = 5.0;
+double JelloMesh::g_structuralKd = 1.0;
 double JelloMesh::g_attachmentKs = 2000.0;
-double JelloMesh::g_attachmentKd = 5.0;
+double JelloMesh::g_attachmentKd = 1.0;
 double JelloMesh::g_shearKs = 2000.0;
 double JelloMesh::g_shearKd = 5.0;
 double JelloMesh::g_bendKs = 2000.0;
@@ -515,13 +515,12 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		//resolution of contacts
 		//	p.force += (g_penaltyKs * (normal * dist)) + (g_penaltyKd * (normal * dist)); 
 
-		
 		double elastic = JelloMesh::g_penaltyKs * (contact.m_distance);
-		double dampening = g_penaltyKd * g_penaltyKs; //Joe helped through g_penaltyKd; Alex with contact.m_distance 
+		double dampening = g_penaltyKd * dist; //Joe helped through g_penaltyKd; 
 		vec3 normalizedPosition = contact.m_normal * contact.m_distance / abs(contact.m_distance);
 
 		p.force += (elastic + dampening) * (normalizedPosition);
-		p.velocity = p.position - contact.m_normal * contact.m_distance; //Joe helped through -contact.m_normal * 
+		p.velocity = p.position - contact.m_normal * dist; //Joe helped through -contact.m_normal * 
 		
 	}
 }
@@ -541,7 +540,7 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 		// TODO - Code below based on collision detection with ground; referenced module; USE THE EQUATION ABOVE!!!
 		// pt.velocity?
 
-		pt.velocity = pt.velocity - 2 * Dot(pt.velocity, normal)*normal*r;
+		pt.velocity = pt.velocity - 2.0 * Dot(pt.velocity, normal)*normal*r;
 		//pt.position = dist * normal;
 	}
 }
