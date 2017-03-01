@@ -1,11 +1,11 @@
-#Charlie Timm --
+#Charlie Timm -- Taking 1 Alibi Day
 #Homework 1 : The Jello Cube (Continuous Simulation Assignment
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
 
 
 This is the framework for homework #1. Please first read the [homework writeup](HomeWork%231.pdf).
 
-The assignment is due: Wednesday, February 27 at 11:59PM (EST)
+The assignment is due: Wednesday, February 27 at 11:59PM (EST); with alibi, and extension, March 2 at 11:59PM (EST)
 
 | undeformed jello  | deformed jello |
 | ------------- | ------------- |
@@ -13,7 +13,7 @@ The assignment is due: Wednesday, February 27 at 11:59PM (EST)
 
 
 
-<<<<<<< HEAD
+
 ## Part 1. Numerical Analysis of Integration Functions
 a. Take integral of dy/dx = y-1/2*e^x/2*sin(5x)+5e^x/2*cos(5x), where initial condition for ODE is defined by y(0)=0.
 
@@ -131,8 +131,7 @@ JelloMesh::ResolveCollisions(ParticleGrid&grid)
 
 e. Extra springs that simulate shear/bending resistance.  Modify JelloMesh::InitJellowMesh()
 
-f. Implement two extra features - X and Y
-
+f. Implement two extra features - Uploaded Movie using Icecream (www.xyz) and Y
 
 ##Part 3
 1.What is the effect of Ks and Kd parameters on the jello?
@@ -152,7 +151,7 @@ ANS:
 The benefits are X...the drawbacks are Y.  The system could be improved by
 the utilization of better integration methods beyond RK4 to give a more realistic
 simulation; granted, more realism is probably not needed given the nature of this
-project.
+project, as opposed to a NASA simulation testing the capabilities of a spacecraft.
 ~~~
 
 3.What are some example systems you could model with Mass-spring simulations?
@@ -181,10 +180,7 @@ into the laws of physics as they relate to water and how it moves and what can c
 method to tracking the motion and particles over time in the simulation.
 ~~~
 
-| RK1 | RK2 | RK4 | Exact |
-| --- | --- | --- | ----- |
-| 0.0 | 0.0 | 0.0 | 0.0 |
-| 0.5 | ttt | ttt | ttt |
+
 
 ~~~
 References

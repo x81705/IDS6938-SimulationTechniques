@@ -610,7 +610,7 @@ void JelloMesh::MidPointIntegrate(double dt)
 	ParticleGrid target = m_vparticles;  // target is a copy!
 	ParticleGrid& source = m_vparticles;  // source is a ptr!
 
-										  // Step 1 - remove which code?
+										  // Step 1 - Joe removed code during office hours...more to remove?
 	ParticleGrid accum1 = m_vparticles;
 	for (int i = 0; i < m_rows + 1; i++)
 	{
