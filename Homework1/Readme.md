@@ -55,10 +55,13 @@ ANS:
 Dr. Kider and I set up an example.txt file, 
 which contained the printed values from the program, 
 and transposed to the values to excel. I then utilized 
-excel to graph the values.  The table/graph below depicts 
+excel to graph the values.  The excel tables show the 
+acquired values and the graph below depicts 
 RK1, RK2, RK4, and the exact solution.  
 
 ~~~
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/chart1.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/chart2.PNG?raw=true)
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/graph1.PNG?raw=true)
 
 --
