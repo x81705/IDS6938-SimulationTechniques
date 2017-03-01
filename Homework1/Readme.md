@@ -202,7 +202,7 @@ method to tracking the motion and particles over time in the simulation.
 ~~~
 References
 
-Almodovar, Alex. Multiple conversations (both in-person and via email/text) regarding both Part I and Part II, 9FEB-2MAR17. For Part II, Alex provided guidance/help in resolving contacts, help with floor interesections, as well as general help   compiling/fixing coding errors.
+Almodovar, Alex. Multiple conversations (both in-person and via email/text) regarding both Part I and Part II, 9FEB-2MAR17. For Part II, Alex provided guidance/help in resolving contacts, help with floor interesections, cylinder collisions, as well as general help compiling/fixing syntax, constant/variable manipulation, and coding errors.
 
 Baraff, D., Witkin, A., and Kass, M.  (2003).  Untangling Cloth.  Pixar Animation  Studios.  
 Retrieved from http://graphics.pixar.com/library/UntanglingCloth/paper.pdf
