@@ -584,7 +584,12 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 	vec3 cylinderAxis = cylinderEnd - cylinderStart;
 	double cylinderRadius = cylinder->r;
 
-	// TODO - no idea; have to take into consideration the axes and length
+	// TODO - no idea; have to take into consideration the axes and length of cylinders; Alex helped with using time equation on piazza link
+	// How to find the intersection of the jello with the cylinder; minimize distance, take dot product of points over
+	// abs value of start and end points?
+
+	//double time = - Dot((cylinderStart, cylinderAxis) / cylinderAxis) 
+
 	return false;
 }
 

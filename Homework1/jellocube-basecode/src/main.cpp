@@ -15,7 +15,7 @@
 
 JelloMesh theJello;
 Camera theCamera;
-World theWorld("../worlds/ground.xml");
+World theWorld("../worlds/cylinders.xml");//From piazza posting; changed from world/ground.xml to worlds/cylinders.xml
 mmc::FpsTracker theFpsTracker;
 
 // UI Helpers
