@@ -479,7 +479,7 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
 		}
 	}
 
-	// Update springs - do we have to add code for bend and shear springs?
+	// Update springs - 
 	for (unsigned int i = 0; i < m_vsprings.size(); i++)
 	{
 		Spring& spring = m_vsprings[i];
@@ -507,7 +507,6 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		Particle& p = GetParticle(grid, contact.m_p);
 		vec3 normal = contact.m_normal;
 		double dist = contact.m_distance;
-		float r = 0.8; //Alex helped
 
 		// TODO - possibly use the particle collision code again?  maybe this refers to bouncing motion? On Webcourses
 		// take contact.m_normal and divide...
@@ -521,7 +520,6 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		double dampening = g_penaltyKd * dist; //Joe helped through g_penaltyKd; 
 		vec3 normalizedPosition = contact.m_normal * contact.m_distance / abs(contact.m_distance);
 
-		
 		p.force += (elastic + dampening) * (normalizedPosition);
 		p.velocity = p.position - contact.m_normal * dist; //Joe helped through -contact.m_normal * 
 
@@ -557,7 +555,7 @@ bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 
 	if (p.position[1] <= 0.0)
 	{
-		intersection.m_type = JelloMesh::CONTACT;//Joe helped with this code during office hours; also Alex for below
+		intersection.m_type = JelloMesh::CONTACT;//Joe helped with this code during office hours
 		intersection.m_distance = -p.position[1];
 			intersection.m_normal = vec3(0.0, 1.0 , 0.0);
 			intersection.m_p = p.index;
