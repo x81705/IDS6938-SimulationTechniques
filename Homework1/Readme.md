@@ -114,9 +114,12 @@ References
 Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
 regarding both Part I and Part II, 9FEB-2MAR17. For Part I, Alex provided 
 guidance in how to fork repositories, and offered troubleshooting advice and 
-guidance for running  code for integration solutions; generally compared my solution to his in order to see if I was on the right track.
+guidance for running  code for integration solutions; generally compared 
+my solution to his in order to see if I was on the right track.
 
-Kider, Joseph.  Multiple conversations via email and during office hours on 22FEB-2MAR17 regarding errors compiling code, printing functions, and general help        determining if solution was correct.
+Kider, Joseph.  Multiple conversations via email and during 
+office hours on 22FEB-2MAR17 regarding errors compiling code,
+printing functions, and general help determining if solution was correct.
 ~~~
 
 ##Part 2.
