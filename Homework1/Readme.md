@@ -59,7 +59,6 @@ ALSO, JUST REFORMATTED TO INCLUDE 5 DECIMEL PLACES IN EXCEL; STILL CANNOT SEE
 ANY REAL DIFFERENCE, LIKELY NEED TO REFORMAT HOW THE CHART/GRAPH IS SETUP
 
 ~~~
-![](images/graph1.png?raw=true)
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/graph1.PNG?raw=true)
 
 --
