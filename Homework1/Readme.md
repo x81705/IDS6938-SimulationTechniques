@@ -70,9 +70,12 @@ d. Plot error percentages for RK1, RK2, and RK4 in another graph.  Error defined
 
 ~~~
 ANS:
-Utilized the same excel spreadsheet and graphed the error percentages from the program (this utilzed the formula %error = |exact-approx|/exact).  The graph below depicts error percentage for RK1, RK2, and RK4.
+Utilized the same excel spreadsheet and graphed the 
+error percentages from the program (this utilzed the formula 
+%error = |exact-approx|/exact).  The graph below depicts 
+error percentage for RK1, RK2, and RK4.
 ~~~
-![](images/graph2.png?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/graph2.PNG?raw=true)
 
 
 --
