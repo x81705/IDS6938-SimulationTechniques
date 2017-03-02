@@ -150,10 +150,11 @@ See code for A-E in Part II in JelloCube.sln in x81705 repository (linked via we
 f. Implement two extra features  
 ~~~
 ANS:
-Uploaded movie using Icecream application to www.youtube.com/; 
-[https://youtu.be/-yUUop7f_EU] 
+Uploaded movie using Icecream application to www.youtube.com (see link below); 
 - attempted to implement Sphere Collision, 
 ~~~
+[https://youtu.be/-yUUop7f_EU] 
+
 
 ##Part 3
 1.What is the effect of Ks and Kd parameters on the jello?
