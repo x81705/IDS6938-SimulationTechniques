@@ -294,7 +294,8 @@ University of Central Florida.  Retrieved from
 https://webcourses.ucf.edu/courses/1246518/files/60770909?module_item_id=10539019 
 
 Author Unknown. (Date Unknown).  Mass-Spring Systems PowerPoint.  
-Rensselaer Polytechnic Institute.  Retrieved from https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf 
+Rensselaer Polytechnic Institute.  Retrieved from 
+https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf 
 ~~~
 
 =======
