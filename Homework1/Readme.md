@@ -173,7 +173,8 @@ f. Implement two extra features
 ~~~
 ANS:
 Uploaded movie using Icecream application to www.youtube.com (see link below); 
-- Attempted to implement Sphere Collision... 
+- Would have attempted Sphere Collision, but did not have time due to
+a focus on cylinder intersection
 ~~~
 [https://youtu.be/-yUUop7f_EU] 
 
