@@ -584,7 +584,7 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 	vec3 cylinderAxis = cylinderEnd - cylinderStart;
 	double cylinderRadius = cylinder->r;
 	float r = .75;
-	double time = (cylinderStart - point * Dot(cylinderStart, -cylinderAxis) / ((cylinderEnd - cylinderStart) * (cylinderEnd - cylinderStart));//Alex helped with defining these variables below; referenced google hangout
+	double time = (cylinderStart - p.position * Dot(cylinderStart, -cylinderAxis) / ((cylinderEnd - cylinderStart) * (cylinderEnd - cylinderStart));//Alex helped with defining these variables below; referenced google hangout
 	vec3 point = cylinderStart + time * cylinderAxis;
 	
 	 

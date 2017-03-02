@@ -151,7 +151,7 @@ f. Implement two extra features
 ~~~
 ANS:
 Uploaded movie using Icecream application to www.youtube.com (see link below); 
-- attempted to implement Sphere Collision, 
+- Attempted to implement Sphere Collision... 
 ~~~
 [https://youtu.be/-yUUop7f_EU] 
 
