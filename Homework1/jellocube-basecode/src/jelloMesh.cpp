@@ -466,7 +466,7 @@ void JelloMesh::CheckForCollisions(ParticleGrid& grid, const World& world)
 
 void JelloMesh::ComputeForces(ParticleGrid& grid)
 {
-	// Add external froces to all points - change i,j,k...but to what?
+	// Add external froces to all points - change i,j,k?...but to what?
 	for (int i = 0; i < m_rows + 1; i++)
 	{
 		for (int j = 0; j < m_cols + 1; j++)
@@ -509,21 +509,20 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
 		double dist = contact.m_distance;
 		vec3 normalizedPosition = contact.m_normal * contact.m_distance / abs(contact.m_distance);
 
-		// TODO - possibly use the particle collision code again?  maybe this refers to bouncing motion? On Webcourses
-		// take contact.m_normal and divide...
-		// Push velocity straight up in the direction of the normal; a couple ways to do it...put spring force?
+		// TODO - 
+		// Joe helped - Push velocity straight up in the direction of the normal; a couple ways to do it...put spring force?
 		//TRY DIFFERENT THINGS; velocity of normal, reflect back up
 		// Alex helped understand application of penalties to account for 
 		//resolution of contacts
 		//	p.force += (g_penaltyKs * (normal * dist)) + (g_penaltyKd * (normal * dist)); 
 
 		double elastic = JelloMesh::g_penaltyKs * (contact.m_distance);
-		double dampening = g_penaltyKd; //Joe helped through g_penaltyKd; Alex helped with rearranging/restructuring of code
+		double dampening = g_penaltyKd; //Joe helped through g_penaltyKd; Alex helped with rearranging/restructuring of code to make jello cube not implode
 		
 
 		p.force += (elastic + dampening) * (normalizedPosition);
+		
 		//p.velocity = p.position - contact.m_normal * dist; //Joe helped through -contact.m_normal * 
-
 		//p.position = dist * normal;//Alex helped
 		
 	}
@@ -541,7 +540,8 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 
 		// Bounciness restitution - Velocity - 2 * Velocity * Normal * Restitution equation ---> code! ON collision response
 		// bouncing page on Webcourses; call RESTITUTION like COLLISION DELTA (a distance function) and make different variables; will have .normal
-		// TODO - Code below based on collision detection with ground; referenced module; USE THE EQUATION ABOVE!!!
+
+		// TODO - Joe Helped - Code below based on collision detection with ground; referenced module; USE THE EQUATION ABOVE!!!
 		// pt.velocity?  Joe helped.
 
 		pt.velocity = pt.velocity - 2.0 * Dot(pt.velocity, normal)*normal*r; 
@@ -563,7 +563,7 @@ bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 			return true;
 	}
 
-	else if (p.position[1] < COLLISION_DELTA) //Alex helped with construction of below
+	else if (p.position[1] < COLLISION_DELTA) //Alex helped with construction of lines below and constant manipulation
 	{
 		intersection.m_type = JelloMesh::COLLISION;
 		intersection.m_distance = COLLISION_DELTA-p.position[1];
@@ -585,7 +585,7 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 	double cylinderRadius = cylinder->r;
 
 	vec3 point = cylinderStart * cylinderAxis;
-	double time = (cylinderStart - point * Dot(cylinderStart, -cylinderAxis) / (cylinderAxis * cylinderAxis);//Alex helped with defining these variables below
+	double time = (cylinderStart - point * Dot(cylinderStart, -cylinderAxis) / ((cylinderEnd - cylinderStart) * (cylinderEnd - cylinderStart));//Alex helped with defining these variables below
 	 
 	vec3 normal = p.position - point; 
 	double dist = normal.Length();

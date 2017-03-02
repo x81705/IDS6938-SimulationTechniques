@@ -50,7 +50,7 @@ c. Run 3 numerical integration solutions: RK1, RK2, and RK4 to generate numerica
 ANS: 
 Dr. Kider and I set up an example.txt file, 
 which contained the printed values from the program, 
-and transposed to the values to excel. I then utilized 
+and transposed the values to excel. I then utilized 
 excel to graph the values.  The excel tables show the 
 acquired values and the graph below depicts 
 RK1, RK2, RK4, and the exact solution.  
