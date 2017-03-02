@@ -152,11 +152,13 @@ e. Extra springs that simulate shear/bending resistance.
 ANS:
 See code for A-E in Part II in JelloCube.sln in 
 x81705 repository (linked via webcourses).  As of now, 
-cylinder collision is not operational, but screenshots 
-of the jellocube bouncing off the ground, compressing,
-jiggling, and returning/maintaining structural integrity 
-are shown below.  Additionally, a video has been uploaded 
-to YouTube, link provided in Part F below.
+cylinder collision is not operational (can get
+cylinders to display, but no interaction with cube), 
+but screenshots  of the jellocube bouncing off the ground, 
+compressing, jiggling, and returning/maintaining 
+structural integrity are shown below.  Additionally, 
+a video has been uploaded to YouTube, link provided 
+in Part F below.
 ~~~
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/successjello1.PNG?raw=true)
 
