@@ -271,19 +271,30 @@ in the simulation (Kider, Unknown).
 ~~~
 References
 
-Almodovar, Alex. Multiple conversations (both in-person and via email/text) regarding both Part I and Part II, 9FEB-2MAR17. For Part II, Alex provided guidance/help in resolving contacts, help with floor interesections, cylinder collisions, as well as general help compiling/fixing syntax, constant/variable manipulation, and coding errors.  All coding has been labeled in locations where Alex has helped me.
+Almodovar, Alex. Multiple conversations (both in-person 
+and via email/text) regarding both Part I and Part II, 
+9FEB-2MAR17. For Part II, Alex provided guidance/help 
+in resolving contacts, help with floor interesections, 
+cylinder collisions, as well as general help compiling/fixing 
+syntax, constant/variable manipulation, and coding errors.  
+All coding has been labeled in locations where Alex has helped me.
 
-Baraff, D., Witkin, A., and Kass, M.  (2003).  Untangling Cloth.  Pixar Animation  Studios.  
+Baraff, D., Witkin, A., and Kass, M.  (2003).  Untangling Cloth.  
+Pixar Animation  Studios.  
 Retrieved from http://graphics.pixar.com/library/UntanglingCloth/paper.pdf
 
-Kider, Joseph.  Conversations via email and during office hours on 22FEB-2MAR17 regarding errors compiling code, finding correct solutions for all functions, and general help with the composition/functionality of the JelloCube program.  All coding
-has been labeled in locations where Joe has helped me.
+Kider, Joseph.  Conversations via email and during 
+office hours on 22FEB-2MAR17 regarding errors compiling 
+code, finding correct solutions for all functions, and general 
+help with the composition/functionality of the JelloCube program.  
+All coding has been labeled in locations where Joe has helped me.
 
-Kider, Joseph. (Date Unknown).  Discrete PowerPoint Presentation.  University of 
-Central Florida.  Retrieved from 
+Kider, Joseph. (Date Unknown).  Discrete PowerPoint Presentation.  
+University of Central Florida.  Retrieved from 
 https://webcourses.ucf.edu/courses/1246518/files/60770909?module_item_id=10539019 
 
-Author Unknown. (Date Unknown).  Mass-Spring Systems PowerPoint.  Rensselaer       Polytechnic Institute.  Retrieved from https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf 
+Author Unknown. (Date Unknown).  Mass-Spring Systems PowerPoint.  
+Rensselaer Polytechnic Institute.  Retrieved from https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf 
 ~~~
 
 =======
