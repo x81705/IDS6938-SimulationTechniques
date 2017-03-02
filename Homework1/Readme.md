@@ -98,7 +98,7 @@ the RK4 and Error Data into a separate excel spreadsheet and graphed.
 
 
 f. Analyze results: 1. Describe how varying integration method changes accuracy, 2. What happens as you increase x value
-to the accuracy, 3. How does varying step size effect accuracy, 4. Which method is most accurage and why (what is taken into
+to the accuracy, 3. How does varying step size effect accuracy, 4. Which method is most accurate and why (what is taken into
 account in the solution). 
 
 ~~~
@@ -110,10 +110,13 @@ between the values for each integration method as compared with the exact soluti
 as demonstrated by the graphs, we see the integrations getting further from
 the exact solution.
 3. The more steps we take the better, as we're increasing the amount of "slices"
-we're taking.
+we're taking which is essentially increasing the accuracy; see graphs above for the
+error rate when H=.5, .25, and .10.
 4. RK4 is most accurate; again, through comparison of all 
 integration methods and the exact solution, we can see that 
-RK4 is most accurate; the reason it is most accurate is......
+RK4 is most accurate by the graphs below; the reason for this is that we're 
+taking four approximations to the slope, and more approximations result in
+more accuracy.
 ~~~
 
 ~~~
@@ -122,7 +125,7 @@ References
 Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
 regarding both Part I and Part II, 9FEB-2MAR17. For Part I, Alex provided 
 guidance in how to fork repositories, and offered troubleshooting advice and 
-guidance for running  code for integration solutions; generally compared 
+guidance for running  code for integration solutions; compared 
 my solution to his in order to see if I was on the right track.
 
 Kider, Joseph.  Multiple conversations via email and during 
@@ -133,24 +136,26 @@ printing functions, and general help determining if solution was correct.
 
 ##Part 2.
 
-a. Forward Euler, midpoint integration, and RK4.  Implement JelloMesh::EulerIntegration(), 
-JelloMesh::MidpointIntegration(), and JelloMesh::RK4Integration()
+a. Forward Euler, midpoint integration, and RK4.  
 
-ANS: See jelloMesh.cpp; essentially took the Lecture6 Solution and integrated into jellowMesh.cpp from lines
-488-605.
+b. Implement spring forces in JelloMesh::ComputerForces(ParticleGrid&grid), find good spring constants.
 
-b. Implement spring forces in JelloMesh::ComputerForces(ParticleGrid&grid), find good spring constants
+c. Collision and Penetration Detection.  
 
-c. Test collisions/contacts with ground and cylyndrical objects in scene.  Look at 
-JelloMesh::CheckForCollisions(ParticleGrid&grid) and implement JelloMesh::CylinderCollision() and 
-JelloMesh::FloorCollision()
+d. Collision and penetration response.  
 
-d. Collision and penetration response.  Implement JelloMesh::ResolveContacts(ParticleGrid&grid) and
-JelloMesh::ResolveCollisions(ParticleGrid&grid)
+e. Extra springs that simulate shear/bending resistance.  
 
-e. Extra springs that simulate shear/bending resistance.  Modify JelloMesh::InitJellowMesh()
-
+~~~
+ANS:
+See code for A-E in Part II in JelloCube.sln in x81705 repository (linked via webcourses)
+~~~
 f. Implement two extra features - Uploaded Movie using Icecream (www.xyz) and attempted Sphere Collision
+~~~
+ANS:
+Uploaded movie using Icecream application to www.youtube.com/
+- attempted to implement Sphere Collision, 
+~~~
 
 ##Part 3
 1.What is the effect of Ks and Kd parameters on the jello?
@@ -158,7 +163,8 @@ f. Implement two extra features - Uploaded Movie using Icecream (www.xyz) and at
 ~~~
 ANS: 
 Ks is the spring constant and Kd is the dampening constant; therefore, they are
-two opposing forces that come into effect when the jello hits the surface.
+two opposing forces that come into effect when the jello hits the ground or the
+surface of any object.
 ~~~
 
 
@@ -167,9 +173,10 @@ What are some different ways in which it could be improved?
 
 ~~~
 ANS: 
-The benefits are X...the drawbacks are Y.  The system could be improved by
-the utilization of better integration methods beyond RK4 to give a more realistic
-simulation; granted, more realism/accuracy is probably not needed given the nature of this project, as opposed to a NASA simulation testing the capabilities of a spacecraft.
+The overall benefit is that the jello interacts with its environment in a fairly
+realistic fashion; the drawbacks (at least in my system) is that it appears to slightly hover above the ground and not be quite as affected by gravity/spring forces the way that I've seen a jello cube; additionally, if dropping from a certain height, there should be a mechanism to make the jello cube actually break structural integrity and fall into multiple pieces.  
+
+The system could be improved by the utilization of better integration methods beyond RK4 to give a more realistic simulation; granted, more realism/accuracy is probably not needed given the nature of this project, as opposed to something like a NASA simulation testing the capabilities of a spacecraft.
 ~~~
 
 3.What are some example systems you could model with Mass-spring simulations?
@@ -207,12 +214,13 @@ method to tracking the motion and particles over time in the simulation.
 ~~~
 References
 
-Almodovar, Alex. Multiple conversations (both in-person and via email/text) regarding both Part I and Part II, 9FEB-2MAR17. For Part II, Alex provided guidance/help in resolving contacts, help with floor interesections, cylinder collisions, as well as general help compiling/fixing syntax, constant/variable manipulation, and coding errors.
+Almodovar, Alex. Multiple conversations (both in-person and via email/text) regarding both Part I and Part II, 9FEB-2MAR17. For Part II, Alex provided guidance/help in resolving contacts, help with floor interesections, cylinder collisions, as well as general help compiling/fixing syntax, constant/variable manipulation, and coding errors.  All coding has been labeled in locations where Alex has helped me.
 
 Baraff, D., Witkin, A., and Kass, M.  (2003).  Untangling Cloth.  Pixar Animation  Studios.  
 Retrieved from http://graphics.pixar.com/library/UntanglingCloth/paper.pdf
 
-Kider, Joseph.  Conversations via email and during office hours on 22FEB-2MAR17 regarding errors compiling code, finding correct solutions for all functions, and general help with the composition/functionality of the JelloCube program.
+Kider, Joseph.  Conversations via email and during office hours on 22FEB-2MAR17 regarding errors compiling code, finding correct solutions for all functions, and general help with the composition/functionality of the JelloCube program.  All coding
+has been labeled in locations where Joe has helped me.
 
 Author Unknown. (Date Unknown).  Mass-Spring Systems PowerPoint.  Rensselaer       Polytechnic Institute.  Retrieved from https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf.
 ~~~
