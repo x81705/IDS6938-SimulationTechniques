@@ -55,7 +55,8 @@ From state 0 it is equally probable of landing on squares 1-6. From state 1 t is
 Produce graphs to analyze the results and show how the game evolves over time. Plot useful statistics of the results such as percentage chance of finishing the game in n-moves, cummulative probability of finishing the game in n-moves, and other ways to convey useful information of the results.
 
 * **(c) Simulate and analyze the results of Snakes and Ladders -10pts:**  Contruct a new transition matrix based on the table:
-<BR>
+
+
  Ladders From  | Ladders To | |  Snakes From  | Snakes To 
  -------- | -------- | ------------- | -------- | -------- 
 3|19| |11|7
@@ -66,7 +67,9 @@ Produce graphs to analyze the results and show how the game evolves over time. P
 53|74| |47|26
 63|86| |83|39
 76|91| |92|75
-84|98| |99|70<BR>
+84|98| |99|70
+
+
 
 Run the same simulation and analyze your results similar to part (b) for the proper game of *Snakes and Ladders*. How often are the snakes and ladders used, how do the probability of finishing change, etc?
 * **(d) Think - 0pts:** If these games are built entirely on chance, do they require any strategy? Is it really a *game*, would you rather play games of chance or games of strategy?
