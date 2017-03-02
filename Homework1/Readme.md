@@ -180,10 +180,14 @@ Uploaded movie using Icecream application to www.youtube.com (see link below);
 
 ~~~
 ANS: 
-Ks is the spring constant and Kd is the dampening constant; therefore, they are
-two opposing forces that come into effect when the jello hits the ground or the
-surface of any object.  Through trial and error (and the help of Alex/Joe), I utilized values from 2000.0-10000.0 for Ks, and much lower values ranging from
-1.0-5.0 for the Kd values.
+Ks is the elastic spring parameter and Kd is the spring damping 
+parameter; therefore, they are two forces that come into effect 
+when the jello hits the ground or the surface of any object
+(total force = elastic force + damping force).  
+Through trial and error (and the help of Alex/Joe), I utilized 
+values from 2000.0-10000.0 for Ks, and much lower values 
+ranging from 1.0-5.0 for the Kd values to make a fairly 
+realistic jellocube simulation.
 ~~~
 
 
@@ -192,10 +196,24 @@ What are some different ways in which it could be improved?
 
 ~~~
 ANS: 
-The overall benefit is that the jello interacts with its environment in a fairly
-realistic fashion; the drawbacks (at least in my system) is that it appears to slightly hover above the ground and not be quite as affected by gravity/spring forces the way that I've seen a jello cube; additionally, if dropping from a certain height, there should be a mechanism to make the jello cube actually break structural integrity and fall into multiple pieces.  
+The overall benefit is that the jello interacts with its 
+environment in a fairly realistic fashion; the drawbacks 
+(at least in my system) is that it appears to not be 
+quite as affected by gravity/spring forces the way that 
+I've seen in a real jello cube (appears more fluid based
+and jiggles slower than normal); additionally, if dropped 
+from a certain height, there should be a mechanism to make 
+the jello cube actually break structural integrity 
+and fall into multiple pieces.
 
-The system could be improved by the utilization of better integration methods beyond RK4 to give a more realistic simulation; granted, more realism/accuracy is probably not needed given the nature of this project, as opposed to something like a NASA simulation testing the capabilities of a spacecraft.
+The system could be improved by the utilization of better 
+integration methods beyond RK4 to give a more realistic 
+simulation; granted, more realism/accuracy is probably not 
+needed given the nature of this project, as opposed to 
+something like a NASA simulation testing the capabilities 
+of a spacecraft.  Additionally, as mentioned above, adding
+a realistic "breaking point" could be implemented to make
+the simulation more realistic.
 ~~~
 
 3.What are some example systems you could model with Mass-spring simulations?
@@ -203,8 +221,19 @@ Explain how you would construct the model.
 
 ~~~
 ANS: 
-Cloth is an example of a system you could model with mass spring simulations; for the model, you would have to incorporate structural, shear, and bend springs and take into consideration that most cloth is not very elastic (Author Unknown, Date       Unknown).  To construct the model, cloth should be model as a triangle mesh of      particles, with the aforementioned spring forces formulated per triangle and in 
-edge-adjacent triangles; additionally, an advanced technique called "flypapering" is utilized to give particles more freedom and thus realism (Baraff et. al, 2003).    Also, models involving cloth will usually utilize the Euler method.                 (Baraff et. al, 2003)
+Cloth is an example of a system you could model with 
+mass spring simulations; for the model, you would have 
+to incorporate structural, shear, and bend springs and 
+take into consideration that most cloth is not very 
+elastic (Author Unknown, Date Unknown).  To construct 
+the model, cloth should be model as a triangle mesh 
+of particles, with the aforementioned spring forces 
+formulated per triangle and in edge-adjacent triangles; 
+additionally, an advanced technique called "flypapering" 
+is utilized to give particles more freedom and 
+thus realism (Baraff et. al, 2003).  Also, models 
+involving cloth will usually utilize the 
+Euler method (Baraff et. al, 2003).
 ~~~
 
 4.Does the jello behave realistically?  What integration method did you choose
@@ -212,20 +241,29 @@ to make the jello stable?
 
 ~~~
 ANS: 
-The jello behaves fairly realistically, although when it hits an object it 
-tends to have more oscillation/jiggling than what I've experienced anecdotally.
-I utilized RK4 to integrate, basically due to the fact that it was the default 
-and appeared to have a good degree of accuracy; using other methods would have
-decreased the accuracy of the simulation so I decided to stay with RK4.
+The jello behaves fairly realistically, although when it 
+hits an object it tends to have slower oscillation/jiggling 
+closer to water than what I've experienced anecdotally with
+jello.
+
+I utilized RK4 to integrate, basically due to the fact that 
+it was the default and appeared to have a good degree of 
+accuracy; as evinced/demonstrated in Part I, using other 
+methods would have decreased the accuracy of the simulation 
+so I decided to stay with RK4.
 ~~~
 
 5.How would you model and simulate water (in terms of continuous simulation)?
 
 ~~~
 ANS: 
-Likely would use particles to simulate the water molecules; we would have to delve
-into the laws of physics as they relate to water and how it moves and what can cause that movement (Author Unknown, Date Unknown).  Additionally, could use the Lagragian
-method to tracking the motion and particles over time in the simulation.
+Likely would use particles to simulate the water molecules; 
+we would have to delve into the laws of physics as they 
+relate to water and how it moves and what can cause/
+affect that movement through time;  
+additionally, potentially could use the Lagragian method 
+to tracking the motion and particles over time 
+in the simulation (Kider, Unknown).
 ~~~
 
 
@@ -241,7 +279,11 @@ Retrieved from http://graphics.pixar.com/library/UntanglingCloth/paper.pdf
 Kider, Joseph.  Conversations via email and during office hours on 22FEB-2MAR17 regarding errors compiling code, finding correct solutions for all functions, and general help with the composition/functionality of the JelloCube program.  All coding
 has been labeled in locations where Joe has helped me.
 
-Author Unknown. (Date Unknown).  Mass-Spring Systems PowerPoint.  Rensselaer       Polytechnic Institute.  Retrieved from https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf.
+Kider, Joseph. (Date Unknown).  Discrete PowerPoint Presentation.  University of 
+Central Florida.  Retrieved from 
+https://webcourses.ucf.edu/courses/1246518/files/60770909?module_item_id=10539019 
+
+Author Unknown. (Date Unknown).  Mass-Spring Systems PowerPoint.  Rensselaer       Polytechnic Institute.  Retrieved from https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf 
 ~~~
 
 =======
