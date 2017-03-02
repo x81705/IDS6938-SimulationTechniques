@@ -100,14 +100,15 @@ account in the solution).
 
 ~~~
 ANS:
-1. As demonstrated by the graphsm as we go from RK1-RK4 
-the accuracy increases; this evidenced by a comparison 
-between the values for each integration method as compared 
-with the exact solution obtained as evidenced in the graphs. 
-2. Increasing the parameters of the X value will show a decrease 
-in the accuracy of the integration methods as X increases; again, 
-as demonstrated by the graphs, we see the integrations getting further
-from the exact solution.
+1. As demonstrated by the graphs, as we go from RK1, RK2,
+and RK4  the accuracy increases; this evidenced by a comparison 
+between the values for each integration method and the exact 
+solution.  It is clear that RK4 is the most accurate method 
+comparing the results of RK1, RK2, and RK4 (refer to graph above).
+2. As the X value increases, there will be a decrease 
+in the accuracy of the integration as compared to exact solution; 
+again, as demonstrated by the images below, we see the integrations 
+getting further from the exact solution graphically.
 3. The more steps we take the better, as we're increasing 
 the amount of "slices" we're taking which is essentially 
 increasing the accuracy; see graphs above for the
