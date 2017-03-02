@@ -584,32 +584,43 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 	vec3 cylinderAxis = cylinderEnd - cylinderStart;
 	double cylinderRadius = cylinder->r;
 	float r = .75;
-	double time = (cylinderStart - p.position * Dot(cylinderStart, -cylinderAxis) / ((cylinderEnd - cylinderStart) * (cylinderEnd - cylinderStart));//Alex helped with defining these variables below; referenced google hangout
+	double time = -Dot(cylinderStart, - p.position) / (cylinderAxis.Length() * cylinderAxis.Length());//Joe helped during office hours
 	vec3 point = cylinderStart + time * cylinderAxis;
-	
-	 
-	vec3 normal = p.position - point; 
-	double dist = normal.Length();
-	normal = normal.Normalize();
+	vec3 normal = point - p.position; //point - p.position or vice versa? 
+	double dist = normal.Length(); //Google Hangout
+	normal = normal.Normalize(); //Google Hangout
 
-	p.position = p.position - (contact.m_distance*normal);//From Google Hangout; conversation between Alex/Corey
-	p.force = (-p.force + contact.m_distance*normal);
-	p.velocity = p.velocity - (2 * (p.velocity * normal))*(normal)*r;
+	//	p.position = p.position - (contact.m_distance*normal);//From Alex and Google Hangout; conversation between Alex/Corey
+//	p.force = (-p.force + contact.m_distance*normal);
+//	p.velocity = p.velocity - (2 * (p.velocity * normal))*(normal)*r;
 	//p.velocity = p.velocity - (2 * (p.velocity * normal))*(normal)*.75;
 
-	// TODO - Alex helped with using time equation on piazza link
+	// TODO - Alex helped with using time equation through Google Hangouts
     // Alex helped with figuring out point intersections, and how to introduce point variables, dist, normals for this function; 
 	// Equations also derived from SimTech Google Hangouts
 	//double t = (p.position[1] - (cylinderStart * cylinderEnd)) * Dot(cylinderStart, cylinderEnd);
 
-	if (dist < cylinderRadius)
+	float COLLISION_DELTA = .05;
+
+	if (p.position[1] <= 0.0)
 	{
-		intersection.m_distance = -p.position[1];
-		intersection.m_normal = vec3(0.0, 1.0, 0.0);
-		intersection.m_p = p.index;
+		result.m_type = JelloMesh::CONTACT;//Joe helped with this code during office hours
+		result.m_distance = -p.position[1];
+		result.m_normal = vec3(0.0, 1.0, 0.0);
+		result.m_p = p.index;
+		return true;
 	}
-	else if (dist < cylinderRadius + .1  && dist > cylinderRadius + .05); //From Google Hangout
-	return false;
+
+	else if (p.position[1] < COLLISION_DELTA) //Joe helped with this code during office hours
+	{
+		result.m_type = JelloMesh::COLLISION;
+		result.m_distance = COLLISION_DELTA - p.position[1];
+		result.m_normal = vec3(0.0, 1.0, 0.0);
+		result.m_p = p.index;
+		return true;
+	}
+
+		return false; //From Google Hangout
 }
 
 void JelloMesh::EulerIntegrate(double dt)
@@ -638,7 +649,7 @@ void JelloMesh::MidPointIntegrate(double dt)
 	ParticleGrid target = m_vparticles;  // target is a copy!
 	ParticleGrid& source = m_vparticles;  // source is a ptr!
 
-										  // Step 1 - Joe removed code during office hours...more to remove?
+										  // Step 1 - Joe removed code during office hours to remove extra computing from program
 	ParticleGrid accum1 = m_vparticles;
 	for (int i = 0; i < m_rows + 1; i++)
 	{
