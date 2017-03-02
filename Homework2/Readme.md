@@ -51,12 +51,13 @@ The game is **memorylessness** - your progression to the next position is indepe
 <BR>![](images/null.png?raw=true)<BR>
 From state 0 it is equally probable of landing on squares 1-6. From state 1 t is equally probable of landing on squares 2-7, and so on. Create this transition matrix. The end is trickier, we will consider any roll past 100 a win case. (Opposed to rolling exactly onto square 100.) Confirm you have a well formed stochastic matrix (Write checks for confirming each row of T sums to one and all elements are non-negative).
 
-* **(b) Simulate and analyze the results of Null State Game - 10pts:** What is the modal number of moves required by a single player to finish the game? The game can be analysed with a row vector, *v* with 101 components, representing the probabilities that the player is on each of the positions. V(0) is (1,0,0,...,0) since we know we start at square 0. v evolves by : <BR>![](images/prob.png?raw=true)<BR>
+* **(b) Simulate and analyze the results of Null State Game - 10pts:** What is the modal number of moves required by a single player to finish the game? The game can be analysed with a row vector, *v* with 101 components, representing the probabilities that the player is on each of the positions. V(0) is (1,0,0,...,0) since we know we start at square 0. v evolves by: <BR>![](images/prob.png?raw=true)<BR>
 Produce graphs to analyze the results and show how the game evolves over time. Plot useful statistics of the results such as percentage chance of finishing the game in n-moves, cummulative probability of finishing the game in n-moves, and other ways to convey useful information of the results.
 
-* **(c) Simulate and analyze the results of Snakes and Ladders -10pts:**  Contruct a new transition matrix based on the table:<BR>
+* **(c) Simulate and analyze the results of Snakes and Ladders -10pts:**  Contruct a new transition matrix based on the table:
+<BR>
 | Ladders From  | Ladders To | |  Snakes From  | Snakes To |
-| --- | --- | --- | --- | --- |
+| ----- | ----- | ----- | ----- | ----- |
 |3|19| |11|7|
 |15|37| |18|13|
 |22|42| |28|12|
