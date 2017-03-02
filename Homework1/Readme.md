@@ -159,8 +159,11 @@ Additionally, a video has been uploaded to YouTube,
 link provided in Part F. Implement Two Extra Features.
 ~~~
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/successjello1.PNG?raw=true)
+
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/successjello2.PNG?raw=true)
+
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/successjello3.PNG?raw=true)
+
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework1/images/successjello4.PNG?raw=true)
 
 f. Implement two extra features  
