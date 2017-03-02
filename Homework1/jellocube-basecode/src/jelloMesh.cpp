@@ -583,6 +583,7 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 	vec3 cylinderEnd = cylinder->end;
 	vec3 cylinderAxis = cylinderEnd - cylinderStart;
 	double cylinderRadius = cylinder->r;
+	float r = .8;
 
 	vec3 point = cylinderStart * cylinderAxis;
 	double time = (cylinderStart - point * Dot(cylinderStart, -cylinderAxis) / ((cylinderEnd - cylinderStart) * (cylinderEnd - cylinderStart));//Alex helped with defining these variables below
@@ -591,9 +592,20 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 	double dist = normal.Length();
 	normal = normal.Normalize();
 
+	p.position = p.position - (contact.m_distance*normal);//From Google Hangout; conversation between Alex/Corey
+	p.force = (-p.force + contact.m_distance*normal);
+	p.velocity = p.velocity - (2 * (p.velocity * normal))*(normal)*r;
+	//p.velocity = p.velocity - (2 * (p.velocity * normal))*(normal)*.75;
+
 	// TODO - Alex helped with using time equation on piazza link
-    // Alex helped with figuring out point intersections, and how to introduce point variables, dist, normals for this function
+    // Alex helped with figuring out point intersections, and how to introduce point variables, dist, normals for this function; 
+	// Equations also derived from SimTech Google Hangouts
 	//double t = (p.position[1] - (cylinderStart * cylinderEnd)) * Dot(cylinderStart, cylinderEnd);
+
+	if (dist < cylinderRadius)
+	{
+		//
+	}
 
 	return false;
 }
