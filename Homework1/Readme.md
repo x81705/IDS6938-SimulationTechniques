@@ -7,9 +7,6 @@
 The assignment is due: Wednesday, February 27 at 11:59PM (EST); with alibi, and extension, March 2 at 11:59PM (EST)
 
 
-
-
-
 ## Part 1. Numerical Analysis of Integration Functions
 a. Take integral of dy/dx = y-1/2*e^x/2*sin(5x)+5e^x/2*cos(5x), where initial condition for ODE is defined by y(0)=0.
 
@@ -114,7 +111,7 @@ we're taking which is essentially increasing the accuracy; see graphs above for 
 error rate when H=.5, .25, and .10.
 4. RK4 is most accurate; again, through comparison of all 
 integration methods and the exact solution, we can see that 
-RK4 is most accurate by the graphs below; the reason for this is that we're 
+RK4 is most accurate by the graphs above; the reason for this is that we're 
 taking four approximations to the slope, and more approximations result in
 more accuracy.
 ~~~
@@ -150,10 +147,11 @@ e. Extra springs that simulate shear/bending resistance.
 ANS:
 See code for A-E in Part II in JelloCube.sln in x81705 repository (linked via webcourses)
 ~~~
-f. Implement two extra features - Uploaded Movie using Icecream (www.xyz) and attempted Sphere Collision
+f. Implement two extra features  
 ~~~
 ANS:
-Uploaded movie using Icecream application to www.youtube.com/
+Uploaded movie using Icecream application to www.youtube.com/; 
+[https://youtu.be/-yUUop7f_EU] 
 - attempted to implement Sphere Collision, 
 ~~~
 
@@ -164,7 +162,8 @@ Uploaded movie using Icecream application to www.youtube.com/
 ANS: 
 Ks is the spring constant and Kd is the dampening constant; therefore, they are
 two opposing forces that come into effect when the jello hits the ground or the
-surface of any object.
+surface of any object.  Through trial and error (and the help of Alex/Joe), I utilized values from 2000.0-10000.0 for Ks, and much lower values ranging from
+1.0-5.0 for the Kd values.
 ~~~
 
 
