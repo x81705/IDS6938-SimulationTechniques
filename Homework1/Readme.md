@@ -4,7 +4,7 @@
 
 
 
-The assignment is due: Wednesday, February 27 at 11:59PM (EST); with alibi, and extension, March 2 at 11:59PM (EST)
+The assignment is due: Wednesday, February 27 at 11:59PM (EST); with alibi and extension, March 2 at 11:59PM (EST)
 
 
 ## Part 1. Numerical Analysis of Integration Functions
@@ -156,7 +156,7 @@ ANS:
 See code for A-E in Part II in JelloCube.sln in 
 x81705 repository (linked via webcourses).  As of now, 
 cylinder collision is not operational (can get
-cylinders to display, but no interaction with cube), 
+cylinders to display, but no interaction w/ jellocube), 
 but screenshots  of the jellocube bouncing off the ground, 
 compressing, jiggling, and returning/maintaining 
 structural integrity are shown below.  Also,
@@ -175,7 +175,7 @@ link provided in Part F below.
 f. Implement two extra features  
 ~~~
 ANS:
-Uploaded movie using Icecream application to www.youtube.com (see link below); 
+- Uploaded movie using Icecream application to www.youtube.com (see link below); 
 - Would have attempted Sphere Collision, but did not have time due to
 a focus on cylinder intersection
 ~~~
@@ -305,5 +305,4 @@ Rensselaer Polytechnic Institute.  Retrieved from
 https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S09/lectures/06_mass_spring_systems.pdf 
 ~~~
 
-=======
 
