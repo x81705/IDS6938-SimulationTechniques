@@ -94,14 +94,17 @@ the RK4 and Error Data into a separate excel spreadsheet and graphed.
 --
 
 
-f. Analyze results: 1. Describe how varying integration method changes accuracy, 2. What happens as you increase x value
-to the accuracy, 3. How does varying step size effect accuracy, 4. Which method is most accurate and why (what is taken into
+f. Analyze results: 
+1. Describe how varying integration method changes accuracy
+2. What happens as you increase x value to the accuracy
+3. How does varying step size effect accuracy 
+4. Which method is most accurate and why (what is taken into
 account in the solution). 
 
 ~~~
 ANS:
 1. As demonstrated by the graphs, as we go from RK1, RK2,
-and RK4  the accuracy increases; this evidenced by a comparison 
+and RK4  the accuracy increases; this is evidenced by a comparison 
 between the values for each integration method and the exact 
 solution.  It is clear that RK4 is the most accurate method 
 comparing the results of RK1, RK2, and RK4 (refer to graph above).
@@ -116,7 +119,7 @@ error rate when H=.5, .25, and .10.  This is also evidenced
 in the graph above, with .10 as H having the lowest error rate.
 4. RK4 is most accurate; again, through comparison of all 
 integration methods and the exact solution, we can see that 
-RK4 is most accurate by the graphs above; the reason for this is that we're 
+RK4 is most accurate by the graphs above. The reason for this is that we're 
 taking four approximations to the slope, and more approximations 
 result in greater accuracy.
 ~~~
@@ -156,8 +159,8 @@ cylinder collision is not operational (can get
 cylinders to display, but no interaction with cube), 
 but screenshots  of the jellocube bouncing off the ground, 
 compressing, jiggling, and returning/maintaining 
-structural integrity are shown below.  As of now,
-there is still an issue with Sheer Forces as well.  
+structural integrity are shown below.  Also,
+there is still an issue with Shear Spring forces as well.  
 Additionally, a video has been uploaded to YouTube, 
 link provided in Part F below.
 ~~~
