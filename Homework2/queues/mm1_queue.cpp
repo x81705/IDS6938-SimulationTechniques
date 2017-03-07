@@ -74,12 +74,15 @@ void MM1_Queue::initialize()
 {
     if (!initialized_)
     {
+
+      //TODO---------------------------------------------
       expected_server_utilization_ ;
       expected_idle_prob_ ;
       expected_queue_length_ ;
       expected_number_customers_ ;
       expected_waiting_time_ ;
       expected_response_time_ ;
+      // ------------------------------------------------
 
       rnd_arrival.set_rate(lambda_);
       rnd_service.set_rate(mu_);
