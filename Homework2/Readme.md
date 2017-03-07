@@ -119,6 +119,7 @@ If you feel like going beyond the scope of the assignment, you should consider i
 * **(10 Points)** - Provide code in (Python, R, Matlab...) that demonstrates an animation of the board itself evolving overtime for Snakes in Ladder for part 2. 
 * **(10 Points)** - Add a 2D visualization to AnyLogic for Part 3.
 * **(10 Points)** - Add a 3D visualization to AnyLogic for Part 3.
+* **(5 Points)** - Pick a research problem (from your dissertation, Energy Microgrids, Missle Defence...). Compare and contrast different software packages (AnyLogic, Simio, Simulu8, Arena etc). Convince me as your "manager/advisor" what advantages, weaknesses, and costs each program has. Come to a conclusion. Roughly sketch out how you would formulate the problem in the framework.
 * **(10 Points)** - Create an Anylogic simulation for Part 2 - Snakes and Ladders.
 * **(10 Points)** - Setup another resource allocation / queueing problem related to your research in Anylogic with a basic visualization
 * **(10 Points)** - Setup up SmartGrid or a Microgrid System that creates resources of power from wind, solar, and electric grid. Set up various devices in your house to draw power. [Reference 1](http://www.sciencedirect.com/science/article/pii/S1877050916301740),   [Reference 2](http://www.tandfonline.com/doi/full/10.1080/19401493.2013.866695?src=recsys&).
