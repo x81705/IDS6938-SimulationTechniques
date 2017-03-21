@@ -22,6 +22,7 @@ int main()
 	//std::knuth_b engine(rd());
 	//std::minstd_rand engine(rd());
 	std::ranlux48 engine(rd());
+	//LAST ONE SHOULD BE SOBOLO
 	
 	 
 
@@ -39,8 +40,10 @@ int main()
 	//  2) - Change distribution types
 	std::uniform_real_distribution<> dist(0, 100);  // example of a uniform distribution
 	//std::normal_distribution<> dist(50,10);    // example of a normal distribution
-	//std::uniform_int_distribution<> dist(0, 100);
-	//std::binomial_distribution<> dist(0, 100);
+	//std::uniform_int_distribution<> dist(0, 100); //ADD THESE
+	//std::binomial_distribution<> dist(0, 100); //ADD THESE
+	//std::cauchy_distribution<> dist(0, 100);
+	//chi_squared_distribution<> dist(0, 100);
 
 
 	auto generator = std::bind(dist, engine);
