@@ -21,8 +21,8 @@ int main()
 	//std::mt19937_64 engine(rd());
 	//std::knuth_b engine(rd());
 	//std::minstd_rand engine(rd());
-	//std::ranlux48 engine(rd());
-	std::ranlux24 engine(rd());
+	std::ranlux48 engine(rd());
+	
 	 
 
 
