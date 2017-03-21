@@ -1,3 +1,5 @@
+
+# Charlie Timm
 #Homework 2 :  Discrete-Event Simulation Assignment
 
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
@@ -6,9 +8,6 @@
 This is the framework for homework #2. 
 
 The assignment is due: **Tuesday, March 28 at 11:59PM (EST)**
-
-asdfasdf
-sadfsad
 
 
 # Introduction
