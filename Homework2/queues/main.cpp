@@ -23,7 +23,7 @@ void pause()
  std::cin >> sInputString;
 }
 
-
+//add extra line from MM1 Queue Objects for Part III?
 
 int main(int argc, char* argv[])
 {
@@ -35,8 +35,28 @@ int main(int argc, char* argv[])
       
 	   //TODO Create MM1_Queue objects to capture the airport senario.
 
-	   //************************************************************
-
+	   /*MM1_Queue MYOBJECTNAME;
+	   MYOBJECTNAME.set_file_names("01_log.txt", "01_wait.txt", 01_service.txt");
+	   MYOBJECTNAME.set_lambda(6);
+	   MYOBJECTNAME.set_mu(45);
+	   MYOBJECTNAME.autogenerate_new_arrivals(false);
+	   MYOBJECTNAME.is_within_confidence_interval();
+	   MYOBJECTNAME.initialize();
+	   MYOBJECTNAME.set_seed(1, rd());
+	   !MYOBECTNAME.is_within_error_range(0.006)||
+	   !MYOBECTNAME1.is_within_error_range(0.006)||
+	   !MYOBECTNAME2.is_within_error_range(0.006)||
+	   !MYOBECTNAME3.is_within_error_range(0.006)
+	   Customer cust = MYOBJECTNAME.process_next_event();
+	   MYOBJECTNAME.add_external_arrival();
+	   MYOBJECTNAE.get_current_time();
+	   MYOBJECTNAME-plot_results_output();
+	   MYOBJECTNAME.output(); cout << ******** << end1;
+	   MYOBJECTNAME_0.output(); cout << ******** << end1;
+	   MYOBJECTNAME_1.output(); cout << ******** << end1;
+	   MYOBJECTNAME_2.output(); cout << ******** << end1;
+	   MYOBJECTNAME_3.output(); cout << ******** << end1;
+	   */
 
    for (; 
 		//TODO: add is_within_error_range check
