@@ -26,9 +26,15 @@ data in excel (See Graphs Below).  Additionally using excel,
 I ran the Chi-square Test, and Kolmogorov-Smirnov Test.
 
 I utilized the Chi-Square Test function in Excel to obtain the 
-results below. The Chi-Square Test indicates that the MINISTD_RAND 
-has the highest X2 value, and that the MT has the lowest X2 value; 
-this likely means that MT is the most uniform for the random values.
+results below. Degrees of freedom are found by taking Rows-1 *
+Columns-1, so in this case the DF=100; however the function in 
+excel takes this into consideration. 
+The Chi-Square Test p values indicates that all values are lower
+than .05, which means they are statistically significant, or that
+the numbers are likely to some degree to be distributed uniformly 
+and randomly. Additionally, MINISTD_RAND has the highest value, 
+and MT has the lowest value; this likely means that MT is the most 
+uniform for the random values.
 
 I learned/utilized the Kolmogorov-Smirnov Test in excel by watching 
 a Youtube video (see references below). The Komogorov-Smirnov Test 
@@ -86,6 +92,9 @@ printing functions, and general help determining if solution was correct.
 
 Microsoft Office Support Page.  Accessed https://support.office.com/en-us/article/CHISQ-TEST-function-2e8a7861-b14a-4985-aa93-fb88de3f260f to look up
 how to utilize Chi-Square Test in Excel.
+
+Turner, Gosia. 4 February 2014.  Is it statistically significant? The chi-square test.  University of Oxford.  Retrieved from http://www.ox.ac.uk/media/global/wwwoxacuk/localsites/uasconference/presentations/P8_Is_it_statistically_significant.pdf. 
+
 ~~~
 
 ##Part 2 - Snakes and Ladders (Discrete Event Markov Chains and Monte Carlo Simulations) (30 pts)
