@@ -5,7 +5,7 @@
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
 
 [University of Central Florida](http://www.ist.ucf.edu/grad/)
-This is the framework for homework #2. 
+ 
 
 The assignment is due: **Tuesday, March 28 at 11:59PM (EST)**
 
@@ -17,18 +17,20 @@ We looked at different ways to generate [pseudo-random numbers]
 * **(a) - 3pts:** Output the results of five different random number engines, using a uniform distribution for values between [0-100]. Generate useful charts and statistics from the output to analyze how uniform these values truly are. You are expected to look at some advanced statistics and test, for example: tests like the Kolmogorov-Smirnov test, Chi-square test, Autocorrelation test, and Spearman’s Rank Correlation Coefficient are a few examples of ones your could use.)
 ~~~
 ANS:
-I essentially just commented out code in random.cpp from Discreet2, keeping the uniform_real_distribution for all random number generator engines. The first random number generator I used was mt19937_64, followed by knuth_b, minstd_rand, and ranlux48, and sobol.  I copied the data into separate text files, and then plotted the data in excel (See Graphs Below).
+I essentially just commented out code in random.cpp from Discreet2, keeping the uniform_real_distribution for all random number generator engines. The first random number generator I used was mt19937_64, followed by knuth_b, minstd_rand, and ranlux48, and sobol.  I copied the data into separate text files, and then plotted the data in excel (See Graphs Below).  Additionally using excel, I ran the Chi-square Test, and Correlation Coefficient...
+
+The Chi-Square Test indicates that the MINISTD_RAND has the highest X2 value, and that the MT has the lowest X2 value; this likely means that MT is the most uniform for the random values.
 ~~~
 ## Graph - Ministd_Rand Histogram
-![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/ministdrandhisto.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/ministdrandhisto.png?raw=true)
 ## Graph - Knuth_b Histogram
-![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/knuthbhisto.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/knuthbhisto.png?raw=true)
 ## Graph - MT Histogram
-![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/mthisto.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/mthisto.png?raw=true)
 ## Graph - Ranlux Histogram
-![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/ranluxhisto.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/ranluxhisto.png?raw=true)
 ## Graph - Sobol Histogram
-![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/sobolhisto.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/sobolhisto.png?raw=true)
 
 
 * **(b) - 2pts:**  Vary *N* (amount of samples). How do things change.
@@ -49,6 +51,9 @@ queues/shoots and ladders code needed to be modified for Part I.
 Kider, Joseph.  Multiple conversations via email and during 
 office hours on 21MAR-28MAR17 regarding errors compiling code,
 printing functions, and general help determining if solution was correct.
+
+Microsoft Office Support Page.  Accessed https://support.office.com/en-us/article/CHISQ-TEST-function-2e8a7861-b14a-4985-aa93-fb88de3f260f to look up
+how to utilize Chi-Square Test in Excel.
 ~~~
 
 ##Part 2 - Snakes and Ladders (Discrete Event Markov Chains and Monte Carlo Simulations) (30 pts)
