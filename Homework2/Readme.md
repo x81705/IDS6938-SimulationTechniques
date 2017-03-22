@@ -23,6 +23,12 @@ I essentially just commented out code in random.cpp from Discreet2, keeping the 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/ministdrandhisto.PNG?raw=true)
 ## Graph - Knuth_b Histogram
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/knuthbhisto.PNG?raw=true)
+## Graph - MT Histogram
+![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/mthisto.PNG?raw=true)
+## Graph - Ranlux Histogram
+![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/ranluxhisto.PNG?raw=true)
+## Graph - Sobol Histogram
+![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/sobolhisto.PNG?raw=true)
 
 
 * **(b) - 2pts:**  Vary *N* (amount of samples). How do things change.
