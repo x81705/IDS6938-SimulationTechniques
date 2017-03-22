@@ -15,6 +15,7 @@ The assignment is due: **Tuesday, March 28 at 11:59PM (EST)**
 ##Part 1: Empirical Tests of Randomness (20 pts).
 We looked at different ways to generate [pseudo-random numbers]
 * **(a) - 3pts:** Output the results of five different random number engines, using a uniform distribution for values between [0-100]. Generate useful charts and statistics from the output to analyze how uniform these values truly are. You are expected to look at some advanced statistics and test, for example: tests like the Kolmogorov-Smirnov test, Chi-square test, Autocorrelation test, and Spearman’s Rank Correlation Coefficient are a few examples of ones your could use.)
+
 ~~~
 ANS:
 I essentially just commented out code in random.cpp from Discreet2, 
@@ -50,7 +51,7 @@ the two distributions.  The RANLUX appears to be the RNG that is closest
 to the critical D value, and is thus closer to distributing random values
 equally.
 ~~~
---
+
 ## Graph - Ministd_Rand Histogram
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/ministdrandhisto.png?raw=true)
 ## Graph - Knuth_b Histogram
@@ -61,15 +62,34 @@ equally.
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/ranluxhisto.png?raw=true)
 ## Graph - Sobol Histogram
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/sobolhisto.png?raw=true)
---
+
 ## Chi-Squared Test Chart
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/chisqrgraph.PNG?raw=true)
---
+
 ## KS Test Chart
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/kstestchart.PNG?raw=true)
 
+
 * **(b) - 2pts:**  Vary *N* (amount of samples). How do things change.
+
+~~~
+ANS:
+I simply change the N number in the program for each
+RNG listed abvoe.  I noticed that X,Y, and Z occurred.  
+Likely what will happen is that
+the samples will remain roughly the samely distributed despite
+the change in N values
+~~~
+
 * **(c) - 3pts:** Fix a random engine of your choice from part (a), and now vary five different [distributions](http://www.cplusplus.com/reference/random/) for just the psedo-random numbers. Again, analyze your results with graphs and statistics of choice.
+
+~~~
+ANS:
+Based on what I understand...pseudo-random numbers mean what?!?!?!
+Do I just do another excel document and then
+~~~
+
+
 * **(d)- 4pts:** Generate random numbers in two-dimensions for a unit square. Plot the results for the different random number engines. The vertical axis should vary N in increasing order. The horizontal axis should show of the random number engines.
 * **(e)- 4pts:** Generate random numbers in two-dimensions for a unit square. Plot the results for the different distributions. The vertical axis should vary N in increasing order. The horizontal axis should show of the random number engines. (See [Random Numbers Webcourse page](https://webcourses.ucf.edu/courses/1246518/pages/random-numbers?module_item_id=10541423) for a rough idea what you should produce.)
 * **(f)- 4pts:** Repeat parts (d) and (e) with a unit circle.
@@ -83,8 +103,8 @@ help compiling the code when I received errors for initial compiling,
 reminded me that Discreet 2 solutions were utilized and that nothing to 
 queues/shoots and ladders code needed to be modified for Part I.
 
-Davis, Jeff.  1 FEB 2010.  K-S Test (Youtube Video).  Youtube.com.  Retrieved from
-https://www.youtube.com/watch?v=9Of2LTy5Sq0.  
+Davis, Jeff.  1 February 2010.  K-S Test (Youtube Video).  Youtube.com.  
+Retrieved from https://www.youtube.com/watch?v=9Of2LTy5Sq0.  
 
 Kider, Joseph.  Multiple conversations via email and during 
 office hours on 21MAR-28MAR17 regarding errors compiling code,
