@@ -113,7 +113,8 @@ printing functions, and general help determining if solution was correct.
 Microsoft Office Support Page.  Accessed https://support.office.com/en-us/article/CHISQ-TEST-function-2e8a7861-b14a-4985-aa93-fb88de3f260f to look up
 how to utilize Chi-Square Test in Excel.
 
-Turner, Gosia. 4 February 2014.  Is it statistically significant? The chi-square test.  University of Oxford.  Retrieved from http://www.ox.ac.uk/media/global/wwwoxacuk/localsites/uasconference/presentations/P8_Is_it_statistically_significant.pdf. 
+Turner, Gosia. 4 February 2014.  Is it statistically significant? The chi-square test.  University of Oxford.  
+Retrieved from  http://www.ox.ac.uk/media/global/wwwoxacuk/localsites/uasconference/presentations/P8_Is_it_statistically_significant.pdf. 
 
 ~~~
 
