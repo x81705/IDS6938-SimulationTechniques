@@ -25,9 +25,11 @@ int main(){
 	
    // TODO add Markov vector - Matrix multiplication
 
-
+	For(int i = 0; i < TransitionMatrix.rows() - 6; i++);
+	TransitionMatrix(i, i + 1) = prob;
 	std::cout <<  v << std::endl;
-	//myfile << v << std::endl;  //this is just a sample, becareful how you print to file so you can mine useful stats
+
+	myfile << v << std::endl;  //this is just a sample, becareful how you print to file so you can mine useful stats
 	
 	myfile.close();
 
