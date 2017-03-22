@@ -19,7 +19,7 @@ We looked at different ways to generate [pseudo-random numbers]
 ANS:
 I essentially just commented out code in random.cpp from Discreet2, 
 keeping the uniform_real_distribution for all random number generator
-engines. The first random number generator I used was mt19937_64, 
+engines. The first random number generator (RNG) I used was mt19937_64, 
 followed by knuth_b, minstd_rand, and ranlux48, and sobol.  I 
 copied the data into separate text files, and then plotted the 
 data in excel (See Graphs Below).  Additionally using excel, 
@@ -36,7 +36,13 @@ results are listed in the chart below; because all the largest
 differences (D) values (found by taking the difference between each 
 distribution and the expected value, and then manually searching for 
 the data) are greater than the critical D (formula: 1.36/SQRT(100000)), 
-uniform random distribution is likely not happening, as it is statiscially .    
+uniform random distribution is likely not happening, as the difference in
+D values indicates that there are varying distributions.  If we had lower
+D values than the critical D, it would indicate that there is not enough
+evidence to conclude there's major discrepancies between 
+the two distributions.  The RANLUX appears to be the RNG that is closest
+to the critical D value, and is thus closer to distributing random values
+equally.
 ~~~
 --
 ## Graph - Ministd_Rand Histogram
