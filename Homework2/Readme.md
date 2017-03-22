@@ -19,8 +19,11 @@ We looked at different ways to generate [pseudo-random numbers]
 ANS:
 I essentially just commented out code in random.cpp from Discreet2, keeping the uniform_real_distribution for all random number generator engines. The first random number generator I used was mt19937_64, followed by knuth_b, minstd_rand, and ranlux48, and sobol.  I copied the data into separate text files, and then plotted the data in excel (See Graphs Below).
 ~~~
-## Graph - RK4/Exact Solution
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/graph4.PNG?raw=true)
+## Graph - Ministd_Rand Histogram
+![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/ministdrandhisto.PNG?raw=true)
+## Graph - Knuth_b Histogram
+![](https://github.com/x81705/IDS6938-SimulationTechniques/tree/master/Homework2/images/knuthbhisto.PNG?raw=true)
+
 
 * **(b) - 2pts:**  Vary *N* (amount of samples). How do things change.
 * **(c) - 3pts:** Fix a random engine of your choice from part (a), and now vary five different [distributions](http://www.cplusplus.com/reference/random/) for just the psedo-random numbers. Again, analyze your results with graphs and statistics of choice.
