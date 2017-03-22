@@ -17,9 +17,11 @@ We looked at different ways to generate [pseudo-random numbers]
 * **(a) - 3pts:** Output the results of five different random number engines, using a uniform distribution for values between [0-100]. Generate useful charts and statistics from the output to analyze how uniform these values truly are. You are expected to look at some advanced statistics and test, for example: tests like the Kolmogorov-Smirnov test, Chi-square test, Autocorrelation test, and Spearman’s Rank Correlation Coefficient are a few examples of ones your could use.)
 ~~~
 ANS:
-I essentially just commented out code in random.cpp from Discreet2, keeping the uniform_real_distribution for all random number generator engines. The first random number generator I used was mt19937_64, followed by knuth_b, minstd_rand, and ranlux48, and ranlux24.  I searched through header files/references for the fifth engine, and used ranlux24.  I copied the data into separate text files, and then plotted the data in excel.
-excel.
+I essentially just commented out code in random.cpp from Discreet2, keeping the uniform_real_distribution for all random number generator engines. The first random number generator I used was mt19937_64, followed by knuth_b, minstd_rand, and ranlux48, and sobol.  I copied the data into separate text files, and then plotted the data in excel (See Graphs Below).
 ~~~
+## Graph - RK4/Exact Solution
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/graph4.PNG?raw=true)
+
 * **(b) - 2pts:**  Vary *N* (amount of samples). How do things change.
 * **(c) - 3pts:** Fix a random engine of your choice from part (a), and now vary five different [distributions](http://www.cplusplus.com/reference/random/) for just the psedo-random numbers. Again, analyze your results with graphs and statistics of choice.
 * **(d)- 4pts:** Generate random numbers in two-dimensions for a unit square. Plot the results for the different random number engines. The vertical axis should vary N in increasing order. The horizontal axis should show of the random number engines.

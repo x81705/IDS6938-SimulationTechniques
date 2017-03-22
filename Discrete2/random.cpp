@@ -22,7 +22,7 @@ int main()
 	//std::knuth_b engine(rd());
 	//std::minstd_rand engine(rd());
 	std::ranlux48 engine(rd());
-	//LAST ONE SHOULD BE SOBOLO
+	//LAST ONE SHOULD BE SOBOLO, got data through quasirandom
 	
 	 
 
