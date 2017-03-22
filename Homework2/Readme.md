@@ -23,6 +23,7 @@ I utilized the Chi-Square Test function in Excel to obtain the results below. Th
 
 I learned/utilized the Kolmogorov-Smirnov Test in excel by watching a Youtube video (see references below). The Komogorov-Smirnov Test results are listed in the chart below; because all the largest differences (D) values (found by taking the difference between each distribution and the expected value, and then manually searching for the data) are greater than the critical D (formula: 1.36/SQRT(100000)), uniform random distribution is likely not happening, as it is statiscially .    
 ~~~
+--
 ## Graph - Ministd_Rand Histogram
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/ministdrandhisto.png?raw=true)
 ## Graph - Knuth_b Histogram
@@ -33,8 +34,10 @@ I learned/utilized the Kolmogorov-Smirnov Test in excel by watching a Youtube vi
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/ranluxhisto.png?raw=true)
 ## Graph - Sobol Histogram
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/sobolhisto.png?raw=true)
-
-
+--
+## Chi-Squared Test Chart
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/chisqrgraph.png?raw=true)
+--
 ## KS Test Chart
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/kstest.png?raw=true)
 
