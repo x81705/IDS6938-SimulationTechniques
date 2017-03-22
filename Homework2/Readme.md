@@ -17,11 +17,26 @@ We looked at different ways to generate [pseudo-random numbers]
 * **(a) - 3pts:** Output the results of five different random number engines, using a uniform distribution for values between [0-100]. Generate useful charts and statistics from the output to analyze how uniform these values truly are. You are expected to look at some advanced statistics and test, for example: tests like the Kolmogorov-Smirnov test, Chi-square test, Autocorrelation test, and Spearman’s Rank Correlation Coefficient are a few examples of ones your could use.)
 ~~~
 ANS:
-I essentially just commented out code in random.cpp from Discreet2, keeping the uniform_real_distribution for all random number generator engines. The first random number generator I used was mt19937_64, followed by knuth_b, minstd_rand, and ranlux48, and sobol.  I copied the data into separate text files, and then plotted the data in excel (See Graphs Below).  Additionally using excel, I ran the Chi-square Test, and Kolmogorov-Smirnov Test.
+I essentially just commented out code in random.cpp from Discreet2, 
+keeping the uniform_real_distribution for all random number generator
+engines. The first random number generator I used was mt19937_64, 
+followed by knuth_b, minstd_rand, and ranlux48, and sobol.  I 
+copied the data into separate text files, and then plotted the 
+data in excel (See Graphs Below).  Additionally using excel, 
+I ran the Chi-square Test, and Kolmogorov-Smirnov Test.
 
-I utilized the Chi-Square Test function in Excel to obtain the results below. The Chi-Square Test indicates that the MINISTD_RAND has the highest X2 value, and that the MT has the lowest X2 value; this likely means that MT is the most uniform for the random values.
+I utilized the Chi-Square Test function in Excel to obtain the 
+results below. The Chi-Square Test indicates that the MINISTD_RAND 
+has the highest X2 value, and that the MT has the lowest X2 value; 
+this likely means that MT is the most uniform for the random values.
 
-I learned/utilized the Kolmogorov-Smirnov Test in excel by watching a Youtube video (see references below). The Komogorov-Smirnov Test results are listed in the chart below; because all the largest differences (D) values (found by taking the difference between each distribution and the expected value, and then manually searching for the data) are greater than the critical D (formula: 1.36/SQRT(100000)), uniform random distribution is likely not happening, as it is statiscially .    
+I learned/utilized the Kolmogorov-Smirnov Test in excel by watching 
+a Youtube video (see references below). The Komogorov-Smirnov Test 
+results are listed in the chart below; because all the largest 
+differences (D) values (found by taking the difference between each 
+distribution and the expected value, and then manually searching for 
+the data) are greater than the critical D (formula: 1.36/SQRT(100000)), 
+uniform random distribution is likely not happening, as it is statiscially .    
 ~~~
 --
 ## Graph - Ministd_Rand Histogram
