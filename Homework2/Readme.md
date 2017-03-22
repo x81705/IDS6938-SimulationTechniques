@@ -17,7 +17,7 @@ We looked at different ways to generate [pseudo-random numbers]
 * **(a) - 3pts:** Output the results of five different random number engines, using a uniform distribution for values between [0-100]. Generate useful charts and statistics from the output to analyze how uniform these values truly are. You are expected to look at some advanced statistics and test, for example: tests like the Kolmogorov-Smirnov test, Chi-square test, Autocorrelation test, and Spearman’s Rank Correlation Coefficient are a few examples of ones your could use.)
 ~~~
 ANS:
-I essentially just commented out code in random.cpp from Discreet2, keeping the uniform_real_distribution for all random number generator engines. The first random number generator I used was mt19937_64, followed by knuth_b, minstd_rand, and ranlux48, and sobol.  I copied the data into separate text files, and then plotted the data in excel (See Graphs Below).  Additionally using excel, I ran the Chi-square Test, and Correlation Coefficient...
+I essentially just commented out code in random.cpp from Discreet2, keeping the uniform_real_distribution for all random number generator engines. The first random number generator I used was mt19937_64, followed by knuth_b, minstd_rand, and ranlux48, and sobol.  I copied the data into separate text files, and then plotted the data in excel (See Graphs Below).  Additionally using excel, I ran the Chi-square Test, and Kolmogorov-Smirnov Test.
 
 The Chi-Square Test indicates that the MINISTD_RAND has the highest X2 value, and that the MT has the lowest X2 value; this likely means that MT is the most uniform for the random values.
 ~~~
@@ -47,6 +47,9 @@ regarding assignment, 9MAR-28MAR17. For Part I, Alex provided
 help compiling the code when I received errors for initial compiling,
 reminded me that Discreet 2 solutions were utilized and that nothing to 
 queues/shoots and ladders code needed to be modified for Part I.
+
+Davis, Jeff.  1 FEB 2010.  K-S Test (Youtube Video).  Youtube.com.  Retrieved from
+https://www.youtube.com/watch?v=9Of2LTy5Sq0.  
 
 Kider, Joseph.  Multiple conversations via email and during 
 office hours on 21MAR-28MAR17 regarding errors compiling code,
