@@ -106,11 +106,28 @@ Based on the data I acquired....X.  Please refer to the charts below.
 ANS:
 For this part of the problem, I utilized the uniform real distribution with a range
 from 0-1 and N of 100000, and simply changed the RNGs.  I subsequently ran the RNGs
-with Ns of 1000 and 1000000 for each individual RNG. The order of RNGs I used was mt19937, followed by knuth_b, minstd_rand, ranlux48, and sobolo (which I ran from quasi.cpp file). I then used the raw results from each and plotted via excel.
+with Ns of 1000 and 1000000 for each individual RNG. The order of RNGs I used was mt19937, followed by knuth_b, minstd_rand, ranlux48, and sobolo (which I ran from quasi.cpp file). I then used the raw results from each and plotted via excel (see 
+chart below).
+
+HOW DO WE CHANGE SOBOL RANGE FROM 0-1????  WENT THROUGH BOTH QUASI AND SOBOL AND 
+COULDN"T FIND INPUT...
 ~~~
 
 * **(e)- 4pts:** Generate random numbers in two-dimensions for a unit square. Plot the results for the different distributions. The vertical axis should vary N in increasing order. The horizontal axis should show of the random number engines. (See [Random Numbers Webcourse page](https://webcourses.ucf.edu/courses/1246518/pages/random-numbers?module_item_id=10541423) for a rough idea what you should produce.)
+
+~~~
+ANS:
+Same issues with distributions...need to fix ASAP!
+~~~
+
 * **(f)- 4pts:** Repeat parts (d) and (e) with a unit circle.
+
+~~~
+ANS:
+Same issue with SOBOL as above for part D, how to input 0,1 in that program
+
+For differing distributions, need to check with Joe for if I'm doing them right
+
 
 ~~~
 References
