@@ -109,6 +109,9 @@ from 0-1 and N of 100000, and simply changed the RNGs.  I subsequently ran the R
 with Ns of 1000 and 1000000 for each individual RNG. The order of RNGs I used was mt19937, followed by knuth_b, minstd_rand, ranlux48, and sobolo (which I ran from quasi.cpp file). I then used the raw results from each and plotted via excel (see 
 chart below).
 
+CAN I JUST USE THE RANDOM NUMBER GENERATOR TO SIMULATE X AND Y?  OR DO I SIMPLY
+DECREASE N VALUES?
+
 HOW DO WE CHANGE SOBOL RANGE FROM 0-1????  WENT THROUGH BOTH QUASI AND SOBOL AND 
 COULDN"T FIND INPUT...
 ~~~
