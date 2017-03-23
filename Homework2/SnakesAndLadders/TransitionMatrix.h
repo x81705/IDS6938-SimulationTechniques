@@ -6,7 +6,7 @@ unsigned int ROLLS = 0; //TODO
 
 double prob = 1.0/6.0 ;  //TODO
 
-//Std:cout << SetTransitionMatrix << std :: end]; //Added - maybe put at the end
+//Std:cout << SetTransitionMatrix << std :: end]; //Added - maybe put at the end //
 
 
 void SetTransitionMatrix()
