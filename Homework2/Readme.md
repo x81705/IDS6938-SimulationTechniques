@@ -52,15 +52,15 @@ to the critical D value, and is thus closer to distributing random values
 equally.
 ~~~
 
-## Graph - Ministd_Rand Histogram
+## Graph - Ministd_Rand Graph
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/ministdrandhisto.png?raw=true)
-## Graph - Knuth_b Histogram
+## Graph - Knuth_b Graph
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/knuthbhisto.png?raw=true)
-## Graph - MT Histogram
+## Graph - MT Graph
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/mthisto.png?raw=true)
-## Graph - Ranlux Histogram
+## Graph - Ranlux Graph
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/ranluxhisto.png?raw=true)
-## Graph - Sobol Histogram
+## Graph - Sobol Graph
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/sobolhisto.png?raw=true)
 
 ## Chi-Squared Test Chart
@@ -74,19 +74,25 @@ equally.
 
 ~~~
 ANS:
-I simply change the N number in the program for each
-RNG listed abvoe.  I noticed that X,Y, and Z occurred.  
-Likely what will happen is that
-the samples will remain roughly the samely distributed despite
-the change in N values
+I simply changed the N number in the program for each
+RNG listed above.  I noticed that in general, a more
+distinct pattern emerged as N increased for all RNGs.
+(See graphs below)
 ~~~
 
 * **(c) - 3pts:** Fix a random engine of your choice from part (a), and now vary five different [distributions](http://www.cplusplus.com/reference/random/) for just the psedo-random numbers. Again, analyze your results with graphs and statistics of choice.
 
 ~~~
 ANS:
-Based on what I understand...pseudo-random numbers mean what?!?!?!
-Do I just do another excel document and then
+I picked the MT (Marsenne Twister) as it was suggested by Joe during office hours
+due to its widespread use.  Using random.cpp in Discreet2, I utilized N = 100000, 
+and then utilized the following distributions (all from 0,100): Uniform Real, Normal, Uniform Int, Discreet, Cauchy, and Fisher F Distributions
+
+CAN I DO UNIFORM REAL AGAIN, OR PICK ANOTHER?  WANT TO COMPARE UNIFORM REAL AND
+UNIFORM INT; WHAT DOES PSEUDO RANDOM NUMBERS MEAN IN THE QUESTION?  CAN I JUST
+RUN THE PROGRAM?
+
+Based on the data I acquired....X.  Please refer to the charts below.
 ~~~
 
 
