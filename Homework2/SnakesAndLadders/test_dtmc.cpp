@@ -51,8 +51,8 @@ int main() {
 
 			std::vector<int> discreteMC;
 			//for (unsigned int i = 0; i < N; ++i){
-			discreteMC = DTMC(matrix, steps, start);
-			++hist[std::round(discreteMC.back())];
+			discreteMC = DTMC(matrix, steps, start);  //Added
+			++hist[std::round(discreteMC.back())];    //Added
 
 			//  }
 			//Returns an array with the states at each step of the discrete-time Markov Chain

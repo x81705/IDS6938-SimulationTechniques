@@ -6,7 +6,7 @@ unsigned int ROLLS = 0; //TODO
 
 double prob = 1.0/6.0 ;  //TODO
 
-//Std:cout << SetTransitionMatrix << std :: end];
+//Std:cout << SetTransitionMatrix << std :: end]; //Added
 
 
 void SetTransitionMatrix()
@@ -14,8 +14,8 @@ void SetTransitionMatrix()
 	TransitionMatrix.setZero();
 
 	//TODO
-	For(int i = 0; i < TransitionMatrix.rows() - 6; i++);
-	TransitionMatrix(i, i + 1) = prob;
+	For(int i = 0; i < TransitionMatrix.rows() - 6; i++); //Added from class
+	TransitionMatrix(i, i + 1) = prob; //Added from class
 
 	//SetTransitionMatrix
 
