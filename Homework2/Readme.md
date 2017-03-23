@@ -77,6 +77,7 @@ ANS:
 I simply changed the N number in the program for each
 RNG listed above to 1000 and 1000000.  I noticed that in general, a more
 distinct pattern emerged as N increased for all RNGs.
+
 (See graphs below)
 ~~~
 
@@ -86,7 +87,7 @@ distinct pattern emerged as N increased for all RNGs.
 ANS:
 I picked the MT (Marsenne Twister) as it was suggested by Joe during office hours
 due to its widespread use.  Using random.cpp in Discreet2, I utilized N = 100000, 
-and then utilized the following distributions (all from 0,100): Uniform Real, Normal, Uniform Int, Fisher F, and Cauchy Distributions.  I found the code for Fisher F
+and then utilized the following distributions (all from 0,100): Uniform Real, Normal, Uniform Int, Chi-Squared, and Cauchy Distributions.  I found the code for Chi Squared
 and Cauchy in Discreet2 under External Dependencies -> Random -> std.
 
 NORMAL and CAUCHY NOT WORKING (producing weird and negative numbers), FISHER and 
@@ -127,7 +128,7 @@ Same issues with distributions...need to fix ASAP!
 
 ~~~
 ANS:
-Same issue with SOBOL as above for part D, how to input 0,1 in that program
+Same issue with SOBOL as above for part D, how to input -1,1 in that program
 
 For differing distributions, need to check with Joe for if I'm doing them right
 
@@ -139,7 +140,8 @@ Almodovar, Alex. Multiple conversations (both in-person and via email/text)
 regarding assignment, 9MAR-28MAR17. For Part I, Alex provided 
 help compiling the code when I received errors for initial compiling,
 reminded me that Discreet 2 solutions were utilized and that nothing to 
-queues/shoots and ladders code needed to be modified for Part I.
+queues/shoots and ladders code needed to be modified for Part I, and provided
+general guidance for manipulation of distributions.
 
 Davis, Jeff.  1 February 2010.  K-S Test (Youtube Video).  Youtube.com.  
 Retrieved from https://www.youtube.com/watch?v=9Of2LTy5Sq0.  
