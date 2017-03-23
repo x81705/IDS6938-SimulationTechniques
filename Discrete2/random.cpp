@@ -39,14 +39,14 @@ int main()
 
 	//  2) - Change distribution types
 	//std::uniform_real_distribution<> dist(0, 100);  // example of a uniform distribution
-	std::normal_distribution<> dist(50, 10);    // example of a normal distribution, was at 50 and 100
+	//std::normal_distribution<> dist(50, 10);    // example of a normal distribution, was at 50 and 100
 	//std::uniform_int_distribution<> dist(0, 100); // Test to see difference between real and int
 	//std::fisher_f_distribution<> dist(0, 100); //Added
-	//std::cauchy_distribution<> dist(0, 100); //Added
+	std::cauchy_distribution<> dist(50.0, 1.0); //Added - Alex Helped with parameters
 	//std::weibull_distribution<> dist(0, 100); //Added
 	//std::gamma_distribution<> dist(0, 100); //Added
 	//std::chi_squared_distribution<> dist(100); //Added
-	std::student_t_distribution<> dist(100); //Added
+	//std::student_t_distribution<> dist(100); //Added
 
 
 	auto generator = std::bind(dist, engine);
