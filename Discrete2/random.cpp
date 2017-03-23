@@ -18,10 +18,10 @@ int main()
 	std::random_device rd;
 
 	// 1) Change random number generators
-	//std::mt19937_64 engine(rd());
+	std::mt19937_64 engine(rd());
 	//std::knuth_b engine(rd());
 	//std::minstd_rand engine(rd());
-	std::ranlux48 engine(rd());
+	//std::ranlux48 engine(rd());
 	//LAST ONE SHOULD BE SOBOLO, got data through quasirandom
 	
 	 
@@ -38,18 +38,21 @@ int main()
 	
 
 	//  2) - Change distribution types
-	std::uniform_real_distribution<> dist(0, 100);  // example of a uniform distribution
-	//std::normal_distribution<> dist(50,10);    // example of a normal distribution
-	//std::uniform_int_distribution<> dist(0, 100); //ADD THESE
-	//std::binomial_distribution<> dist(0, 100); //ADD THESE
-	//std::cauchy_distribution<> dist(0, 100);
-	//chi_squared_distribution<> dist(0, 100);
+	//std::uniform_real_distribution<> dist(0, 100);  // example of a uniform distribution
+	std::normal_distribution<> dist(50, 10);    // example of a normal distribution, was at 50 and 100
+	//std::uniform_int_distribution<> dist(0, 100); // Test to see difference between real and int
+	//std::fisher_f_distribution<> dist(0, 100); //Added
+	//std::cauchy_distribution<> dist(0, 100); //Added
+	//std::weibull_distribution<> dist(0, 100); //Added
+	//std::gamma_distribution<> dist(0, 100); //Added
+	//std::chi_squared_distribution<> dist(100); //Added
+	std::student_t_distribution<> dist(100); //Added
 
 
 	auto generator = std::bind(dist, engine);
 
 	// 3) Play with N
-	unsigned int N = 1000000;  // number of values generated
+	unsigned int N = 100000;  // number of values generated
 	double randomValue;
 	std::map<int, int> hist; //Counts of discrete values
 	std::vector<double> raw; //raw random values 

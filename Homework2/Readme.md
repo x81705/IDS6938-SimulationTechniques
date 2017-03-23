@@ -86,7 +86,11 @@ distinct pattern emerged as N increased for all RNGs.
 ANS:
 I picked the MT (Marsenne Twister) as it was suggested by Joe during office hours
 due to its widespread use.  Using random.cpp in Discreet2, I utilized N = 100000, 
-and then utilized the following distributions (all from 0,100): Uniform Real, Normal, Uniform Int, Discreet, Cauchy, and Fisher F Distributions
+and then utilized the following distributions (all from 0,100): Uniform Real, Normal, Uniform Int, Fisher F, and Cauchy Distributions.  I found the code for Fisher F
+and Cauchy in Discreet2 under External Dependencies -> Random -> std.
+
+NORMAL and CAUCHY NOT WORKING (producing weird and negative numbers), FISHER and 
+WEIBULL and GAMMA NOT WORKING AT ALL
 
 CAN I DO UNIFORM REAL AGAIN, OR PICK ANOTHER?  WANT TO COMPARE UNIFORM REAL AND
 UNIFORM INT; WHAT DOES PSEUDO RANDOM NUMBERS MEAN IN THE QUESTION?  CAN I JUST
