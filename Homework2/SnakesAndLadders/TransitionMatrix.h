@@ -19,7 +19,10 @@ void SetTransitionMatrix()
 	TransitionMatrix(i, i + 1) = prob; //Added from class
     }
 	//SetTransitionMatrix
-	//TransitionMatrix(95, 100) = prob*2;  keep going, increase to 96,97, - prob, 3, 4 - through 100 and prob*6
-
+	//TransitionMatrix(95, 100) = prob*2;  //keep going, increase to 96,97, - prob, 3, 4 - through 100 and prob*6
+	//TransitionMatrix(96, 100) = prob*3;
+	//TransitionMatrix(97, 100) = prob*4;
+	//TransitionMatrix(98, 100) = prob*5;
+	//TransitionMatrix(99, 100) = prob*6;
 
 }
