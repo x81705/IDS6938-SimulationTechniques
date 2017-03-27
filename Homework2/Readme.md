@@ -8,6 +8,7 @@
  
 
 The assignment is due: **Tuesday, March 28 at 11:59PM (EST)**
+Will use one alibi day, making new due date: **Wed, Mar 29 at 11:59PM (EST)**
 
 
 # Assignment
