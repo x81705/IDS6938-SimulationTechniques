@@ -31,7 +31,7 @@ int main() {
 	for (unsigned int i = 0; i < N; ++i) {
 		
 		//TODO (add DTMC, and histogram lines.)
-		 /*int main() {
+		 int main() {
 			//SIMULATE DISCRETE TIME MARKOV CHAIN
 			std::vector< std::vector<double> > matrix(3, std::vector<double>(3)); //initializes a 3x3 matrix with zeros
 
