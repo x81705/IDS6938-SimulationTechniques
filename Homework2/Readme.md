@@ -280,8 +280,22 @@ connected 3 of the 5 outputs and put probabilities of all three at .333.  Follow
 Finally, I emplaced a Go To block named "GTplane" and a Ped Sink named "End" to finish the simulation of pedestrians moving through airport security.
 
 I then built the model and ran it; see below for screen shots displaying
-this simulation.
+the flowchart constructed in AnyLogic and the simulation.
+~~~
+## AnyLogic Flowchart
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any1.PNG?raw=true)
 
+## AnyLogic Simulation Start
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any2.PNG?raw=true)
+
+## AnyLogic Simulation Running
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any3.PNG?raw=true)
+
+## AnyLogic Simulation Running
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any4.PNG?raw=true)
+
+## AnyLogic Simulation End
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any5.PNG?raw=true)
 
 ~~~
 References
