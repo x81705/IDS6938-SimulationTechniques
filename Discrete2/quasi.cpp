@@ -14,7 +14,7 @@
 
 # define DIM_MAX 2
 
-int dim_num = 1;
+int dim_num = 2;// can swtich to two from one, original was int dim_num = 1 --Joes office hours
 float *r;
 int seed;
 int seed_in;
@@ -52,7 +52,7 @@ int main()
 
 
 	// 3) Play with N
-	unsigned int N = 500;  // number of values generated
+	unsigned int N = 6;  // number of values generated
 	double randomValue;
 	std::map<int, int> hist; //Counts of discrete values
 	std::vector<double> raw; //raw random values 

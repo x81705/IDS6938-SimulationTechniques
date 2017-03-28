@@ -1745,7 +1745,7 @@
 				<RectangleWall>
 					<Id>1490723149715</Id>
 					<Name><![CDATA[wall]]></Name>
-					<X>0</X><Y>60</Y>
+					<X>15</X><Y>70</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1909,86 +1909,6 @@
 					<Z>0</Z>
 				</Ground>
 
-				<Group>
-					<Id>1490717477023</Id>
-					<Name><![CDATA[planeModel]]></Name>
-					<X>730</X><Y>490</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_3D</DrawMode>
-					<VisibleCode><![CDATA[true]]></VisibleCode>
-					<AsObject>true</AsObject>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-
-			<Shapes>
-				<Figure3D>
-					<Id>1490717477027</Id>
-					<Name><![CDATA[airliner]]></Name>
-					<X>-100</X><Y>-180</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>-100</X><Y>-180</Y><Z>5</Z>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/airliner.x3d]]></FileName>
-					<ColorTable>
-						<ColorMapping>
-							<Name><![CDATA[Material_Surf]]></Name>
-							<OriginalColor>-1</OriginalColor>
-						</ColorMapping>
-					</ColorTable>
-					<AutoScale>false</AutoScale>
-					<Scale>1.25</Scale>
-					<Rotation>0.0</Rotation>
-					<AxisOrder>YZX_AXIS_ORDER</AxisOrder>
-					<ApplyShading>false</ApplyShading>
-				</Figure3D>
-			</Shapes>
-
-				</Group>
-				<Figure3D>
-					<Id>1490717534602</Id>
-					<Name><![CDATA[car_1]]></Name>
-					<X>30</X><Y>280</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>false</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>30</X><Y>280</Y><Z>0</Z>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/car.x3d]]></FileName>
-					<ColorTable>
-						<ColorMapping>
-							<Name><![CDATA[Material__1__Surf]]></Name>
-							<OriginalColor>-3618616</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[Material__2__Surf]]></Name>
-							<OriginalColor>-3403008</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[Material__4__Surf]]></Name>
-							<OriginalColor>-13138595</OriginalColor>
-							<Color>-8388608</Color>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[Material__3__Surf]]></Name>
-							<OriginalColor>-11908534</OriginalColor>
-						</ColorMapping>
-					</ColorTable>
-					<AutoScale>false</AutoScale>
-					<Scale>1.0</Scale>
-					<Rotation>0.0</Rotation>
-					<AxisOrder>YZX_AXIS_ORDER</AxisOrder>
-					<ApplyShading>true</ApplyShading>
-				</Figure3D>
 				<Figure3D>
 					<Id>1490731929142</Id>
 					<Name><![CDATA[airliner1]]></Name>
@@ -2122,73 +2042,17 @@
 					<ApplyShading>true</ApplyShading>
 				</Figure3D>
 				<Figure3D>
-					<Id>1490732097539</Id>
-					<Name><![CDATA[table]]></Name>
-					<X>490</X><Y>230</Y>
+					<Id>1490734768160</Id>
+					<Name><![CDATA[bench]]></Name>
+					<X>105</X><Y>270</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>490</X><Y>230</Y><Z>0</Z>
+					<X>105</X><Y>270</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/table.x3d]]></FileName>
-					<ColorTable>
-						<ColorMapping>
-							<Name><![CDATA[material0]]></Name>
-							<OriginalColor>-14391175</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[material1]]></Name>
-							<OriginalColor>-11184811</OriginalColor>
-						</ColorMapping>
-					</ColorTable>
-					<AutoScale>true</AutoScale>
-					<Scale>1.0</Scale>
-					<Rotation>0.0</Rotation>
-					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
-					<ApplyShading>true</ApplyShading>
-				</Figure3D>
-				<Figure3D>
-					<Id>1490732118076</Id>
-					<Name><![CDATA[table1]]></Name>
-					<X>120</X><Y>270</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>120</X><Y>270</Y><Z>0</Z>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/table.x3d]]></FileName>
-					<ColorTable>
-						<ColorMapping>
-							<Name><![CDATA[material0]]></Name>
-							<OriginalColor>-14391175</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[material1]]></Name>
-							<OriginalColor>-11184811</OriginalColor>
-						</ColorMapping>
-					</ColorTable>
-					<AutoScale>true</AutoScale>
-					<Scale>1.0</Scale>
-					<Rotation>0.0</Rotation>
-					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
-					<ApplyShading>true</ApplyShading>
-				</Figure3D>
-				<Figure3D>
-					<Id>1490732124297</Id>
-					<Name><![CDATA[chair]]></Name>
-					<X>160</X><Y>270</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>160</X><Y>270</Y><Z>0</Z>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -2202,17 +2066,17 @@
 					<ApplyShading>true</ApplyShading>
 				</Figure3D>
 				<Figure3D>
-					<Id>1490732132301</Id>
-					<Name><![CDATA[chair1]]></Name>
-					<X>150</X><Y>270</Y>
+					<Id>1490734812949</Id>
+					<Name><![CDATA[bench1]]></Name>
+					<X>140</X><Y>285</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>150</X><Y>270</Y><Z>0</Z>
+					<X>140</X><Y>285</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -2226,8 +2090,32 @@
 					<ApplyShading>true</ApplyShading>
 				</Figure3D>
 				<Figure3D>
-					<Id>1490732141482</Id>
-					<Name><![CDATA[chair2]]></Name>
+					<Id>1490734814916</Id>
+					<Name><![CDATA[bench2]]></Name>
+					<X>105</X><Y>285</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>105</X><Y>285</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[material0]]></Name>
+							<OriginalColor>-3094341</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>1.0</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+				</Figure3D>
+				<Figure3D>
+					<Id>1490734819571</Id>
+					<Name><![CDATA[bench3]]></Name>
 					<X>140</X><Y>270</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -2236,7 +2124,7 @@
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<X>140</X><Y>270</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -2250,17 +2138,17 @@
 					<ApplyShading>true</ApplyShading>
 				</Figure3D>
 				<Figure3D>
-					<Id>1490732147584</Id>
-					<Name><![CDATA[chair3]]></Name>
-					<X>480</X><Y>240</Y>
+					<Id>1490734848658</Id>
+					<Name><![CDATA[bench4]]></Name>
+					<X>105</X><Y>300</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>480</X><Y>240</Y><Z>0</Z>
+					<X>105</X><Y>300</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -2274,17 +2162,17 @@
 					<ApplyShading>true</ApplyShading>
 				</Figure3D>
 				<Figure3D>
-					<Id>1490732152300</Id>
-					<Name><![CDATA[chair4]]></Name>
-					<X>470</X><Y>240</Y>
+					<Id>1490734854339</Id>
+					<Name><![CDATA[bench5]]></Name>
+					<X>140</X><Y>300</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>470</X><Y>240</Y><Z>0</Z>
+					<X>140</X><Y>300</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -2298,17 +2186,17 @@
 					<ApplyShading>true</ApplyShading>
 				</Figure3D>
 				<Figure3D>
-					<Id>1490732159324</Id>
-					<Name><![CDATA[chair5]]></Name>
-					<X>490</X><Y>240</Y>
+					<Id>1490735057358</Id>
+					<Name><![CDATA[bench6]]></Name>
+					<X>475</X><Y>228</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>490</X><Y>240</Y><Z>0</Z>
+					<X>475</X><Y>228</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -2322,17 +2210,17 @@
 					<ApplyShading>true</ApplyShading>
 				</Figure3D>
 				<Figure3D>
-					<Id>1490732163991</Id>
-					<Name><![CDATA[chair6]]></Name>
-					<X>500</X><Y>240</Y>
+					<Id>1490735057451</Id>
+					<Name><![CDATA[bench7]]></Name>
+					<X>475</X><Y>243</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>500</X><Y>240</Y><Z>0</Z>
+					<X>475</X><Y>243</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
@@ -2346,21 +2234,273 @@
 					<ApplyShading>true</ApplyShading>
 				</Figure3D>
 				<Figure3D>
-					<Id>1490732169402</Id>
-					<Name><![CDATA[chair7]]></Name>
-					<X>510</X><Y>240</Y>
+					<Id>1490735057531</Id>
+					<Name><![CDATA[bench8]]></Name>
+					<X>475</X><Y>258</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>510</X><Y>240</Y><Z>0</Z>
+					<X>475</X><Y>258</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[x3d/chair.x3d]]></FileName>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
 					<ColorTable>
 						<ColorMapping>
 							<Name><![CDATA[material0]]></Name>
 							<OriginalColor>-3094341</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>1.0</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+				</Figure3D>
+				<Figure3D>
+					<Id>1490735057616</Id>
+					<Name><![CDATA[bench9]]></Name>
+					<X>510</X><Y>258</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>510</X><Y>258</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[material0]]></Name>
+							<OriginalColor>-3094341</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>1.0</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+				</Figure3D>
+				<Figure3D>
+					<Id>1490735070035</Id>
+					<Name><![CDATA[bench10]]></Name>
+					<X>510</X><Y>245</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>510</X><Y>245</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[material0]]></Name>
+							<OriginalColor>-3094341</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>1.0</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+				</Figure3D>
+				<Figure3D>
+					<Id>1490735076735</Id>
+					<Name><![CDATA[bench11]]></Name>
+					<X>510</X><Y>230</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>510</X><Y>230</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<FileName><![CDATA[x3d/bench.x3d]]></FileName>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[material0]]></Name>
+							<OriginalColor>-3094341</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>1.0</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+				</Figure3D>
+				<Figure3D>
+					<Id>1490735197350</Id>
+					<Name><![CDATA[controller_1]]></Name>
+					<X>130</X><Y>190</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>130</X><Y>190</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<FileName><![CDATA[x3d/controller_1.x3d]]></FileName>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_12]]></Name>
+							<OriginalColor>-267827</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_6]]></Name>
+							<OriginalColor>-16734209</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material]]></Name>
+							<OriginalColor>-11447983</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_11]]></Name>
+							<OriginalColor>-3618616</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>1.0</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+				</Figure3D>
+				<Figure3D>
+					<Id>1490735208351</Id>
+					<Name><![CDATA[controller_2]]></Name>
+					<X>120</X><Y>190</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>120</X><Y>190</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<FileName><![CDATA[x3d/controller_1.x3d]]></FileName>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_12]]></Name>
+							<OriginalColor>-267827</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_6]]></Name>
+							<OriginalColor>-16734209</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material]]></Name>
+							<OriginalColor>-11447983</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_11]]></Name>
+							<OriginalColor>-3618616</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>1.0</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+				</Figure3D>
+				<Figure3D>
+					<Id>1490735214725</Id>
+					<Name><![CDATA[controller_3]]></Name>
+					<X>110</X><Y>190</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>110</X><Y>190</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<FileName><![CDATA[x3d/controller_1.x3d]]></FileName>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_12]]></Name>
+							<OriginalColor>-267827</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_6]]></Name>
+							<OriginalColor>-16734209</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material]]></Name>
+							<OriginalColor>-11447983</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_11]]></Name>
+							<OriginalColor>-3618616</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>1.0</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+				</Figure3D>
+				<Figure3D>
+					<Id>1490735220639</Id>
+					<Name><![CDATA[controller_4]]></Name>
+					<X>140</X><Y>190</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>140</X><Y>190</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<FileName><![CDATA[x3d/controller_1.x3d]]></FileName>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_12]]></Name>
+							<OriginalColor>-267827</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_6]]></Name>
+							<OriginalColor>-16734209</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material]]></Name>
+							<OriginalColor>-11447983</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_11]]></Name>
+							<OriginalColor>-3618616</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>1.0</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+				</Figure3D>
+				<Figure3D>
+					<Id>1490735227116</Id>
+					<Name><![CDATA[controller_5]]></Name>
+					<X>100</X><Y>190</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>100</X><Y>190</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<FileName><![CDATA[x3d/controller_1.x3d]]></FileName>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_12]]></Name>
+							<OriginalColor>-267827</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_6]]></Name>
+							<OriginalColor>-16734209</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material]]></Name>
+							<OriginalColor>-11447983</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_11]]></Name>
+							<OriginalColor>-3618616</OriginalColor>
 						</ColorMapping>
 					</ColorTable>
 					<AutoScale>true</AutoScale>
