@@ -258,28 +258,29 @@ In regards to useful data and statistics, the following charts display
 interesting statistics about the data I obtained.
 ~~~
 
-***(e) - 15pts:** AnyLogic Simulation; added to images file in repository.  
+***(e) - 15pts:** AnyLogic Simulation;
+
+~~~
+ANS:
+- Note: I added AnyLogic files under the images folder 
+in my repository for reference
+
 Narrative of Construction:
-To construct this simulation, I utilized the pedestrian library.  I emplaced
-a pedestrian source first to generate the customers (arrival rate of 1000 per hour
-, with max number of arrivals of 1000) followed by a ped service
-block which I labeled "CheckIn" (keeping default settings of uniform 2.0/3.0 seconds
-delay).  I then created a Ped Wait block which I labeled "CIwait", and set the delay
-time for 53 minutes.  
+To construct this simulation, I utilized the pedestrian library; all inputs were
+left in default mode unless otherwise noted.  I first made a target line and a
+ped source block.  I connected the ped source block to a Go To Block (referred
+to as "GTCheckin"), and then emplaced a rectangular area to serve as the container
+for pedestrians around a Wait block (named "CIwait"; inputted a delay of 53 minutes,  but for simulation changed to millisecs for quicker observation (repeated in next
+wait areas as well)).  
 
-After "CIwait", I created a Ped Go To block which I labeled 
-"GTsecurity" (kept default settings), and then a Ped Select Output which I labeled
-"SecurityQueue", and set the probabilities for the first three queues at .333, and the last two at 0 to ensure that no simulated customers would go through additional
-queues not specified in the problem statement.  I then created another Ped Wait block
-which I labeled "SecWait", and set the delay for 20 minutes.  
+From CIwait, I emplaced
+a Go To block ("GTsecurity) and then a Wait block ("SecWait"; with a 20 min delay setting), followed by a Ped Select Output named "Security Queue", in which I only
+connected 3 of the 5 outputs and put probabilities of all three at .333.  Following this, I emplaced another Go To block ("GTBoarding") and a Wait block ("BoardWait").
 
-The Ped Go To Block
-labeled "GTBoarding" was then created, followed by a Ped Service block which I called
-"Boarding" (kept default settings); "Boarding" was followed by another Ped Wait block
-I named "BoardWait", which I set the delay for 80 minutes.  I then put a Ped Sink
-block labeled "End" to finish the simulation.
+Finally, I emplaced a Go To block named "GTplane" and a Ped Sink named "End" to finish the simulation of pedestrians moving through airport security.
 
-I then built the model and ran it.
+I then built the model and ran it; see below for screen shots displaying
+this simulation.
 
 
 ~~~
