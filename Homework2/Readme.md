@@ -243,8 +243,20 @@ ANS: Please refer to coding in main.cpp.
   *  expected number customers 
   * expected waiting time
   * expected response time 
-  * 
-***(d) - 4pts:** Write code to call the functions to output and generate data from the airport senario. Plot and analyze the useful statistics/results in the program of your choice.  (Hint -  basically call  *.output();* on the MM1_Queue objects you create. Hint2 - two other use functions are *get_current_time()* and  *plot_results_output()* call intially on your intial MM1_Queue object.)  
+
+
+~~~
+ANS: Please refer to coding in main.cpp.
+~~~
+
+
+***(d) - 4pts:** Write code to call the functions to output and generate data from the airport senario. Plot and analyze the useful statistics/results in the program of your choice.  (Hint -  basically call  *.output();* on the MM1_Queue objects you create. Hint2 - two other use functions are *get_current_time()* and  *plot_results_output()* call intially on your intial MM1_Queue object.)
+
+~~~
+ANS: Please refer to coding in main.cpp.  
+In regards to useful data and statistics, the following charts display
+interesting statistics about the data I obtained.
+~~~
 
 ***(e) - 15pts:** AnyLogic Simulation; added to images file in repository.  
 Narrative of Construction:
