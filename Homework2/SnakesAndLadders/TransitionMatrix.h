@@ -25,6 +25,7 @@ void SetTransitionMatrix()
     }
 	//SetTransitionMatrix
 	//TransitionMatrix(95, 100) = prob*2;  //keep going, increase to 96,97, - prob, 3, 4 - through 100 and prob*6
+	//William helped with the below code; I had only inputted (95, 100) = prob*2, (96, 100) = prob*3 etc;
 
 	TransitionMatrix(95, 96) = prob;
 	TransitionMatrix(95, 97) = prob;

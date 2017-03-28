@@ -204,6 +204,16 @@ Ladders From  | Ladders To | |  Snakes From  | Snakes To
 Run the same simulation and analyze your results similar to part (b) for the proper game of *Snakes and Ladders* for both methods. How often are the snakes and ladders used, how do the probability of finishing change, etc? What is the maximum and expected amount of moves for the game? Use charts and graphs to illustrate these points.
 * **(d) Think - 0pts:** If these games are built entirely on chance, do they require any strategy? Is it really a *game*, would you rather play games of chance or games of strategy?
 
+~~~
+References
+
+Netterville, William. Face to face conversations on 27MAR17. For Part II,
+William helped with the formulation of the transition matrix and where to 
+input code from piazaa.  All help received from William is documented in
+visual studio files.
+
+~~~
+
 
 ##Part 3 - Discrete Event Simulation - Queue Simulation (30 pts)
 
@@ -222,6 +232,18 @@ When a passanger arrives they have to wait in a queue to present their ID and ti
   * expected response time 
 *  **(d) - 4pts:** Write code to call the functions to output and generate data from the airport senario. Plot and analyze the useful statistics/results in the program of your choice.  (Hint -  basically call  *.output();* on the MM1_Queue objects you create. Hint2 - two other use functions are *get_current_time()* and  *plot_results_output()* call intially on your intial MM1_Queue object.)  
 * **(e) - 15pts:** Download the personal edition of **[Anylogic](http://www.anylogic.com/)**, read through the [documentation](http://www.anylogic.com/learn-simulation) as needed, and set up the same type of simulation discussed above.
+
+~~~
+References
+
+Netterville, William. Face to face conversations on 27MAR17. For Part III,
+William helped me with the construction of formulas in mm1_queue.cpp by showing
+me where the formulas were on webcourses (and helped with formulation).  He also
+showed me the piazaa post detailing the coding in main.cpp, and helped with where
+and how to input the code.  All helped received from William is documented in
+visual studio files.
+
+~~~
 
 
 ##Part 4 - Implementing Extra Features (10 pts)

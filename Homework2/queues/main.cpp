@@ -35,6 +35,7 @@ int main(int argc, char* argv[])
    {
       
 	   //TODO Create MM1_Queue objects to capture the airport senario.
+	   //William helped with showing where post detailing code in piazaa was, and then helped walk through where code was to be emplaced
 	   MM1_Queue    Q1;
 	   Q1.set_file_names("Q1_log.txt", "Q1_wait.txt", "Q1_service.txt");
 	   Q1.set_lambda(6);   // for this assignment this is set to a variable from the for loop.

@@ -75,7 +75,7 @@ void MM1_Queue::initialize()
     if (!initialized_)
     {
 
-      //TODO---------------------------------------------
+      //TODO---------------------------------------------//William helped with this, showed where formulas were on webcourses and helped with formulation
 		expected_server_utilization_ = lambda_ / mu_;
 		expected_idle_prob_ = 1 - expected_server_utilization_;
 		expected_queue_length_ = expected_server_utilization_*expected_server_utilization_ / (expected_idle_prob_);
