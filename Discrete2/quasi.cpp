@@ -32,8 +32,28 @@ void getNDimQuasiRandomNumber(int *seed, int dim_number, float *r)
 	i4_sobol(dim_number, seed, r);
 }
 
+/*double call Functionsomething(int N, double &val1, double &val2) //From Joe, office hours
+{
+	val1 = 30.0;
+	val2 = 60.0;
+
+	return 0.4;
+
+}
 
 
+int main()
+{
+
+	double val1;
+	double val2;
+
+	callFunctionsomething(4, val1, val2);
+
+	return 1;
+
+}
+*/
 
 int main()
 {
