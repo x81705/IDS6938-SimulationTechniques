@@ -33,7 +33,6 @@ void SetTransitionMatrix()
 	TransitionMatrix(95, 99) = prob;
 	TransitionMatrix(95, 100) = prob * 2;
 	
-	TransitionMatrix(96, 96) = prob;
 	TransitionMatrix(96, 97) = prob;
 	TransitionMatrix(96, 98) = prob;
 	TransitionMatrix(96, 99) = prob;
@@ -43,7 +42,6 @@ void SetTransitionMatrix()
 	TransitionMatrix(97, 99) = prob;
 	TransitionMatrix(97, 100) = prob * 4;
 
-	TransitionMatrix(98, 98) = prob;
 	TransitionMatrix(98, 99) = prob;
 	TransitionMatrix(98, 100) = prob * 5;
 	

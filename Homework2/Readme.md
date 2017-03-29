@@ -292,7 +292,8 @@ documented in visual studio files.
 
 Matthews, Sarah.  Multiple conversations (both in-person and via email) 
 regarding assignment, 27-29MAR17.  For Part II, Sarah helped me modify the 
-transition matrix, modify test_markov.cpp and...
+transition matrix; all help received from Sarah is documented in visual
+studio files.
 
 Netterville, William. Face to face conversations on 27MAR17 during study group. 
 For Part II, William helped with the formulation of the transition matrix and where to input code from piazaa.  All help received from William is documented in
