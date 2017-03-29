@@ -123,11 +123,18 @@ due to its widespread use.  Using random.cpp in Discreet2, I utilized N = 100000
 and then utilized the following distributions: Uniform Real, 
 Normal, Uniform Int, Chi-Squared, and Cauchy Distributions.  
 I found the code for Chi Squared and Cauchy in Discreet2 
-under External Dependencies -> Random -> std.
+under External Dependencies -> Random -> std.  For many distributions the 
+parameters/inputs had to be adjusted to make the code work.
 
 
 Based on the data I acquired, I followed the same procedure listed above to graph all datasets (refer to graphs below).  Of note, the MT with Uniform Int Distribution did
-not appear to have the same issue of values being skewed at 0 and 100.
+not appear to have the same issue of values being skewed at 0 and 100.  Additionally,
+I observed that P values were all below .05, meaning they are stastically significant
+but not proving they are uniformly/randomly distributed (see below; note, possible
+corrupted data due to obtaining 0s for three distributions).
+
+NO TIME FOR KS TEST!!!!
+
 ~~~
 
 ## Graph - MT With Uniform Real Distribution
@@ -142,8 +149,11 @@ not appear to have the same issue of values being skewed at 0 and 100.
 ## Graph - MT With Uniform Int Distribution
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/c4.PNG?raw=true)
 
-## Graph - MT Expanded N=1M Graph
+## Graph - MT with Chi-Squared Distribution
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/c5.PNG?raw=true)
+
+## Graph - Chi-Squared Test
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/c6.PNG?raw=true)
 
 
 
@@ -189,7 +199,7 @@ regarding assignment, 9MAR-28MAR17. For Part I, Alex provided
 help compiling the code when I received errors for initial compiling,
 reminded me that Discreet 2 solutions were utilized and that nothing to 
 queues/shoots and ladders code needed to be modified for Part I, and provided
-general guidance for manipulation of distributions.
+general guidance for manipulation of distributions and inputs/parameters.
 
 Davis, Jeff.  1 February 2010.  K-S Test (Youtube Video).  Youtube.com.  
 Retrieved from https://www.youtube.com/watch?v=9Of2LTy5Sq0.  
@@ -202,7 +212,7 @@ Microsoft Office Support Page.  Accessed https://support.office.com/en-us/articl
 how to utilize Chi-Square Test in Excel.
 
 Turner, Gosia. 4 February 2014.  Is it statistically significant? The chi-square test.  University of Oxford.  
-Retrieved from  http://www.ox.ac.uk/media/global/wwwoxacuk/localsites/uasconference/presentations/P8_Is_it_statistically_significant.pdf. 
+Retrieved from  http://www.ox.ac.uk/media/global/wwwoxacuk/localsites/uasconference/presentations/P8_Is_it_statistically_significant.pdf . 
 ~~~
 
 ##Part 2 - Snakes and Ladders (Discrete Event Markov Chains and Monte Carlo Simulations) (30 pts)
