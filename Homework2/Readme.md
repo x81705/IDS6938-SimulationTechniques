@@ -399,7 +399,7 @@ and also how to better view/see the simulation.
 * **(10 Points)** - Add a 3D visualization to AnyLogic for Part 3.
  This is also documented in Part 3 through the PNGs posted.
  
-* Microgrids, Missle Defence...). Compare and contrast different software packages (AnyLogic, Simio, Simulu8, Arena etc). Convince me as your "manager/advisor" what advantages, weaknesses, and costs each program has. Come to a conclusion. Roughly sketch out how you would formulate the problem in the framework.
+* **(5 Points)** - Pick a research problem (from your dissertation, Energy Microgrids, Missle Defence...). Compare and contrast different software packages (AnyLogic, Simio, Simulu8, Arena etc). Convince me as your "manager/advisor" what advantages, weaknesses, and costs each program has. Come to a conclusion. Roughly sketch out how you would formulate the problem in the framework.
 
 ##Part 5 - Final Report (10 pts)
 Write up contained in this readme.md and forked to repository/linked on webcourses.
