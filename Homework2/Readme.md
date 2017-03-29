@@ -8,7 +8,8 @@
  
 
 The assignment is due: **Tuesday, March 28 at 11:59PM (EST)**
-Will use one alibi day, making new due date: **Wed, Mar 29 at 11:59PM (EST)**
+Will use one alibi day, making new due date: 
+**Wed, Mar 29 at 11:59PM (EST)**
 Total Alibi Days Used: 2
 
 
@@ -127,13 +128,16 @@ under External Dependencies -> Random -> std.  For many distributions the
 parameters/inputs had to be adjusted to make the code work.
 
 
-Based on the data I acquired, I followed the same procedure listed above to graph all datasets (refer to graphs below).  Of note, the MT with Uniform Int Distribution did
-not appear to have the same issue of values being skewed at 0 and 100.  Additionally,
-I observed that P values were all below .05, meaning they are stastically significant
-but not proving they are uniformly/randomly distributed (see below; note, possible
-corrupted data due to obtaining 0s for three distributions).
+Based on the data I acquired, I followed the same procedure listed above to 
+graph all datasets (refer to graphs below).  Of note, the MT with Uniform 
+Int Distribution did not appear to have the same issue of values being 
+skewed at 0 and 100.  Additionally, I observed that P values were all 
+below .05, meaning they are stastically significant but not proving they are uniformly/randomly distributed (see below; note, possible corrupted data due
+to obtaining 0s for three distributions).
 
 NO TIME FOR KS TEST!!!!
+NO TIME FOR KS TEST!!!!!
+NO TIME FOR KS TEST!!!!!
 
 ~~~
 
@@ -162,7 +166,9 @@ NO TIME FOR KS TEST!!!!
 ANS:
 For this part of the problem, I utilized the uniform real distribution with a range
 from 0-1 and N of 100000, and simply changed the RNGs.  I subsequently ran the RNGs
-with Ns of 1000 and 1000000 for each individual RNG. The order of RNGs I used was mt19937, followed by knuth_b, minstd_rand, ranlux48, and sobolo (which I ran from quasi.cpp file). 
+with Ns of 1000 and 1000000 for each individual RNG. The order of RNGs I used was mt19937, followed by 
+knuth_b, minstd_rand, ranlux48, and 
+sobolo (which I ran from quasi.cpp file). 
 
 I then used the raw results from each and plotted via excel (see 
 chart below; due to graph constraints, utilized two separate pngs to 
@@ -199,7 +205,7 @@ excel and plotted (see below).
 References
 ~~~
 Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
-regarding assignment, 9MAR-28MAR17. For Part I, Alex provided 
+regarding assignment, 9MAR-29MAR17. For Part I, Alex provided 
 help compiling the code when I received errors for initial compiling,
 reminded me that Discreet 2 solutions were utilized and that nothing to 
 queues/shoots and ladders code needed to be modified for Part I, and provided
@@ -227,7 +233,8 @@ Retrieved from  http://www.ox.ac.uk/media/global/wwwoxacuk/localsites/uasconfere
 ~~~
 ANS:
 I used the code from class/piazza to create the transition matrix for the null state
-game; also received help from William Netterville (see references below) .
+game; also received help from William Netterville (see references below).
+Please refer to Visual Studio files for coding.
 ~~~
 
 * **(b) Simulate and analyze the results of Null State Game - 10pts:** What is the modal number of moves required by a single player to finish the game? Produce graphs to analyze the results and show how the game evolves over time for both methods. Plot useful statistics of the results such as percentage chance of finishing the game in n-moves, cumulative probability of finishing the game in n-moves, and other ways to convey useful information of the results.
@@ -235,7 +242,9 @@ game; also received help from William Netterville (see references below) .
 ~~~
 ANS:
 I used the code from class/piazza to create the transition matrix for the null state
-game; also received help from William Netterville (see references below) .
+game; also received help from William Netterville (see references below).  Please 
+refer to Visual Studio files for coding.  The modal number of moves is XXXX.  Graphs
+for A and B are also included below and indicate that the game progresses...
 ~~~
 
 * **(c) Simulate and analyze the results of Snakes and Ladders -10pts:**  Construct a new transition matrix based on the table:
@@ -276,6 +285,11 @@ my odds of winning through hard work/practice, I would choose a game of strategy
 
 ~~~
 References
+Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
+regarding assignment, 9MAR-29MAR17. For Part II, Alex provided 
+help with general problem solution for B/C.  All help received from Alex is 
+documented in visual studio files.
+
 
 Netterville, William. Face to face conversations on 27MAR17 during study group. 
 For Part II, William helped with the formulation of the transition matrix and where to input code from piazaa.  All help received from William is documented in
@@ -286,19 +300,18 @@ visual studio files.
 
 ##Part 3 - Discrete Event Simulation - Queue Simulation (30 pts)
 
-This problem will look at queues and commonly used performance measures. For this problem we will look to design a simple airport security check. We will make the following assumptions: (1) there is only one airline - Southwest; (2) passengers' interarrival times are independent and identically distributed (IID) with an exponential distribution with mean 1 / lambda. The service times are also assumed to be IID and exponentially distributed random variables with mean 1 / mu.
-<BR>![](images/queue.png?raw=true)<BR>
-When a passanger arrives they have to wait in a queue to present their ID and ticket to the gate agent with all the other passengers. Once approved by the agent they will have to pass through a security check. Since this is Orlando, there are only 3 open metal/screening devices open and again passangers have to wait in a queue. After passing through security you again have to wait in a queue to board your plane.
-
 * **(a) - 4pts:** To start create the senario in the figure above in *main.cpp*. Checkin will have a *mu* of 53 and accept new arrivals, the security gates will have a *mu* of 20, and will not accept new arrivials, boarding will have a *mu* of 80. You will have to set up  the appropriate *MM1_Queue* objects to capture the functionality above.
 
-
 ~~~
-ANS: Please refer to coding in main.cpp.
+ANS: Please refer to coding in visual studio files.
 ~~~
-
 
 * **(b) - 4pts:** You want to add a check that your process is within an error range *is_within_error_range(float)* where the error range will be 0.002. You also want to process the next event, and add an external arrival where marked.
+
+~~~
+ANS: Please refer to coding in visual studio files.
+~~~
+
 * **(c) - 3pts:** in *mm1_queue.cpp* : add code to caculate the expected results for: 
   *  expected_server_utilization 
   *    expected idle prob
@@ -307,16 +320,15 @@ ANS: Please refer to coding in main.cpp.
   * expected waiting time
   * expected response time 
 
-
 ~~~
-ANS: Please refer to coding in main.cpp.
+ANS: Please refer to coding in visual studio files.
 ~~~
 
 
 ***(d) - 4pts:** Write code to call the functions to output and generate data from the airport senario. Plot and analyze the useful statistics/results in the program of your choice.  (Hint -  basically call  *.output();* on the MM1_Queue objects you create. Hint2 - two other use functions are *get_current_time()* and  *plot_results_output()* call intially on your intial MM1_Queue object.)
 
 ~~~
-ANS: Please refer to coding in main.cpp.  
+ANS: Please refer to coding in visual studio files.  
 In regards to useful data and statistics, the following charts display
 interesting statistics about the data I obtained.
 ~~~
@@ -340,7 +352,7 @@ From CIwait, I emplaced
 a Go To block ("GTsecurity) and then a Wait block ("SecWait"; with a 20 min delay setting), followed by a Ped Select Output named "Security Queue", in which I only
 connected 3 of the 5 outputs and put probabilities of all three at .333.  Following this, I emplaced another Go To block ("GTBoarding") and a Wait block ("BoardWait").
 
-Finally, I emplaced a Go To block named "GTplane" and a Ped Sink named "End" to finish the simulation of pedestrians moving through airport security.
+Finally, I emplaced a Go To block named "GTplane" and a Ped Sink named "End" to finish the simulation of pedestrians moving through airport security; I also emplaced waiting areas around all areas in which there is a delay.
 
 I then built the model and ran it; see below for screen shots displaying
 the flowchart constructed in AnyLogic and the simulation.
@@ -394,14 +406,19 @@ and also how to better view/see the simulation.
 
 ##Part 4 - Implementing Extra Features (10 pts)
 * **(10 Points)** - Add a 2D visualization to AnyLogic for Part 3.
- This is documented in Part 3 through the PNGs posted.
-
  
-* **(5 Points)** - Pick a research problem (from your dissertation, Energy Microgrids, Missle Defence...). Compare and contrast different software packages (AnyLogic, Simio, Simulu8, Arena etc). Convince me as your "manager/advisor" what advantages, weaknesses, and costs each program has. Come to a conclusion. Roughly sketch out how you would formulate the problem in the framework.
+ ~~~
+ ANS:
+ This is documented in Part 3 through the PNGs posted.
+~~~
+
 
 ##Part 5 - Final Report (10 pts)
-Write up contained in this readme.md and forked to repository/linked on webcourses.
 
+~~~
+ANS:
+Write-up contained in this readme.md and forked to repository/linked on webcourses.
+~~~
 
 ##Extra Credit - 25pts (Mandatory Extra Features noted in Part 4)
 * **(10 Points)** - Add a 3D visualization to AnyLogic for Part 3.
@@ -419,9 +436,22 @@ Prior to deployment in the Army, many units go through what is called a Rapid
 Fielding Initiative (RFI), which in essence gives all the Soldiers in the deploying
 unit new/updated equipment to ensure they are prepared/mission ready.  RFI is conducted due to both training exercises prior to deployment that break/ruin Soldiers
 gear, and also the possibility that a unit does not have the newest model of equipment.  Units from the Army usually deploy in Brigade size elements (approx.
-4400 Soldiers dispersed throughout five Battalions).  For the purpose of this simulation, I will simulate the RFI of a Battalion in order to get a good estimation of the time it will take the entire Brigade to receive this critical equipment; due to the fact that in my experience Battalions are usually understaffed, I will assume the number of Soldiers in each Battalion is 700.  I will also have 6 stations that Soliders must process to receive gear (Body Armor, Helmet, Uniforms, Boots, Load Bearing Equipment, Miscellaneous).  I used 20 minute delays at all stations with the exception of Body Army, which in my experience usually takes roughly 40 minutes due to blocks of instruction/certification/inspection.  Please see the images below.
+4400 Soldiers dispersed throughout five Battalions).  In my future jobs at the Brigade/Division level, this will likely be an operation I will oversee in some capacity, and therefore a simulation could be a great predictor and aid in the planning process.
+
+For the purpose of this simulation, I will simulate the RFI of a Battalion in order to get a good estimation of the time it will take the entire Brigade to receive this critical equipment; due to the fact that in my experience Battalions are usually understaffed, I will assume the number of Soldiers in each Battalion is 700.  I will also have 6 stations that Soliders must process to receive gear (Body Armor, Helmet, Uniforms, Boots, Load Bearing Equipment, Miscellaneous).  I used 20 minute delays at all stations with the exception of Body Army, which in my experience usually takes roughly 40 minutes due to blocks of instruction/certification/inspection.  Please see the images below.
+~~~
+
+
 
 * **(5 Points)** - Pick a research problem (from your dissertation, Energy Microgrids, Missle Defence...). Compare and contrast different software packages (AnyLogic, Simio, Simulu8, Arena etc). Convince me as your "manager/advisor" what advantages, weaknesses, and costs each program has. Come to a conclusion. Roughly sketch out how you would formulate the problem in the framework.
+
+~~~
+ANS:
+For this section, the question I'm seeking to answer is, "What type of program
+would provide the most accurate network simulations?".  This relates to my focus
+on Cybersecurity in this graduate program at UCF, and also something (like the extra credit above), that will be very valuable to understand in my future positions in the Army.
+
+~~~
 
 
 
