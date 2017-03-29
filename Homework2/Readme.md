@@ -439,8 +439,21 @@ gear, and also the possibility that a unit does not have the newest model of equ
 4400 Soldiers dispersed throughout five Battalions).  In my future jobs at the Brigade/Division level, this will likely be an operation I will oversee in some capacity, and therefore a simulation could be a great predictor and aid in the planning process.
 
 For the purpose of this simulation, I will simulate the RFI of a Battalion in order to get a good estimation of the time it will take the entire Brigade to receive this critical equipment; due to the fact that in my experience Battalions are usually understaffed, I will assume the number of Soldiers in each Battalion is 700, and that RFI personnel will be able to service 120 Soldiers per hour.  I will also have 6 stations that Soliders must process to receive gear (Body Armor, Helmet, Uniforms, Boots, Load Bearing Equipment, Miscellaneous (equipment dependent on mission)).  I used 20 minute delays at all stations with the exception of Body Army, which in my experience usually takes roughly 40 minutes due to blocks of instruction/certification/inspection.  Please see the images below (of note, to run more simulations, changed the values from minutes to milliseconds).
-~~~
 
+This simulation accurately predicted a bottleneck in the beginning of the queue (which I have seen in every RFI I have attended), and also predicted approximately 60 hours to equip an entire Battalion; anecodtally this seems a bit high to me (usually can pass an entire Battalion through in two days, but it is often broken up by the Company level); however, taking into account stragglers and people who missed the fielding, 60 hours is likely close to an accurate number to equip all personnel.
+NOTE: AnyLogic model/files located in Homework 2 repository.
+~~~
+## AnyLogic RFI Flowchart
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/extra1.PNG?raw=true)
+
+## AnyLogic RFI Flowchart w/ Soldiers Simulated
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/extra2.PNG?raw=true)
+
+## AnyLogic 3D RFI Simulation Close Up
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/extra3.PNG?raw=true)
+
+## AnyLogic 3D RFI Simulation Ending
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/extra4.PNG?raw=true)
 
 
 * **(5 Points)** - Pick a research problem (from your dissertation, Energy Microgrids, Missle Defence...). Compare and contrast different software packages (AnyLogic, Simio, Simulu8, Arena etc). Convince me as your "manager/advisor" what advantages, weaknesses, and costs each program has. Come to a conclusion. Roughly sketch out how you would formulate the problem in the framework.
