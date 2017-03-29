@@ -214,7 +214,8 @@ original distributions without parameter/axes manipulation, possible data issues
 ANS:
 To obtain graphs for this section, I simply emplaced parameters from -1 to 1
 in all distributions possible and then converted the 
-coordinates to polar in excel and plotted (see below).
+coordinates to polar in excel and plotted (see below; Sarah Matthews
+helped me figure out the conversion equations).
 ~~~
 
 
@@ -233,6 +234,12 @@ Retrieved from https://www.youtube.com/watch?v=9Of2LTy5Sq0.
 Kider, Joseph.  Multiple conversations via email and during 
 office hours on 21MAR-28MAR17 regarding errors compiling code,
 printing functions, and general help determining if solution was correct.
+
+Matthews, Sarah.  Multiple conversations (both in-person and via email) 
+regarding assignment, 27-29MAR17.  For Part I, Sarah helped me with the 
+equations to convert cartesian to polar coordinates in excel(IE, how to
+find theta, x, and y from my initial data; see uploaded excel for more
+detail).
 
 Microsoft Office Support Page.  Accessed https://support.office.com/en-us/article/CHISQ-TEST-function-2e8a7861-b14a-4985-aa93-fb88de3f260f to look up
 how to utilize Chi-Square Test in Excel.
