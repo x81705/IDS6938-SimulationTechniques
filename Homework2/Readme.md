@@ -25,8 +25,10 @@ keeping the uniform_real_distribution for all random number generator
 engines. The first random number generator (RNG) I used was mt19937_64, 
 followed by knuth_b, minstd_rand, and ranlux48, and sobol.  I 
 copied the data into separate text files, and then plotted the 
-data in excel (See Graphs Below).  Additionally using excel, 
-I ran the Chi-square Test, and Kolmogorov-Smirnov Test.
+data in excel (See Graphs Below).  Of note, with
+this distribution it appeared that the limits (0,100) had far less
+than the other numbers.  Additionally using excel, 
+I ran the Chi-square Test, and Kolmogorov-Smirnov Test.  
 
 I utilized the Chi-Square Test function in Excel to obtain the 
 results below. Degrees of freedom are found by taking Rows-1 *
@@ -83,7 +85,7 @@ distributions appeared to roughly hold the same patterns even as
 N increased; this is most
 clearly seen in a comparison of these two graphs with the initial N value
 conducted in Part A above (see graphs below; separate 1M graph displayed
-to give full context with all values).
+with axes parameters to give full context with all values).
 ~~~
 
 ## Graph - Ranlux Comparison Graphs
@@ -118,18 +120,35 @@ to give full context with all values).
 ANS:
 I picked the MT (Marsenne Twister) as it was suggested by Joe during office hours
 due to its widespread use.  Using random.cpp in Discreet2, I utilized N = 100000, 
-and then utilized the following distributions (all from 0,100): Uniform Real, Normal, Uniform Int, Chi-Squared, and Cauchy Distributions.  I found the code for Chi Squared
-and Cauchy in Discreet2 under External Dependencies -> Random -> std.
+and then utilized the following distributions: Uniform Real, 
+Normal, Uniform Int, Chi-Squared, and Cauchy Distributions.  
+I found the code for Chi Squared and Cauchy in Discreet2 
+under External Dependencies -> Random -> std.
 
-NORMAL and CAUCHY NOT WORKING (producing weird and negative numbers), FISHER and 
-WEIBULL and GAMMA NOT WORKING AT ALL
 
-CAN I DO UNIFORM REAL AGAIN, OR PICK ANOTHER?  WANT TO COMPARE UNIFORM REAL AND
-UNIFORM INT; WHAT DOES PSEUDO RANDOM NUMBERS MEAN IN THE QUESTION?  CAN I JUST
-RUN THE PROGRAM?
-
-Based on the data I acquired....X.  Please refer to the charts below.
+Based on the data I acquired, I followed the same procedure listed above to graph all datasets (refer to graphs below).  Of note, the MT with Uniform Int Distribution did
+not appear to have the same issue of values being skewed at 0 and 100.
 ~~~
+
+## Graph - MT With Uniform Real Distribution
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/c1.PNG?raw=true)
+
+## Graph - MT With Normal Distribution
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/c2.PNG?raw=true)
+
+## Graph - MT With Cauchy Distribution
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/c3.PNG?raw=true)
+
+## Graph - MT With Uniform Int Distribution
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/c4.PNG?raw=true)
+
+## Graph - MT Expanded N=1M Graph
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/c5.PNG?raw=true)
+
+
+
+
+
 
 
 * **(d)- 4pts:** Generate random numbers in two-dimensions for a unit square. Plot the results for the different random number engines. The vertical axis should vary N in increasing order. The horizontal axis should show of the random number engines.
@@ -141,11 +160,9 @@ from 0-1 and N of 100000, and simply changed the RNGs.  I subsequently ran the R
 with Ns of 1000 and 1000000 for each individual RNG. The order of RNGs I used was mt19937, followed by knuth_b, minstd_rand, ranlux48, and sobolo (which I ran from quasi.cpp file). I then used the raw results from each and plotted via excel (see 
 chart below).
 
-CAN I JUST USE THE RANDOM NUMBER GENERATOR TO SIMULATE X AND Y?  OR DO I SIMPLY
-DECREASE N VALUES?
 
 HOW DO WE CHANGE SOBOL RANGE FROM 0-1????  WENT THROUGH BOTH QUASI AND SOBOL AND 
-COULDN"T FIND INPUT...
+COULDN"T FIND INPUT...USE JOES CODE, AND CAN USE SAME N with varying different Ns
 ~~~
 
 * **(e)- 4pts:** Generate random numbers in two-dimensions for a unit square. Plot the results for the different distributions. The vertical axis should vary N in increasing order. The horizontal axis should show of the random number engines. (See [Random Numbers Webcourse page](https://webcourses.ucf.edu/courses/1246518/pages/random-numbers?module_item_id=10541423) for a rough idea what you should produce.)
