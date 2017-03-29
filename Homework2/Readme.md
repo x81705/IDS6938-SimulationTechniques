@@ -498,11 +498,42 @@ NOTE: AnyLogic model/files located in Homework 2 repository.
 ~~~
 ANS:
 For this section, the question I'm seeking to answer is, "What type of program
-would provide the most accurate network simulations?".  This relates to my focus
-on Cybersecurity in this graduate program at UCF, and also something (like the extra credit above), that will be very valuable to understand in my future positions in the Army.
+would provide a quick and accurate network simulations for initial modeling/simulation?".  This relates to my focus
+on Cybersecurity in this graduate program at UCF, and also something (like the extra credit above), that will be very valuable to understand in my future positions in the Army.  I will compare the advantges/disadvantages of AnyLogic,
+Simio, and Arena and formulate a recommendation to my superiors.
 
+In regards to Arena, a major advantage is that it has been around since approximately 1995,
+and is readily regarded as the most popular simulation tool in the world; this means there is a body of knowledge associated with the platform, and that there is likely major support for operations in this program (Vieira, Date Unknown).  Another major advantage personally, is that the Arena interface looks very similar to the AnyLogic interface, and thus I would likely have a greater likelihood of initially understanding the system (Vieira, Date Unknown).  While reading a case study comparing Arena and Simio completing the same model/simulation, it appeared that some of the major disadvantages of Arena were the lack of animation, the aesthetics of the system (did not look as realistic as Simio), and that in general it took longer to construct, was more complex, and less intuitive overall (Vieira, Date Unknown).
+
+A major advantage of Simio is that there isn't any need to write code because the software runs on an object oriented system; for me personally, this likely means that it would be an easier system to use (Vieira, Date Unknown).  Another major advantage is that objects can be easily shared between users, which would decrease the amount of workload for personnel working on simulating network architecture, as they would not have to build networks from scratch (Vieira, Date Unknown).  Additionally, 2D/3D animation has been simplified in this program, which would be a great feature whilst presenting possible solutions during briefs (Vieira, Date Unknown).  The major disadvantage of Simio is that there are very few practicioners, and there could be issues with sharing products or working on teams with personnel who are not familiar with the program (Vieira, Date Unknown).
+
+Finally, we'll cover advantages/disadvantages of AnyLogic.  The biggest advantage at this point is that I've had experience modeling/simulating with this platform, which means that there isn't as steep of a learning curve with this platform.  I found the GUI very intutive and feel that it is generally a user friendly piece of software.  Another advantage is that the software can execute three kinds of modeling (agent based, discreet event, and system dynamics), in the event the question needs to be scaled up to include other factors/parameters (Author Unknown, 2014).  Also, animation of models is relatively easy to setup, and greatly increases the efficacy of future presentations on the proposed quetion. That being said, a disadvantage is that AnyLogic does not allow Windows Communication Foundation, although at this point I do not believe this would have a major affect on the question above (Author Unknown, 2014).  Another major disadvantage for AnyLogic is the fact that it takes a long time to load (likely due to both the fact that it's running Java and my old OS on my personal computer).
+
+We also most include price in our comparison of these products.  
+For the purpose of this section,
+I will assume that time is a factor and that all systems would be able to be obtained in roughly one week with minimum negotiations/licensing.  I will also assume that Student Additions will not be admitted due to the fact that most people working on this type of problem in the Army would not have Student status.  In regards to price, AnyLogic has a free version which has many features that 
+we could immediately implement in our design process.  Simio also has a free version that can be utillized to run/simulate models (www. simio.com/products)  Arena has an average price of 89$ per month, but customer configurations can vary/scale, and annual subscription is required (www.arenasolutions.com/pricing).    
+Without trying each, this is a difficult decision, but my recommendation would be to download both AnyLogic and Simio and see if there are enough features to meet mission accomplishment;  as long as there are no issues, based on price, either Simio or AnyLogic should be selected.
+
+Taking all of the advantages/disadvantages into consideration, I would recommend the selection of AnyLogic due to its ease of use, scalability, intutive GUI, and price.  Also, a major consideration is familiarity with the system, and while I'm not an expert yet, I feel that I can navigate the system well enough to produce a quality product.
+
+In regards to mapping out the problem above, I would first go to the AnyLogic site and find any models that could be utilized in the initial infrastructure.  By doing a quick cursory search, I found multiple models located at https://runthemodel.com/models/it_amp_telecom/ .  The goal of this model/simulation would be initally to simply simulate a given military networks
+diagnostics(see picture below; obtained from Anylogic.com; eventually, after the model is working, we could start introducing attack/defense mechanisms/operations.
+
+
+References
+Author Unknown.  2014.  Simulators Comparison.  Critical Manufacturing.  Retrieved
+from http://paginas.fe.up.pt/~ei09035/thesis/SimulatorsComparison_V1.pdf .
+
+Author Unknown.  Date Unknown.  Network Infrastructure Picture.  Anylogic.  Retrieved
+from http://www.anylogic.com/consulting/information-and-telecommunication-networks .
+
+Vieira, Antonio, et al.  Date Unknown.  Comparison of Simio and Arena Simulation
+Tools.  University of Minho, Campus Gualtar.  Retreived from 
+https://repositorium.sdum.uminho.pt/bitstream/1822/36949/3/SIMIO_vs_Arena%20@140606.pdf . 
 ~~~
-
+## AnyLogic IT/Telecom Network Modeling Picture (Anylogic Website)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/anylogic.jpg?raw=true)
 
 
 
