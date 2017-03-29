@@ -41,10 +41,11 @@ not prove they are distributed randomly and uniformly (see P value
 chart below). With this in mind, MINISTD_RAND has the highest P value, 
 and MT has the lowest value; as Joe mentioned in class, it should be noted 
 this does not prove the hypothesis that the numbers are distributed 
-uniformly and randomly.
+uniformly and randomly (Turner, Gosia; obtained info about Chi-Sqr
+from PowerPoint in references).
 
 I learned/utilized the Kolmogorov-Smirnov Test in excel by watching 
-a Youtube video (see references below). The Komogorov-Smirnov Test 
+a Youtube video (Davis, Jeff; see references below). The Komogorov-Smirnov Test 
 results are listed in the chart below; because all the largest 
 differences (D) values (found by taking the difference between each 
 distribution and the expected value, and then manually searching for 
@@ -132,7 +133,9 @@ Based on the data I acquired, I followed the same procedure listed above to
 graph all datasets (refer to graphs below).  Of note, the MT with Uniform 
 Int Distribution did not appear to have the same issue of values being 
 skewed at 0 and 100.  Additionally, I observed that P values were all 
-below .05, meaning they are stastically significant but not proving they are uniformly/randomly distributed (see below; note, possible corrupted data due
+below .05, meaning they are stastically significant 
+but not proving they are uniformly/randomly distributed 
+(see below; note, possible corrupted data due
 to obtaining 0s for three distributions).
 
 NO TIME FOR KS TEST!!!!
@@ -190,15 +193,16 @@ clearer as N increases.
 ~~~
 ANS:
 For this section, I ran the distributions twice and then plotted all graphs for
-N= 500, 750, and 1000.  There are likely issues with the graphs of Cauchy and Chi-Squared (see below).
+N= 500, 750, and 1000.  There are likely issues with the data of Cauchy and Chi-Squared due to parameters/inputs (see graphs below).
 ~~~
 
 * **(f)- 4pts:** Repeat parts (d) and (e) with a unit circle.
 
 ~~~
 ANS:
-To obtain graphs for this section, I simply emplaced parameters from -1 to 1 in all distributions possible and then converted the coordinates to polar in
-excel and plotted (see below).
+To obtain graphs for this section, I simply emplaced parameters from -1 to 1
+in all distributions possible and then converted the 
+coordinates to polar in excel and plotted (see below).
 ~~~
 
 
@@ -233,7 +237,8 @@ Retrieved from  http://www.ox.ac.uk/media/global/wwwoxacuk/localsites/uasconfere
 ~~~
 ANS:
 I used the code from class/piazza to create the transition matrix for the null state
-game; also received help from William Netterville (see references below).
+game; also received help from William Netterville/Sarah Matthews
+(see references below).
 Please refer to Visual Studio files for coding.
 ~~~
 
@@ -242,7 +247,8 @@ Please refer to Visual Studio files for coding.
 ~~~
 ANS:
 I used the code from class/piazza to create the transition matrix for the null state
-game; also received help from William Netterville (see references below).  Please 
+game; also received help from William Netterville/Sarah Matthews 
+(see references below).  Please 
 refer to Visual Studio files for coding.  The modal number of moves is XXXX.  Graphs
 for A and B are also included below and indicate that the game progresses...
 ~~~
@@ -334,7 +340,8 @@ ANS: Please refer to coding in visual studio files.
 ~~~
 ANS: Please refer to coding in visual studio files.  
 In regards to useful data and statistics, the following charts display
-interesting statistics about the data I obtained.
+interesting statistics about the data I obtained, and also implement
+the Extra Credit Feature - Add a 2D Visualization to AnyLogic for Part 3.
 ~~~
 
 ***(e) - 15pts:** AnyLogic Simulation;
@@ -438,14 +445,40 @@ ANS: This is documented in Part 3 through the PNGs posted.
 ANS:
 Prior to deployment in the Army, many units go through what is called a Rapid
 Fielding Initiative (RFI), which in essence gives all the Soldiers in the deploying
-unit new/updated equipment to ensure they are prepared/mission ready.  RFI is conducted due to both training exercises prior to deployment that break/ruin Soldiers
-gear, and also the possibility that a unit does not have the newest model of equipment.  Units from the Army usually deploy in Brigade size elements (approx.
-4400 Soldiers dispersed throughout five Battalions).  In my future jobs at the Brigade/Division level, this will likely be an operation I will oversee in some capacity, and therefore a simulation could be a great predictor and aid in the planning process.
+unit new/updated equipment to ensure they are prepared/mission ready.  
+RFI is conducted due to both training exercises 
+prior to deployment that break/ruin Soldiers
+gear, and also the possibility that a unit does not 
+have the newest model of equipment.  Units from the Army usually deploy in Brigade size elements (approx. 4400 Soldiers dispersed throughout five Battalions).  
+In my future jobs at the Brigade/Division level, this will 
+likely be an operation I will oversee in some capacity, 
+and therefore a simulation could be a great 
+predictor and aid in the planning process.
 
-For the purpose of this simulation, I will simulate the RFI of a Battalion in order to get a good estimation of the time it will take the entire Brigade to receive this critical equipment; due to the fact that in my experience Battalions are usually understaffed, I will assume the number of Soldiers in each Battalion is 700, and that RFI personnel will be able to service 120 Soldiers per hour.  I will also have 6 stations that Soliders must process to receive gear (Body Armor, Helmet, Uniforms, Boots, Load Bearing Equipment, Miscellaneous (equipment dependent on mission)).  I used 20 minute delays at all stations with the exception of Body Army, which in my experience usually takes roughly 40 minutes due to blocks of instruction/certification/inspection.  Please see the images below (of note, to run more simulations, changed the values from minutes to milliseconds).
+For the purpose of this simulation, I will simulate the RFI 
+of a Battalion in order to get a good estimation of the time 
+it will take the entire Brigade to receive this critical equipment; 
+due to the fact that in my experience Battalions are usually 
+understaffed, I will assume the number of Soldiers in each Battalion 
+is 700, and that RFI personnel will be able to service 120 Soldiers 
+per hour.  I will also have 6 stations that Soliders must process
+to receive gear (Body Armor, Helmet, Uniforms, Boots, Load Bearing Equipment, Miscellaneous (equipment dependent on mission)).  I used 20 minute 
+delays at all stations with the exception of Body Army, which in 
+my experience usually takes roughly 40 minutes due to increased blocks of instruction/certification/inspection.  Please see the images below 
+(of note, to run more simulations, changed the values from 
+minutes to milliseconds).
 
-This simulation accurately predicted a bottleneck in the beginning of the queue (which I have seen in every RFI I have attended), and also predicted approximately 60 hours to equip an entire Battalion; anecodtally this seems a bit high to me (usually can pass an entire Battalion through in two days, but it is often broken up by the Company level); however, taking into account stragglers and people who missed the fielding, 60 hours is likely close to an accurate number to equip all personnel.
+In regards to results, this simulation accurately predicted 
+a bottleneck in the beginning of the queue (which I have seen in 
+every RFI I have attended), and also predicted approximately 
+60 hours to equip an entire Battalion; anecodtally this seems 
+a bit high to me (usually can pass an entire Battalion through 
+in two days, but it is often broken up by the Company level); 
+however, taking into account stragglers and people who missed 
+the fielding for other reasons (sickness, training, etc.), 60 
+hours is likely close to an accurate number to equip all personnel.
 NOTE: AnyLogic model/files located in Homework 2 repository.
+
 ~~~
 ## AnyLogic RFI Flowchart
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/extra1.PNG?raw=true)
