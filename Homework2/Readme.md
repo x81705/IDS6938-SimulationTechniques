@@ -193,8 +193,20 @@ clearer as N increases.
 ~~~
 ANS:
 For this section, I ran the distributions twice and then plotted all graphs for
-N= 500, 750, and 1000.  There are likely issues with the data of Cauchy and Chi-Squared due to parameters/inputs (see graphs below).
+N= 500, 750, and 1000.  (see graphs below; final graph displays the
+original distributions without parameter/axes manipulation, possible data issues; most notably Uniform Int (manipulated variables in source code but could not get any other graphs to produce)).
 ~~~
+
+## Graph - Unit Squares - MT Uniform Real, Normal, and Cauchy Distributions
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/1e1.PNG?raw=true)
+
+## Graph - Unit Squares - MT ChiSqd and Uniform Int Distributions
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/1e2.PNG?raw=true)
+
+## Additional Graphs (Original W/O Parameter/Axes Changes)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/1e3.PNG?raw=true)
+
+
 
 * **(f)- 4pts:** Repeat parts (d) and (e) with a unit circle.
 
