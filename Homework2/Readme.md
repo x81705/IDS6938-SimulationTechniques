@@ -183,16 +183,16 @@ clearer as N increases.
 
 ~~~
 ANS:
-Same issues with distributions...need to fix ASAP!
+For this section, I ran the distributions twice and then plotted all graphs for
+N= 500, 750, and 1000.  There are likely issues with the graphs of Cauchy and Chi-Squared (see below).
 ~~~
 
 * **(f)- 4pts:** Repeat parts (d) and (e) with a unit circle.
 
 ~~~
 ANS:
-Same issue with SOBOL as above for part D, how to input -1,1 in that program
-
-For differing distributions, need to check with Joe for if I'm doing them right
+To obtain graphs for this section, I simply emplaced parameters from -1 to 1 in all distributions possible and then converted the coordinates to polar in
+excel and plotted (see below).
 ~~~
 
 
@@ -348,17 +348,32 @@ the flowchart constructed in AnyLogic and the simulation.
 ## AnyLogic Flowchart
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any1.PNG?raw=true)
 
-## AnyLogic Simulation Start
+## AnyLogic 2D Simulation Start
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any2.PNG?raw=true)
 
-## AnyLogic Simulation Running
+## AnyLogic 2D Simulation Running
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any3.PNG?raw=true)
 
-## AnyLogic Simulation Running
+## AnyLogic 2D Simulation Running
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any4.PNG?raw=true)
 
-## AnyLogic Simulation End
+## AnyLogic 2D Simulation End
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any5.PNG?raw=true)
+
+## AnyLogic 3D Simulation Running
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any6.PNG?raw=true)
+
+## AnyLogic 3D Simulation Running
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any7.PNG?raw=true)
+
+## AnyLogic 3D Simulation End
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any8.PNG?raw=true)
+
+## AnyLogic 3D Simulation Close Up
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any9.PNG?raw=true)
+
+## AnyLogic 3D Simulation Close Up
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any10.PNG?raw=true)
 
 ~~~
 References
@@ -370,11 +385,21 @@ the simulation.
 Netterville, William. Face to face conversations on 27MAR17 during study group. For Part III, William helped me with the construction of formulas in mm1_queue.cpp by showing me where the formulas were on webcourses (and helped with formulation).  He also showed me the piazaa post detailing the coding in main.cpp, and helped with where and how to input the code.  All helped received from William is documented in
 visual studio files.
 
+Wileman, Joseph.  Face to face conversation on 28MAR17 after class.  Joe helped me
+implement 3D visualization by helping me to understand where the system was recording
+and also how to better view/see the simulation.
+
 ~~~
 
 
 ##Part 4 - Implementing Extra Features (10 pts)
-Implementing 2 features on the extra features list. Pick any feature on the "*extra features*" list below to customize your assignment to fit your interests. Please document this in your writeup. (*Note: These should total 10pts. You could successfully implement a feature worth 10pts or greater. This also fulfills this requirement. The features are assigned points based on difficulty. The 5pt features are more straightforward.*)
+* **(10 Points)** - Add a 2D visualization to AnyLogic for Part 3.
+ This is documented in Part 3 through the PNGs posted.
+ 
+* **(10 Points)** - Add a 3D visualization to AnyLogic for Part 3.
+ This is also documented in Part 3 through the PNGs posted.
+ 
+* Microgrids, Missle Defence...). Compare and contrast different software packages (AnyLogic, Simio, Simulu8, Arena etc). Convince me as your "manager/advisor" what advantages, weaknesses, and costs each program has. Come to a conclusion. Roughly sketch out how you would formulate the problem in the framework.
 
 ##Part 5 - Final Report (10 pts)
 Write up contained in this readme.md and forked to repository/linked on webcourses.
@@ -382,11 +407,6 @@ Write up contained in this readme.md and forked to repository/linked on webcours
 
 ##Extra Features (Extra Credit - 25pts)
 You have to implement two features from this list for Part 4. You may choose any two features you wish from this list. (Please explicitly note them in your *Readme.md*)
-
-* **(5 Points)** - Implement and compare Halton, Hammersley, (Or another quasi method) Quasi sequences and add them to your analysis for appropriate subparts of Part 1.
-* **(5 Points)** - Implement different distributions inside the Quasi random sequences and add them to your analysis for appropriate subparts of Part 1.
-* **(5 Points)** - Implement and compare another (advanced) psedo random sequences and add them to your analysis for all subparts of Part 1 (Examples include: [PCG](http://www.pcg-random.org/), or [Random123](https://github.com/DEShawResearch/Random123-Boost)).
- 
 * **(10 Points)** - Add a 2D visualization to AnyLogic for Part 3.
 * **(10 Points)** - Add a 3D visualization to AnyLogic for Part 3.
 * **(5 Points)** - Pick a research problem (from your dissertation, Energy Microgrids, Missle Defence...). Compare and contrast different software packages (AnyLogic, Simio, Simulu8, Arena etc). Convince me as your "manager/advisor" what advantages, weaknesses, and costs each program has. Come to a conclusion. Roughly sketch out how you would formulate the problem in the framework.
