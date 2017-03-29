@@ -133,8 +133,8 @@ Based on the data I acquired, I followed the same procedure listed above to
 graph all datasets (refer to graphs below).  Of note, the MT with Uniform 
 Int Distribution did not appear to have the same issue of values being 
 skewed at 0 and 100.  Additionally, I observed that P values were all 
-below .05, meaning they are stastically significant 
-but not proving they are uniformly/randomly distributed 
+below .05 with the exception of Uniform Int, meaning they are stastically significant (other than Uniform Int)
+but does not prove they are uniformly/randomly distributed 
 (see below; note, possible corrupted data due
 to obtaining 0s for three distributions).
 
