@@ -77,9 +77,28 @@ equally.
 ~~~
 ANS:
 I simply changed the N number in the program for each
-RNG listed above to 1000 and 1000000.  I noticed that in general, a more
-distinct pattern emerged as N increased for all RNGs (see graphs below).
+RNG listed above to 1000 and 1000000.  I noticed that in general, the 
+distributions appeared to roughly hold the same patterns even as
+N increased; this is most
+clearly seen in a comparison of the two graphs with N values of
+1000 and 1000000, the two lower graphs displayed(see graphs below).
 ~~~
+
+## Graph - Ranlux Comparison Graphs
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/b1.PNG?raw=true)
+
+## Graph - Sobol Comparison Graphs
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/b2.PNG?raw=true)
+
+## Graph - Knuth_b Comparison Graphs
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/b3.PNG?raw=true)
+
+## Graph - MINSTD Comparison Graphs
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/b4.PNG?raw=true)
+
+## Graph - MT Comparison Graphs
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/b5.PNG?raw=true)
+
 
 * **(c) - 3pts:** Fix a random engine of your choice from part (a), and now vary five different [distributions](http://www.cplusplus.com/reference/random/) for just the psedo-random numbers. Again, analyze your results with graphs and statistics of choice.
 
