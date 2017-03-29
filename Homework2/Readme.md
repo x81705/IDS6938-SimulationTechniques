@@ -32,11 +32,12 @@ results below. Degrees of freedom are found by taking Rows-1 *
 Columns-1, so in this case the DF=100; however the function in 
 excel takes this into consideration. 
 The Chi-Square Test p values indicates that all values are lower
-than .05, which means they are statistically significant, or that
-the numbers are likely to some degree to be distributed uniformly 
-and randomly. Additionally, MINISTD_RAND has the highest value, 
-and MT has the lowest value; this likely means that MT is the most 
-uniform for the random values.
+than .05, which means they are statistically significant, but does
+not prove they are distributed randomly and uniformly (see P value
+chart below). With this in mind, MINISTD_RAND has the highest P value, 
+and MT has the lowest value; as Joe mentioned in class, it should be noted 
+this does not prove the hypothesis that the numbers are distributed 
+uniformly and randomly.
 
 I learned/utilized the Kolmogorov-Smirnov Test in excel by watching 
 a Youtube video (see references below). The Komogorov-Smirnov Test 
