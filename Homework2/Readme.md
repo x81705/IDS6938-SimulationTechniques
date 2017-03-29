@@ -355,7 +355,7 @@ connected 3 of the 5 outputs and put probabilities of all three at .333.  Follow
 Finally, I emplaced a Go To block named "GTplane" and a Ped Sink named "End" to finish the simulation of pedestrians moving through airport security; I also emplaced waiting areas around all areas in which there is a delay.
 
 I then built the model and ran it; see below for screen shots displaying
-the flowchart constructed in AnyLogic and the simulation.
+the flowchart constructed in AnyLogic and the simulation (of note, changed values from minutes to milliseconds so I could run more simulations).
 ~~~
 ## AnyLogic Flowchart
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any1.PNG?raw=true)
@@ -438,7 +438,7 @@ unit new/updated equipment to ensure they are prepared/mission ready.  RFI is co
 gear, and also the possibility that a unit does not have the newest model of equipment.  Units from the Army usually deploy in Brigade size elements (approx.
 4400 Soldiers dispersed throughout five Battalions).  In my future jobs at the Brigade/Division level, this will likely be an operation I will oversee in some capacity, and therefore a simulation could be a great predictor and aid in the planning process.
 
-For the purpose of this simulation, I will simulate the RFI of a Battalion in order to get a good estimation of the time it will take the entire Brigade to receive this critical equipment; due to the fact that in my experience Battalions are usually understaffed, I will assume the number of Soldiers in each Battalion is 700.  I will also have 6 stations that Soliders must process to receive gear (Body Armor, Helmet, Uniforms, Boots, Load Bearing Equipment, Miscellaneous).  I used 20 minute delays at all stations with the exception of Body Army, which in my experience usually takes roughly 40 minutes due to blocks of instruction/certification/inspection.  Please see the images below.
+For the purpose of this simulation, I will simulate the RFI of a Battalion in order to get a good estimation of the time it will take the entire Brigade to receive this critical equipment; due to the fact that in my experience Battalions are usually understaffed, I will assume the number of Soldiers in each Battalion is 700, and that RFI personnel will be able to service 120 Soldiers per hour.  I will also have 6 stations that Soliders must process to receive gear (Body Armor, Helmet, Uniforms, Boots, Load Bearing Equipment, Miscellaneous (equipment dependent on mission)).  I used 20 minute delays at all stations with the exception of Body Army, which in my experience usually takes roughly 40 minutes due to blocks of instruction/certification/inspection.  Please see the images below (of note, to run more simulations, changed the values from minutes to milliseconds).
 ~~~
 
 
