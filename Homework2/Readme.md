@@ -282,7 +282,7 @@ Despite running the code multiple times over many hours, and also having Alex lo
 
 If possible, I would have run multiple simulations and analyzed the number of rolls, the number of moves per game, and also would have plotted the percentage of 
 of finishing the game in 5 moves, 10 moves, 20 moves, 30 moves, 40 moves, 50 moves, 60 moves, 70 moves, 80 moves, 90 moves, and 100 moves; this is based off my research that the shortest possible game takes only 7 rolls, that the modal number of rolls is 20, and 97.6% of games take 100 moves or less to complete (Author Unknown, Date Unknown).  I have placed samples from the DataGenetics website below that would
-be similar to the products I would have created; again, this is NOT my work, but simply examples of the type of analysis I would have attempted given working code.
+be similar to the products I would have created; again, this is NOT my work, but simply examples of the type of analysis I would have attempted given working code (Author Unknown, Date Unknown).
 ~~~
 ## Percentage Finishing Game in N-Moves (Author Unknown, Date Unknown)
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/2b1.PNG?raw=true)
@@ -296,9 +296,11 @@ be similar to the products I would have created; again, this is NOT my work, but
 
 ~~~
 ANS:
-I used the code from class/piazza to create the transition matrix for the null state
-game; also received help from William Netterville (see references below) .
+Again, not possible to complete without outputs/data from the program.  In the event that I got the program working, in addition to the types of charts/graphs displayed above and detailed in the previous question, I would also have included something like the Snakes/Ladders usage shown below, also from the DataGenetics website; to do this would have had to implement a counter for each type (snake/ladder) (Author Unknown, Date Unknown).  Also, from my research, I found that there is no upper bound in terms of moves for the traditional game, the median number of rolls to complete a game is 29, and that the arithmetic mean of number of rolls in a billion simulated games is 36.2 (Author Unknown, Date Unknown).  Again, these stats/charts/graphs are not my work, but simply research as I could not get the program to display outputs.
 ~~~
+## Snakes and Ladders Usage Chart (Author Unknown, Date Unknown)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/2b3.PNG?raw=true)
+
 
 * **(d) Think - 0pts:** If these games are built entirely on chance, do they require any strategy? Is it really a *game*, would you rather play games of chance or games of strategy?
 
@@ -319,7 +321,7 @@ Retrieved from http://www.datagenetics.com/blog/november12011/.
 
 Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
 regarding assignment, 9MAR-29MAR17. For Part II, Alex provided 
-help with general problem solution for B/C.  All help received from Alex is 
+help with general problem solution for B/C (to no avail, program is still not outputting).  All help received from Alex is 
 documented in visual studio files.
 
 Matthews, Sarah.  Multiple conversations (both in-person and via email) 
@@ -331,8 +333,6 @@ Netterville, William. Face to face conversations on 27MAR17 during study group.
 For Part II, William helped with the formulation of the transition matrix and where to input code from piazaa.  All help received from William is documented in
 visual studio files.
 ~~~
-
-
 
 ##Part 3 - Discrete Event Simulation - Queue Simulation (30 pts)
 
