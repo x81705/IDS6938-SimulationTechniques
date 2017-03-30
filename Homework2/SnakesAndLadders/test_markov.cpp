@@ -23,7 +23,20 @@ int main(){
 	myfile.open("markov_results.txt");
 
 	
-   // TODO add Markov vector - Matrix multiplication - Added all below
+   // TODO add Markov vector - Matrix multiplication - Added all below with help of Alex
+	std::vector<int> discreteMC;
+
+	for (int i = 0; i < TransitionMatrix.rows(); i++)
+	{
+		v = v.transpose() * TransitionMatrix; 
+}
+	std::cout << v << std::endl;
+	myfile << v << std::endl;
+
+	myfile.close();
+
+	return 1;
+
 /*
 	//std::vector<int> DTMC(Eigen::MatrixXf trans, int steps, int start) 
 	{ //Added from Markov.cpp
@@ -63,6 +76,4 @@ int main(){
 	
 	myfile.close();*/
 
-
-  return 1;
 }
