@@ -400,9 +400,34 @@ ANS: Please refer to coding in visual studio files.
 ~~~
 ANS: Please refer to coding in visual studio files.  
 In regards to useful data and statistics, the following charts display
-interesting statistics about the data I obtained, and also implement
-the Extra Credit Feature - Add a 2D Visualization to AnyLogic for Part 3.
+both the wait times and services data at each Queue; my nomenclature 
+refers to Check-In as Queue 1, Security Gates as Queues 2-4, and 
+Boarding as Queue 5 (shown in graphs as Q1-Q5).
+
+After running the simulation, I utilized the txt files in excel to 
+analyze the raw values (i.e., wait/service timelengths for customers; 
+see graphs/charts below).
+
+From a managerial/leadership perspective, I would analyze the data and
+use it to improve services/systems within the airport.  For example, although
+it is slight, there is a slight lag in Queue 3 (a security gate) compared
+with the other gates.  I would potentially go to observe that particular gate,
+and see if there was a personnel problem, or simply more efficient systems
+that could be shared/adopted to improve the overall system.
+
+This also applies to the service times, and this dataset could potentially
+be used to predict times of increased traffic, which has implications such
+as modification of work schedules.  This could also be drilled down to the 
+individual level, and an analysis could be conducted of employees who have the
+most efficient service times (i.e., time based, or performance based (such as 
+no luggage being sent to the wrong location, customer satisfaction, etc.)).
 ~~~
+## Average Wait Time
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/4d1.PNG?raw=true)
+
+## Wait Time for All Queues
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/4d2.PNG?raw=true)
+
 
 ***(e) - 15pts:** AnyLogic Simulation;
 
