@@ -212,11 +212,25 @@ original distributions without parameter/axes manipulation, possible data issues
 
 ~~~
 ANS:
-To obtain graphs for this section, I simply emplaced parameters from -1 to 1
-in all distributions possible and then converted the 
+To obtain graphs for this section, I simply 
+emplaced parameters from -1 to 1
+in all RNGs/distributions possible and then converted the 
 coordinates to polar in excel and plotted (see below; Sarah Matthews
-helped me figure out the conversion equations).
+helped me figure out the conversion equations). For the RNGs, I utilized
+a Uniform Real Distribution.
 ~~~
+
+## Unit Circles w/ Differing RNG Graph
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/1f2.PNG?raw=true)
+
+## Unit Circles w/ Differing RNG Graph
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/1f1.PNG?raw=true)
+
+## Unit Circles w/ Differing Distribution Graph
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/1f3.PNG?raw=true)
+
+## Unit Circles w/ Differing Distribution Graph
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/1f4.PNG?raw=true)
 
 
 References
