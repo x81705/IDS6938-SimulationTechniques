@@ -320,8 +320,10 @@ implement a counter for each type (snake/ladder)
 that there is no upper bound in terms of moves for the traditional 
 game, the median number of rolls to complete a game is 29, 
 and that the arithmetic mean of number of rolls in a billion 
-simulated games is 36.2 (Author Unknown, Date Unknown).  Again, these stats/charts/graphs are not my work, but simply research 
-as I could not get the program to display outputs.
+simulated games is 36.2 (Author Unknown, Date Unknown).  
+Again, these stats/charts/graphs are not my work, 
+but simply research  as I could not get the program to 
+display outputs despite immense effort.
 ~~~
 ## Snakes and Ladders Usage Chart (Author Unknown, Date Unknown)
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/2b3.PNG?raw=true)
@@ -351,17 +353,19 @@ Retrieved from http://www.datagenetics.com/blog/november12011/.
 
 Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
 regarding assignment, 9MAR-29MAR17. For Part II, Alex provided 
-help with general problem solution for B/C (to no avail, program is still not outputting).  All help received from Alex is 
-documented in visual studio files.
+help with general problem solution for B/C (to no avail, program is still not outputting).  
+All help received from Alex is documented in visual studio files.
 
 Matthews, Sarah.  Multiple conversations (both in-person and via email) 
 regarding assignment, 27-29MAR17.  For Part II, Sarah helped me modify the 
 transition matrix; all help received from Sarah is documented in visual
 studio files.
 
-Netterville, William. Face to face conversations on 27MAR17 during study group. 
-For Part II, William helped with the formulation of the transition matrix and where to input code from piazaa.  All help received from William is documented in
-visual studio files.
+Netterville, William. Face to face conversations on 27MAR17
+during study group. For Part II, William helped with the 
+formulation of the transition matrix and where to input 
+code from piazaa.  All help received from William is 
+documented in visual studio files.
 ~~~
 
 ##Part 3 - Discrete Event Simulation - Queue Simulation (30 pts)
@@ -404,25 +408,36 @@ the Extra Credit Feature - Add a 2D Visualization to AnyLogic for Part 3.
 
 ~~~
 ANS:
-- Note: I added AnyLogic files under the images folder 
-in my repository for reference
+- Note: I added AnyLogic files under the Homework2 folder 
+in my repository for reference.
 
 Narrative of Construction:
-To construct this simulation, I utilized the pedestrian library; all inputs were
-left in default mode unless otherwise noted.  I first made a target line and a
-ped source block.  I connected the ped source block to a Go To Block (referred
-to as "GTCheckin"), and then emplaced a rectangular area to serve as the container
-for pedestrians around a Wait block (named "CIwait"; inputted a delay of 53 minutes,  but for simulation changed to millisecs for quicker observation (repeated in next
-wait areas as well)).  
+To construct this simulation, I utilized the pedestrian library; 
+all inputs were left in default mode unless otherwise noted. 
+I first made a target line and a ped source block.  I connected 
+the ped source block to a Go To Block (referred to as "GTCheckin"), 
+and then emplaced a rectangular area to serve as the container
+for pedestrians around a Wait block (named "CIwait"; inputted a 
+delay of 53 minutes,  but for simulation changed to millisecs 
+for quicker observation (repeated in other wait areas as well)).  
 
 From CIwait, I emplaced
-a Go To block ("GTsecurity) and then a Wait block ("SecWait"; with a 20 min delay setting), followed by a Ped Select Output named "Security Queue", in which I only
-connected 3 of the 5 outputs and put probabilities of all three at .333.  Following this, I emplaced another Go To block ("GTBoarding") and a Wait block ("BoardWait").
+a Go To block ("GTsecurity) and then a Wait block ("SecWait"; 
+with a 20 min delay setting), followed by a Ped Select Output 
+named "Security Queue", in which I only connected 3 of the 5 
+outputs and put probabilities of all three at .333.  Following 
+this, I emplaced another Go To block ("GTBoarding") and a 
+Wait block ("BoardWait").
 
-Finally, I emplaced a Go To block named "GTplane" and a Ped Sink named "End" to finish the simulation of pedestrians moving through airport security; I also emplaced waiting areas around all areas in which there is a delay.
+Finally, I emplaced a Go To block named "GTplane" and a 
+Ped Sink named "End" to finish the simulation of pedestrians 
+moving through airport security; I also emplaced waiting 
+areas around all areas in which there is a delay.
 
-I then built the model and ran it; see below for screen shots displaying
-the flowchart constructed in AnyLogic and the simulation (of note, changed values from minutes to milliseconds so I could run more simulations).
+I then built the model and ran it; see below for screen 
+shots displaying the flowchart constructed in AnyLogic 
+and the simulation (of note, changed values from minutes 
+to milliseconds so I could run more simulations).
 ~~~
 ## AnyLogic Flowchart
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any1.PNG?raw=true)
@@ -466,7 +481,9 @@ visual studio files.
 
 Wileman, Joseph.  Face to face conversation on 28MAR17 after class.  Joe helped me
 implement 3D visualization by helping me to understand where the system was recording
-and also how to better view/see the simulation.
+and also how to better view/see the simulation; he also generally helped
+me better understand the program by explaining how the flowcharts/ped
+blocks interacted in the simulation.
 
 ~~~
 
@@ -505,7 +522,8 @@ unit new/updated equipment to ensure they are prepared/mission ready.
 RFI is conducted due to both training exercises 
 prior to deployment that break/ruin Soldiers
 gear, and also the possibility that a unit does not 
-have the newest model of equipment.  Units from the Army usually deploy in Brigade size elements (approx. 4400 Soldiers dispersed throughout five Battalions).  
+have the newest model of equipment.  Units from the Army usually deploy in Brigade size elements 
+(approx. 4400 Soldiers dispersed throughout five Battalions).  
 In my future jobs at the Brigade/Division level, this will 
 likely be an operation I will oversee in some capacity, 
 and therefore a simulation could be a great 
@@ -518,9 +536,13 @@ due to the fact that in my experience Battalions are usually
 understaffed, I will assume the number of Soldiers in each Battalion 
 is 700, and that RFI personnel will be able to service 120 Soldiers 
 per hour.  I will also have 6 stations that Soliders must process
-to receive gear (Body Armor, Helmet, Uniforms, Boots, Load Bearing Equipment, Miscellaneous (equipment dependent on mission)).  I used 20 minute 
+to receive gear (Body Armor, Helmet, Uniforms, Boots, 
+Load Bearing Equipment, Miscellaneous (equipment 
+dependent on mission)).  I used 20 minute 
 delays at all stations with the exception of Body Army, which in 
-my experience usually takes roughly 40 minutes due to increased blocks of instruction/certification/inspection.  Please see the images below 
+my experience usually takes roughly 40 minutes due to 
+increased blocks of instruction/certification/inspection.  
+Please see the images below 
 (of note, to run more simulations, changed the values from 
 minutes to milliseconds).
 
@@ -555,28 +577,106 @@ NOTE: AnyLogic model/files located in Homework 2 repository.
 ANS:
 For this section, the question I'm seeking to answer is, "What type of program
 would provide a quick and accurate network simulations for initial modeling/simulation?".  This relates to my focus
-on Cybersecurity in this graduate program at UCF, and also something (like the extra credit above), that will be very valuable to understand in my future positions in the Army.  I will compare the advantges/disadvantages of AnyLogic,
+on Cybersecurity in this graduate program at UCF, and also something (like the extra credit above), that will be very valuable to 
+understand in my future positions in the Army.  
+I will compare the advantges/disadvantages of AnyLogic,
 Simio, and Arena and formulate a recommendation to my superiors.
 
-In regards to Arena, a major advantage is that it has been around since approximately 1995,
-and is readily regarded as the most popular simulation tool in the world; this means there is a body of knowledge associated with the platform, and that there is likely major support for operations in this program (Vieira, Date Unknown).  Another major advantage personally, is that the Arena interface looks very similar to the AnyLogic interface, and thus I would likely have a greater likelihood of initially understanding the system (Vieira, Date Unknown).  While reading a case study comparing Arena and Simio completing the same model/simulation, it appeared that some of the major disadvantages of Arena were the lack of animation, the aesthetics of the system (did not look as realistic as Simio), and that in general it took longer to construct, was more complex, and less intuitive overall (Vieira, Date Unknown).
+In regards to Arena, a major advantage is that it has 
+been around since approximately 1995,
+and is readily regarded as the most popular simulation 
+tool in the world; this means there is a body of knowledge 
+associated with the platform, and that there is likely 
+major support for operations in this program (Vieira, Date Unknown).  
+Another major advantage personally, is that the Arena 
+interface looks very similar to the AnyLogic interface, 
+and thus I would likely have a greater likelihood of 
+initially understanding the system (Vieira, Date Unknown).  
+While reading a case study comparing Arena and Simio 
+completing the same model/simulation, it appeared that 
+some of the major disadvantages of Arena were the lack 
+of animation, the aesthetics of the system (did not look 
+as realistic as Simio), and that in general it took longer 
+to construct, was more complex, and less 
+intuitive overall (Vieira, Date Unknown).
 
-A major advantage of Simio is that there isn't any need to write code because the software runs on an object oriented system; for me personally, this likely means that it would be an easier system to use (Vieira, Date Unknown).  Another major advantage is that objects can be easily shared between users, which would decrease the amount of workload for personnel working on simulating network architecture, as they would not have to build networks from scratch (Vieira, Date Unknown).  Additionally, 2D/3D animation has been simplified in this program, which would be a great feature whilst presenting possible solutions during briefs (Vieira, Date Unknown).  The major disadvantage of Simio is that there are very few practicioners, and there could be issues with sharing products or working on teams with personnel who are not familiar with the program (Vieira, Date Unknown).
+A major advantage of Simio is that there isn't any need 
+to write code because the software runs on an object 
+oriented system; for me personally, this likely means that 
+it would be an easier system to use (Vieira, Date Unknown).  
+Another major advantage is that objects can be easily shared 
+between users, which would decrease the amount of workload 
+for personnel working on simulating network architecture, 
+as they would not have to build networks from 
+scratch (Vieira, Date Unknown).  Additionally, 2D/3D animation 
+has been simplified in this program, which would be a great 
+feature whilst presenting possible solutions 
+during briefs (Vieira, Date Unknown).  The major disadvantage 
+of Simio is that there are very few practicioners, and there 
+could be issues with sharing products or working on teams 
+with personnel who are not familiar with 
+the program (Vieira, Date Unknown).
 
-Finally, we'll cover advantages/disadvantages of AnyLogic.  The biggest advantage at this point is that I've had experience modeling/simulating with this platform, which means that there isn't as steep of a learning curve with this platform.  I found the GUI very intutive and feel that it is generally a user friendly piece of software.  Another advantage is that the software can execute three kinds of modeling (agent based, discreet event, and system dynamics), in the event the question needs to be scaled up to include other factors/parameters (Author Unknown, 2014).  Also, animation of models is relatively easy to setup, and greatly increases the efficacy of future presentations on the proposed quetion. That being said, a disadvantage is that AnyLogic does not allow Windows Communication Foundation, although at this point I do not believe this would have a major affect on the question above (Author Unknown, 2014).  Another major disadvantage for AnyLogic is the fact that it takes a long time to load (likely due to both the fact that it's running Java and my old OS on my personal computer).
+Finally, we'll cover advantages/disadvantages of AnyLogic.  
+The biggest advantage at this point is that I've had 
+experience modeling/simulating with this platform, which means 
+that there isn't as steep of a learning curve with this platform.  
+I found the GUI very intutive and feel that it is generally a 
+user friendly piece of software.  Another advantage is that the 
+software can execute three kinds of modeling (agent based, discreet 
+event, and system dynamics), in the event the question needs to 
+be scaled up to include other factors/parameters (Author Unknown, 2014). 
+Also, animation of models is relatively easy to setup, 
+and greatly increases the efficacy of future presentations 
+on the proposed quetion. That being said, a disadvantage is 
+that AnyLogic does not allow Windows Communication Foundation, 
+although at this point I do not believe this would have a 
+major affect on the question above (Author Unknown, 2014).  
+Another major disadvantage for AnyLogic is the fact that it 
+takes a long time to load (likely due to both the fact that 
+it's running Java and my old OS/hardware on my personal computer).
 
 We also most include price in our comparison of these products.  
 For the purpose of this section,
-I will assume that time is a factor and that all systems would be able to be obtained in roughly one week with minimum negotiations/licensing.  I will also assume that Student Additions will not be admitted due to the fact that most people working on this type of problem in the Army would not have Student status.  In regards to price, AnyLogic has a free version which has many features that 
-we could immediately implement in our design process.  Simio also has a free version that can be utillized to run/simulate models (www. simio.com/products)  Arena has an average price of 89$ per month, but customer configurations can vary/scale, and annual subscription is required (www.arenasolutions.com/pricing).    
-Without trying each, this is a difficult decision, but my recommendation would be to download both AnyLogic and Simio and see if there are enough features to meet mission accomplishment;  as long as there are no issues, based on price, either Simio or AnyLogic should be selected.
+I will assume that time is a factor and that all systems 
+would be able to be obtained in roughly one week with minimum negotiations/licensing.  I will also assume that Student Additions
+will not be admitted due to the fact that most people working 
+on this type of problem in the Army would not have Student status. 
+In regards to price, AnyLogic has a free version which has many 
+features that 
+we could immediately implement in our design process.  
+Simio also has a free version that can be utillized to 
+run/simulate models (www. simio.com/products)  Arena has 
+an average price of 89$ per month, but customer configurations 
+can vary/scale, and annual subscription is required (www.arenasolutions.com/pricing). 
+Without trying each, this is a difficult decision, 
+but my recommendation would be to download both AnyLogic 
+and Simio and see if there are enough features to meet mission 
+accomplishment;  as long as there are no issues, based on price, 
+either Simio or AnyLogic should be selected.
 
-Taking all of the advantages/disadvantages into consideration, I would recommend the selection of AnyLogic due to its ease of use, scalability, intutive GUI, and price.  Also, a major consideration is familiarity with the system, and while I'm not an expert yet, I feel that I can navigate the system well enough to produce a quality product.
+Taking all of the advantages/disadvantages into consideration, 
+I would recommend the selection of AnyLogic due to its ease of use, 
+scalability, intutive GUI, and price.  Also, a major consideration 
+is familiarity with the system, and while I'm not an expert yet, 
+I feel that I can navigate the system well enough to produce 
+a quality product.
 
-In regards to mapping out the problem above, I would first go to the AnyLogic site and find any models that could be utilized in the initial infrastructure.  By doing a quick cursory search, I found multiple models located at https://runthemodel.com/models/it_amp_telecom/ .  The goal of this model/simulation would be initally to simply simulate a given military networks
-diagnostics(see picture below; obtained from Anylogic.com; eventually, after the model is working, we could start introducing attack/defense mechanisms/operations.
+In regards to mapping out the problem above, I would first go 
+to the AnyLogic site and find any models that could be utilized 
+in the initial infrastructure.  By doing a quick cursory search, 
+I found multiple models located at 
+https://runthemodel.com/models/it_amp_telecom/ .  The goal of 
+this model/simulation would be initally to simply simulate a given military networks diagnostics(see picture below; obtained from Anylogic.com; 
+eventually, after the model is working, we could start introducing 
+attack/defense mechanisms/operations and possibly integrate multiple types
+of modeling/simulation (i.e., agent and discreet).
+~~~
 
+## AnyLogic IT/Telecom Network Modeling Picture (Anylogic Website)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/anylogic.jpg?raw=true)
 
+~~~
 References
 Author Unknown.  2014.  Simulators Comparison.  Critical Manufacturing.  Retrieved
 from http://paginas.fe.up.pt/~ei09035/thesis/SimulatorsComparison_V1.pdf .
@@ -588,8 +688,7 @@ Vieira, Antonio, et al.  Date Unknown.  Comparison of Simio and Arena Simulation
 Tools.  University of Minho, Campus Gualtar.  Retreived from 
 https://repositorium.sdum.uminho.pt/bitstream/1822/36949/3/SIMIO_vs_Arena%20@140606.pdf . 
 ~~~
-## AnyLogic IT/Telecom Network Modeling Picture (Anylogic Website)
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/anylogic.jpg?raw=true)
+
 
 
 
