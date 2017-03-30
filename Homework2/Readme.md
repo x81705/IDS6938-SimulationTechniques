@@ -278,31 +278,21 @@ Please refer to Visual Studio files for coding.
 
 ~~~
 ANS:
-I used the code from class/piazza to create the transition matrix for the null state
-game; also received help from William Netterville/Sarah Matthews 
-(see references below).  Please 
-refer to Visual Studio files for coding.  The modal number of moves is XXXX.  Graphs
-for A and B are also included below and indicate that the game progresses...
+Despite running the code multiple times over many hours, and also having Alex look it over and troubleshoot, I could not get stats to print out and therefore could not complete this section regarding simulation/analysis.
+
+If possible, I would have run multiple simulations and analyzed the number of rolls, the number of moves per game, and also would have plotted the percentage of 
+of finishing the game in 5 moves, 10 moves, 20 moves, 30 moves, 40 moves, 50 moves, 60 moves, 70 moves, 80 moves, 90 moves, and 100 moves; this is based off my research that the shortest possible game takes only 7 rolls, that the modal number of rolls is 20, and 97.6% of games take 100 moves or less to complete (Author Unknown, Date Unknown).  I have placed samples from the DataGenetics website below that would
+be similar to the products I would have created; again, this is NOT my work, but simply examples of the type of analysis I would have attempted given working code.
 ~~~
+## Percentage Finishing Game in N-Moves (Author Unknown, Date Unknown)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/2b1.PNG?raw=true)
+
+## Cumulative Probability of Finishing Game in N-Moves (Author Unknown, Date Unknown)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/2b2.PNG?raw=true)
+
 
 * **(c) Simulate and analyze the results of Snakes and Ladders -10pts:**  Construct a new transition matrix based on the table:
-
-
-Ladders From  | Ladders To | |  Snakes From  | Snakes To 
--------- | -------- | ------------- | -------- | -------- 
-3|19| |11|7
-15|37| |18|13
-22|42| |28|12
-25|64| |36|34
-41|73| |77|16
-53|74| |47|26
-63|86| |83|39
-76|91| |92|75
-84|98| |99|70
-
-
-
-Run the same simulation and analyze your results similar to part (b) for the proper game of *Snakes and Ladders* for both methods. How often are the snakes and ladders used, how do the probability of finishing change, etc? What is the maximum and expected amount of moves for the game? Use charts and graphs to illustrate these points.
+ How often are the snakes and ladders used, how do the probability of finishing change, etc? What is the maximum and expected amount of moves for the game? Use charts and graphs to illustrate these points.
 
 ~~~
 ANS:
@@ -323,6 +313,10 @@ my odds of winning through hard work/practice, I would choose a game of strategy
 
 ~~~
 References
+
+Author Unknown.  Date Unknown.  Analysis of Chutes and Ladders.  DataGenetics.
+Retrieved from http://www.datagenetics.com/blog/november12011/.
+
 Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
 regarding assignment, 9MAR-29MAR17. For Part II, Alex provided 
 help with general problem solution for B/C.  All help received from Alex is 
