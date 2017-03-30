@@ -278,11 +278,24 @@ Please refer to Visual Studio files for coding.
 
 ~~~
 ANS:
-Despite running the code multiple times over many hours, and also having Alex look it over and troubleshoot, I could not get stats to print out and therefore could not complete this section regarding simulation/analysis.
+Despite running the code multiple times over many hours, 
+and also having Alex look it over and troubleshoot, I could 
+not get stats to print out and therefore could not 
+complete this section regarding simulation/analysis.
 
-If possible, I would have run multiple simulations and analyzed the number of rolls, the number of moves per game, and also would have plotted the percentage of 
-of finishing the game in 5 moves, 10 moves, 20 moves, 30 moves, 40 moves, 50 moves, 60 moves, 70 moves, 80 moves, 90 moves, and 100 moves; this is based off my research that the shortest possible game takes only 7 rolls, that the modal number of rolls is 20, and 97.6% of games take 100 moves or less to complete (Author Unknown, Date Unknown).  I have placed samples from the DataGenetics website below that would
-be similar to the products I would have created; again, this is NOT my work, but simply examples of the type of analysis I would have attempted given working code (Author Unknown, Date Unknown).
+If possible, I would have run multiple simulations 
+and analyzed the number of rolls, the number of moves per game, 
+and also would have plotted the percentage of of finishing the 
+game in 5 moves, 10 moves, 20 moves, 30 moves, 40 moves, 50 moves, 
+60 moves, 70 moves, 80 moves, 90 moves, and 100 moves; this is 
+based off my research that the shortest possible game takes only 
+7 rolls, that the modal number of rolls is 20, and 97.6% of games 
+take 100 moves or less to complete (Author Unknown, Date Unknown).  
+
+I have placed samples from the DataGenetics website below that would
+be similar to the products I would have created; again, this is 
+NOT my work, but simply examples of the type of analysis I would 
+have attempted given working code (Author Unknown, Date Unknown).
 ~~~
 ## Percentage Finishing Game in N-Moves (Author Unknown, Date Unknown)
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/2b1.PNG?raw=true)
@@ -296,7 +309,19 @@ be similar to the products I would have created; again, this is NOT my work, but
 
 ~~~
 ANS:
-Again, not possible to complete without outputs/data from the program.  In the event that I got the program working, in addition to the types of charts/graphs displayed above and detailed in the previous question, I would also have included something like the Snakes/Ladders usage shown below, also from the DataGenetics website; to do this would have had to implement a counter for each type (snake/ladder) (Author Unknown, Date Unknown).  Also, from my research, I found that there is no upper bound in terms of moves for the traditional game, the median number of rolls to complete a game is 29, and that the arithmetic mean of number of rolls in a billion simulated games is 36.2 (Author Unknown, Date Unknown).  Again, these stats/charts/graphs are not my work, but simply research as I could not get the program to display outputs.
+Again, not possible to complete without outputs/data 
+from the program.  In the event that I got the program working, 
+in addition to the types of charts/graphs displayed above 
+and detailed in the previous question, I would also have included 
+something like the Snakes/Ladders usage shown below, also 
+from the DataGenetics website; to do this would have had to 
+implement a counter for each type (snake/ladder) 
+(Author Unknown, Date Unknown).  Also, from my research, I found 
+that there is no upper bound in terms of moves for the traditional 
+game, the median number of rolls to complete a game is 29, 
+and that the arithmetic mean of number of rolls in a billion 
+simulated games is 36.2 (Author Unknown, Date Unknown).  Again, these stats/charts/graphs are not my work, but simply research 
+as I could not get the program to display outputs.
 ~~~
 ## Snakes and Ladders Usage Chart (Author Unknown, Date Unknown)
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/2b3.PNG?raw=true)
@@ -306,11 +331,16 @@ Again, not possible to complete without outputs/data from the program.  In the e
 
 ~~~
 ANS:
-If the games are completely built on chance, by definition they do not require any
-strategy, unless one was to know the engines/processes driving that chance, which to some degree all games are driven by.  Personally, I'd rather play a game of strategy
-to have more control over the outcomes; skill or strategy games are generally determined by propensity of the individual to play, and also more importantly, their
-devotion to practicing and thus becoming better at the game.  Therefore, to increase
-my odds of winning through hard work/practice, I would choose a game of strategy.
+If the games are completely built on chance, by definition 
+they do not require any strategy, unless one was to know 
+the engines/processes driving that chance, which to some 
+degree all games are driven by.  Personally, I'd rather play 
+a game of strategy to have more control over the outcomes; 
+skill or strategy games are generally determined by propensity 
+of the individual to play, and also more importantly, their
+devotion to practicing and thus becoming better at the game.  
+Therefore, to increase my odds of winning through hard 
+work/practice, I would choose a game of strategy.
 ~~~
 
 ~~~
