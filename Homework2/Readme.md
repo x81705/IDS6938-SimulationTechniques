@@ -138,10 +138,6 @@ but does not prove they are uniformly/randomly distributed
 (see below; note, possible corrupted data due
 to obtaining 0s for three distributions).
 
-NO TIME FOR KS TEST!!!!
-NO TIME FOR KS TEST!!!!!
-NO TIME FOR KS TEST!!!!!
-
 ~~~
 
 ## Graph - MT With Uniform Real Distribution
@@ -194,7 +190,10 @@ clearer as N increases.
 ANS:
 For this section, I ran the distributions twice and then plotted all graphs for
 N= 500, 750, and 1000.  (see graphs below; final graph displays the
-original distributions without parameter/axes manipulation, possible data issues; most notably Uniform Int (manipulated variables in source code but could not get any other graphs to produce)).
+original distributions without parameter/axes manipulation, 
+possible data issues; most notably Uniform Int 
+(manipulated variables in source code but could not 
+get any other graphs to produce)).
 ~~~
 
 ## Graph - Unit Squares - MT Uniform Real, Normal, and Cauchy Distributions
