@@ -422,11 +422,17 @@ individual level, and an analysis could be conducted of employees who have the
 most efficient service times (i.e., time based, or performance based (such as 
 no luggage being sent to the wrong location, customer satisfaction, etc.)).
 ~~~
-## Average Wait Time
+## Wait Times for All Queues
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/4d1.PNG?raw=true)
 
-## Wait Time for All Queues
+## Average Wait Time
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/4d2.PNG?raw=true)
+
+## Wait Times for All Services
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/4d3.PNG?raw=true)
+
+## Average Service Time
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/4d4.PNG?raw=true)
 
 
 ***(e) - 15pts:** AnyLogic Simulation;
