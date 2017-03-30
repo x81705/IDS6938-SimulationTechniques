@@ -421,6 +421,18 @@ as modification of work schedules.  This could also be drilled down to the
 individual level, and an analysis could be conducted of employees who have the
 most efficient service times (i.e., time based, or performance based (such as 
 no luggage being sent to the wrong location, customer satisfaction, etc.)).
+
+In regards to the service data, it appears there is anomaly in Q5 
+with a spike in the service time; in the real world this could 
+be the possibility 
+of delayed flights, an issue with 
+rebooking for multiple customers, or a mechanical failure on the plane.
+
+The data also mirrors average wait time/service time fairly close; again,
+a manager could use this data to improve the airports systems.  With this 
+dataset, in general, it appears that the security gates would be a good
+area to focus on.
+
 ~~~
 ## Wait Times for All Queues
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/4d1.PNG?raw=true)
@@ -428,7 +440,7 @@ no luggage being sent to the wrong location, customer satisfaction, etc.)).
 ## Average Wait Time
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/4d2.PNG?raw=true)
 
-## Wait Times for All Services
+## Times for All Services
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/4d3.PNG?raw=true)
 
 ## Average Service Time
