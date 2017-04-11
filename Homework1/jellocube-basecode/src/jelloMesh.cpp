@@ -1,6 +1,7 @@
 #include "JelloMesh.h"
 #include <GL/glut.h>
 #include <algorithm>
+<<<<<<< HEAD
 #include <math.h>
 
 // TODO - can modify all to modify how jello interacts with environment? Alex/Joe helped with constant manipulation
@@ -21,6 +22,20 @@ JelloMesh::JelloMesh() :
 {
 	SetSize(1.0, 1.0, 1.0);
 	SetGridSize(6, 6, 6);
+=======
+
+// TODO
+
+double JelloMesh::g_penaltyKs = 0.0;
+double JelloMesh::g_penaltyKd = 0.0;
+
+JelloMesh::JelloMesh() :     
+    m_integrationType(JelloMesh::RK4), 
+    m_cols(0), m_rows(0), m_stacks(0), m_width(0.0), m_height(0.0), m_depth(0.0)
+{
+    SetSize(1.0, 1.0, 1.0);
+
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 }
 
 JelloMesh::~JelloMesh()
@@ -56,6 +71,7 @@ const JelloMesh::Particle& JelloMesh::GetParticle(const JelloMesh::ParticleGrid&
 	return GetParticle(grid, i, j, k);
 }
 
+<<<<<<< HEAD
 bool JelloMesh::isInterior(const JelloMesh::Spring& s) const
 {
 	int i1, j1, k1, i2, j2, k2;
@@ -112,6 +128,10 @@ int JelloMesh::GetGridStacks() const
 {
 	return m_stacks;
 }
+=======
+
+
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 
 void JelloMesh::SetSize(float width, float height, float depth)
 {
@@ -121,6 +141,7 @@ void JelloMesh::SetSize(float width, float height, float depth)
 	InitJelloMesh();
 }
 
+<<<<<<< HEAD
 float JelloMesh::GetWidth() const
 {
 	return m_width;
@@ -135,6 +156,9 @@ float JelloMesh::GetDepth() const
 {
 	return m_depth;
 }
+=======
+
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 
 int JelloMesh::GetIndex(int i, int j, int k) const
 {
@@ -162,6 +186,7 @@ void JelloMesh::GetCell(int idx, int& i, int &j, int& k) const
 
 void JelloMesh::InitJelloMesh()
 {
+<<<<<<< HEAD
 	m_vsprings.clear();
 
 	if (m_width < 0.01 || m_height < 0.01 || m_depth < 0.01) return;
@@ -275,6 +300,19 @@ void JelloMesh::AddShearSpring(JelloMesh::Particle& p1, JelloMesh::Particle& p2)
 	double restLen = (p1.position - p2.position).Length();
 	m_vsprings.push_back(Spring(SHEAR, p1.index, p2.index, g_shearKs, g_shearKd, restLen));
 }
+=======
+
+	float x, y, z;
+	x = y = z = 0.0f;
+	m_vparticles.resize(10);
+    for (int i = 0; i <10; i++)
+    {
+		m_vparticles[i][j][k] = Particle(GetIndex(i, j, k), vec3(x, y, z));
+    }
+
+}
+
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 
 void JelloMesh::SetIntegrationType(JelloMesh::IntegrationType type)
 {
@@ -296,6 +334,7 @@ unsigned int JelloMesh::GetDrawFlags() const
 	return m_drawflags;
 }
 
+<<<<<<< HEAD
 void JelloMesh::DrawMesh(const vec3& eyePos)
 {
 	const ParticleGrid& g = m_vparticles;
@@ -367,10 +406,31 @@ void JelloMesh::DrawCollisionNormals()
 		glVertex3f(end[0], end[1], end[2]);
 	}
 	glEnd();
+=======
+
+void JelloMesh::DrawCollisionNormals()
+{
+    const ParticleGrid& g = m_vparticles;
+    glBegin(GL_LINES);
+    glColor3f(0.0, 1.0, 0.0);
+    for(unsigned int i = 0; i < m_vcollisions.size(); i++)
+    {
+       Intersection intersection = m_vcollisions[i];
+       //if (isInterior(intersection.m_p)) continue;
+
+       const Particle& pt = GetParticle(g, intersection.m_p);
+       vec3 normal = intersection.m_normal;
+       vec3 end = pt.position + 0.2 * normal;
+       glVertex3f(pt.position[0], pt.position[1], pt.position[2]);
+       glVertex3f(end[0], end[1], end[2]);
+    }     
+    glEnd();
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 }
 
 void JelloMesh::DrawForces()
 {
+<<<<<<< HEAD
 	glBegin(GL_LINES);
 	glColor3f(1.0, 0.0, 0.0);
 	for (int i = 0; i < m_rows + 1; i++)
@@ -390,10 +450,36 @@ void JelloMesh::DrawForces()
 		}
 	}
 	glEnd();
+=======
+	glDisable(GL_LIGHTING);
+    glBegin(GL_LINES);
+    glColor3f(1.0, 0.0, 0.0);
+    for (int i = 0; i < m_rows+1; i++)
+    {
+        for (int j = 0; j < m_cols+1; j++)
+        {
+            for (int k = 0; k < m_stacks+1; k++)
+            {
+                Particle p = m_vparticles[i][j][k];
+               // if (isInterior(i,j,k)) continue;
+
+                vec3 normal = p.force.Normalize();
+                vec3 end = p.position + 0.1 * normal;
+                glVertex3f(p.position[0], p.position[1], p.position[2]);
+                glVertex3f(end[0], end[1], end[2]);
+            }
+        }
+    }     
+    glEnd();
+	glEnable(GL_LIGHTING);
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 }
 
-void JelloMesh::Draw(const vec3& eyePos)
+
+
+void JelloMesh::DrawParticles()
 {
+<<<<<<< HEAD
 	if (m_drawflags & MESH) DrawMesh(eyePos);
 
 	if (m_drawflags & (STRUCTURAL | BEND | SHEAR))
@@ -411,6 +497,47 @@ void JelloMesh::Draw(const vec3& eyePos)
 	if (m_drawflags & FORCES) DrawForces();
 
 	glEnable(GL_LIGHTING);
+=======
+	glDisable(GL_LIGHTING);
+	glPointSize(18.0);
+	glEnable(GL_ALPHA_TEST);
+	glAlphaFunc(GL_NOTEQUAL, 0);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glEnable(GL_POINT_SMOOTH);
+	glHint(GL_POINT_SMOOTH_HINT, GL_NICEST);
+	glBegin(GL_POINTS);
+
+	glColor4f(1.0, 1.0, 0.0, 0.99);
+	for (int i = 0; i < m_rows + 1; i++)
+	{
+		for (int j = 0; j < m_cols + 1; j++)
+		{
+			for (int k = 0; k < m_stacks + 1; k++)
+			{
+				Particle& p = GetParticle(m_vparticles, i, j, k);
+				glVertex3f(p.position[0], p.position[1], p.position[2]);
+
+			}
+		}
+	}
+	glEnd();
+	glEnable(GL_LIGHTING);
+
+
+	glDisable(GL_POINT_SMOOTH);
+	glBlendFunc(GL_NONE, GL_NONE);
+	glDisable(GL_BLEND);
+
+
+	return;
+}
+
+void JelloMesh::Draw(const vec3& eyePos)
+{
+	DrawParticles();
+	DrawForces();
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 }
 
 void JelloMesh::Update(double dt, const World& world, const vec3& externalForces)
@@ -466,6 +593,7 @@ void JelloMesh::CheckForCollisions(ParticleGrid& grid, const World& world)
 
 void JelloMesh::ComputeForces(ParticleGrid& grid)
 {
+<<<<<<< HEAD
 	// Add external froces to all points - change i,j,k?...but to what?
 	for (int i = 0; i < m_rows + 1; i++)
 	{
@@ -497,6 +625,26 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
 			b.force += -force; //Newtons third law; applly equal and opposite reaction 
 		}
 	}
+=======
+    // Add external froces to all points
+    for (int i = 0; i < m_rows+1; i++)
+    {
+        for (int j = 0; j < m_cols+1; j++)
+        {
+            for (int k = 0; k < m_stacks+1; k++)
+            {
+                Particle& p = GetParticle(grid, i,j,k);
+                p.force = m_externalForces * p.mass;
+            }
+        }
+    }
+
+    // Update Flocking
+  // TODO
+
+
+    
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 }
 
 void JelloMesh::ResolveContacts(ParticleGrid& grid)
@@ -881,6 +1029,7 @@ void JelloMesh::RK4Integrate(double dt)
   // do we need to write code for Euler as well?  
 
 
+<<<<<<< HEAD
 //---------------------------------------------------------------------
 // Spring
 //---------------------------------------------------------------------
@@ -916,6 +1065,10 @@ JelloMesh::Spring::Spring(JelloMesh::SpringType t,
 	m_type(t), m_Ks(Ks), m_Kd(Kd), m_p1(p1), m_p2(p2), m_restLen(restLen)
 {
 }
+=======
+
+
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 
 //---------------------------------------------------------------------
 // Particle
@@ -986,6 +1139,7 @@ JelloMesh::Intersection::Intersection(IntersectionType type, int p, const vec3& 
 //---------------------------------------------------------------------
 // Drawing
 //---------------------------------------------------------------------
+<<<<<<< HEAD
 
 void JelloMesh::FaceMesh::Draw(const JelloMesh& m)
 {
@@ -1206,3 +1360,5 @@ bool JelloMesh::FaceMesh::compare(const FaceMesh& one, const FaceMesh& other)
 }
 
 
+=======
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71

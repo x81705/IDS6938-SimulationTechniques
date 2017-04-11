@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
 # Charlie Timm
 #Homework 2 :  Discrete-Event Simulation Assignment
+=======
+# Homework 2 :  Discrete-Event Simulation Assignment
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
 
@@ -12,8 +16,11 @@ Will use one alibi day, making new due date:
 **Wed, Mar 29 at 11:59PM (EST)**
 Total Alibi Days Used: 2
 
+<<<<<<< HEAD
 
 # Assignment
+=======
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 
 ##Part 1: Empirical Tests of Randomness (20 pts).
 We looked at different ways to generate [pseudo-random numbers]
@@ -77,7 +84,13 @@ equally.
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/kstestchart.PNG?raw=true)
 
 
+<<<<<<< HEAD
 * **(b) - 2pts:**  Vary *N* (amount of samples). How do things change.
+=======
+# Assignment
+## Part 0 - Getting Started
+Read the assignment. Sync your fork with the [main IDS6938 repository](https://github.com/hepcatjk/IDS6938-SimulationTechniques). Use CMake to create project files for the Homework 2 assignment (*Hint: and Discrete Lecture folders*). Set your *startup project* to the correct project. Test building and executing the homework 2 project. Look over and understand the framework and find the functions you need to edit for the assignment.
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 
 ~~~
 ANS:
@@ -116,6 +129,13 @@ with axes parameters to give full context with all values).
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/b10.PNG?raw=true)
 
 
+<<<<<<< HEAD
+=======
+## Part 1: Empirical Tests of Randomness (20 pts).
+We looked at different ways to generate [pseudo-random numbers](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) and [quasi random numbers](https://en.wikipedia.org/wiki/Low-discrepancy_sequence). Generating random numbers are crucial to Discrete-Event simulations which rely on random variables and stochastic processes. This problem explores different random number generators, distributions, and statistics. Different [C++ pseudo-random numbers engines are instantiated](http://www.cplusplus.com/reference/random/) already for you. Also a a wide variety of standard distributions are implemented. Two quasi random number generators are also provided. - One must be the Sobel - quasi random number generator.
+* **(a) - 3pts:** Output the results of five different random number engines, using a uniform distribution for values between [0-100]. Generate useful charts and statistics from the output to analyze how uniform these values truly are. You are expected to look at some advanced statistics and test, for example: tests like the Kolmogorov-Smirnov test, Chi-square test, Autocorrelation test, and Spearman’s Rank Correlation Coefficient are a few examples of ones your could use.)
+* **(b) - 2pts:**  Vary *N* (amount of samples). How do things change.
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 * **(c) - 3pts:** Fix a random engine of your choice from part (a), and now vary five different [distributions](http://www.cplusplus.com/reference/random/) for just the psedo-random numbers. Again, analyze your results with graphs and statistics of choice.
 
 ~~~
@@ -209,6 +229,7 @@ get any other graphs to produce)).
 
 * **(f)- 4pts:** Repeat parts (d) and (e) with a unit circle.
 
+<<<<<<< HEAD
 ~~~
 ANS:
 To obtain graphs for this section, I simply 
@@ -262,6 +283,9 @@ Retrieved from  http://www.ox.ac.uk/media/global/wwwoxacuk/localsites/uasconfere
 ~~~
 
 ##Part 2 - Snakes and Ladders (Discrete Event Markov Chains and Monte Carlo Simulations) (30 pts)
+=======
+## Part 2 - Snakes and Ladders (Discrete Event Markov Chains and Monte Carlo Simulations) (30 pts)
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 
 
 * **(a) Null State Game transition matrix - 10pts:** The *null state game* is defined by a game with no snakes and no ladders. This simplifies the game to just the moves of the two dice rolls. Create the transition matrix for the null state game. 
@@ -368,7 +392,7 @@ code from piazaa.  All help received from William is
 documented in visual studio files.
 ~~~
 
-##Part 3 - Discrete Event Simulation - Queue Simulation (30 pts)
+## Part 3 - Discrete Event Simulation - Queue Simulation (30 pts)
 
 * **(a) - 4pts:** To start create the senario in the figure above in *main.cpp*. Checkin will have a *mu* of 53 and accept new arrivals, the security gates will have a *mu* of 20, and will not accept new arrivials, boarding will have a *mu* of 80. You will have to set up  the appropriate *MM1_Queue* objects to capture the functionality above.
 
@@ -415,6 +439,7 @@ with the other gates.  I would potentially go to observe that particular gate,
 and see if there was a personnel problem, or simply more efficient systems
 that could be shared/adopted to improve the overall system.
 
+<<<<<<< HEAD
 This also applies to the service times, and this dataset could potentially
 be used to predict times of increased traffic, which has implications such
 as modification of work schedules.  This could also be drilled down to the 
@@ -505,12 +530,24 @@ to milliseconds so I could run more simulations).
 
 ## AnyLogic 3D Simulation End
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any8.PNG?raw=true)
+=======
+## Part 4 - Implementing Extra Features (10 pts)
+Implementing 2 features on the extra features list. Pick any feature on the "*extra features*" list below to customize your assignment to fit your interests. Please document this in your writeup. (*Note: These should total 10pts. You could successfully implement a feature worth 10pts or greater. This also fulfills this requirement. The features are assigned points based on difficulty. The 5pt features are more straightforward.*)
+
+## Part 5 - Final Report (10 pts)
+Write up the results to the previous sections in the main *readme.md* in your forked repository. Turn in the URL for your fork in webcourses. Be visual. The report should contain the graphs and analysis requested. I have high expectations for the documentation here and you should allot the proper time to compose the writeup.
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 
 ## AnyLogic 3D Simulation Close Up
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any9.PNG?raw=true)
 
+<<<<<<< HEAD
 ## AnyLogic 3D Simulation Close Up
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework2/images/any10.PNG?raw=true)
+=======
+## Extra Features (Extra Credit - 25pts)
+You have to implement two features from this list for Part 4. You may choose any two features you wish from this list. (Please explicitly note them in your *Readme.md*)
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
 
 ~~~
 References
@@ -556,6 +593,7 @@ ANS: This is documented in Part 3 through the PNGs posted.
 
 
 * **(10 Points)** - Setup another resource allocation / queueing problem related to your research in Anylogic with a basic visualization
+<<<<<<< HEAD
 
 ~~~
 ANS:
@@ -735,3 +773,8 @@ https://repositorium.sdum.uminho.pt/bitstream/1822/36949/3/SIMIO_vs_Arena%20@140
 
 
 
+=======
+* **(10 Points)** - Setup up SmartGrid or a Microgrid System that creates resources of power from wind, solar, and electric grid. Set up various devices in your house to draw power. [Reference 1](http://www.sciencedirect.com/science/article/pii/S1877050916301740),   [Reference 2](http://www.tandfonline.com/doi/full/10.1080/19401493.2013.866695?src=recsys&).
+* **(25 Points)** - Set up a discrete simulation of your choice that uses an approved real-time data source and visualizes the results. (See instructor for approval).
+* **(N Points)** - You are welcome to make suggestions for a feature of your own choosing, but they must be approved by instructor before implementing.
+>>>>>>> cb3c7e0f67557661bfe81c7f2daab929467cdb71
