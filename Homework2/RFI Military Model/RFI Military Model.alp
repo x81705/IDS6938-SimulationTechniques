@@ -4335,6 +4335,20 @@
 					<X>510</X><Y>180</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<FileName><![CDATA[x3d/cart2.x3d]]></FileName>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[MA_Cart_part_2]]></Name>
+							<OriginalColor>-3815995</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_Cart_part_1]]></Name>
+							<OriginalColor>-1</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_Wheels]]></Name>
+							<OriginalColor>-13027015</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
 					<AutoScale>true</AutoScale>
 					<Scale>1.0</Scale>
 					<Rotation>0.0</Rotation>

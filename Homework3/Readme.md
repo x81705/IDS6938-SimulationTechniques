@@ -54,11 +54,52 @@ SIMAgent::KNoise,	SIMAgent::KWander, SIMAgent::KAvoid, SIMAgent::TAvoid, SIMAgen
 * Flocking
 * Leader Following
 
+~~~
+References
+
+Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
+regarding assignment, 9MAR-29MAR17. For Part II, Alex provided 
+help with general problem solution for B/C (to no avail, program is still not outputting).  
+All help received from Alex is documented in visual studio files.
+
+MacArthur, Keith.  For Part 2, I posted a question in Piazaa on April 12th, 2017 titled "AnyLogic Agen Behavior" regarding randomizing agent paths in the maze.  Keith replied by showing that a potential solution is the utilization of ped select outputs, which I then utilized in my maze. 
+
+Netterville, William. Face to face conversations on 27MAR17
+during study group. For Part II, William helped with the 
+formulation of the transition matrix and where to input 
+code from piazaa.  All help received from William is 
+documented in visual studio files.
+~~~
+
+
 # Part 2 - Simulating A Simple Pedestrian Flow
 
 **(a) - 0 points**: Follow the Anylogic example for the [Subway Entrance example]
+
+~~~
+ANS: I completed the tutorials with no major issues (screenshot included below; did not include 3D models (will be reflected in part 2B)).
+~~~
+## Subway Entrance Model/Simulation 
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/2a1.PNG?raw=true)
+
 
 **(b) - 20 points**: Create a maze. Generate the pdm, stats, and animations like before. Vary [parameters in your agents](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/_PL/reference/Attributes.html) to give them different behaviors and show the pedistrians change how they navigate the maze.
 
 **(c) - 30 points**: Model and analyze a building (or floor/outdoor space/stadium) on campus. (There is help on piazza how to find rough building plans - we expect something plausible). Create a senario: evacuation, daily office routine, special event, normal egress.... etc., and model and design your own experiment to determine if the building design suits the needs of its users. Start with photographs of your site, describe your site, describe your senario and hypothesis. Then use an agent-based pedistrian simulation to visualize your experiment's results.
 
+~~~
+References
+
+Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
+regarding assignment, 9MAR-29MAR17. For Part II, Alex provided 
+help with general problem solution for B/C (to no avail, program is still not outputting).  
+All help received from Alex is documented in visual studio files.
+
+MacArthur, Keith.  For Part 2, I posted a question in Piazaa on April 12th, 2017 titled "AnyLogic Agen Behavior" regarding randomizing agent paths in the maze.  Keith replied by showing that a potential solution is the utilization of ped select outputs, which I then utilized in my maze. 
+
+Netterville, William. Face to face conversations on 27MAR17
+during study group. For Part II, William helped with the 
+formulation of the transition matrix and where to input 
+code from piazaa.  All help received from William is 
+documented in visual studio files.
+~~~
