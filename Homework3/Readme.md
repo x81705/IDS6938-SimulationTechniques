@@ -90,6 +90,8 @@ ANS: I completed the tutorials with no major issues (screenshot included below; 
 ~~~
 References
 
+Unknown Author.  Unknown Date.  Maze-Dessert .PNG file utilized for maze, found via a google search.  MIT.Edu.  Retrieved from https://scratch.mit.edu/projects/95364380/.
+
 Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
 regarding assignment, 9MAR-29MAR17. For Part II, Alex provided 
 help with general problem solution for B/C (to no avail, program is still not outputting).  
