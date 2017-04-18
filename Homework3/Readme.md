@@ -62,7 +62,6 @@ regarding assignment, 9MAR-29MAR17. For Part II, Alex provided
 help with general problem solution for B/C (to no avail, program is still not outputting).  
 All help received from Alex is documented in visual studio files.
 
-MacArthur, Keith.  For Part 2, I posted a question in Piazaa on April 12th, 2017 titled "AnyLogic Agen Behavior" regarding randomizing agent paths in the maze.  Keith replied by showing that a potential solution is the utilization of ped select outputs, which I then utilized in my maze. 
 
 Netterville, William. Face to face conversations on 27MAR17
 during study group. For Part II, William helped with the 
@@ -84,6 +83,12 @@ ANS: I completed the tutorials with no major issues (screenshot included below; 
 
 
 **(b) - 20 points**: Create a maze. Generate the pdm, stats, and animations like before. Vary [parameters in your agents](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/_PL/reference/Attributes.html) to give them different behaviors and show the pedistrians change how they navigate the maze.
+~~~
+ANS: I first searched via google for an image of a maze, and then imported it to AnyLogic (maze obtained from MIT.edu; see references below).  During initial probelm solving, I constructed the maze and populated it with agents, but realized that the agents were simply taking the path of least resistance to the exit, and not taking any dead-end turns.  I posted a question via Piazaa regarding this issue, and saw that other students had used the pedSelect node to work around this problem (MacArthur, Keith; see references below).  
+
+I used the method of emplacing multiple pedSelect nodes (linked to target lines which represented path decisions; see screen shot below); it should be noted, for all pedSelects I assumed that due to the difficulty of the maze, that agents would have an evenly distributed to chance to choose any path, after being redirected to the pedSelect node where a wrong decision was made.  I then populated the maze with 5 agents per minute (leaving all other settings at default)
+~~~
+
 
 **(c) - 30 points**: Model and analyze a building (or floor/outdoor space/stadium) on campus. (There is help on piazza how to find rough building plans - we expect something plausible). Create a senario: evacuation, daily office routine, special event, normal egress.... etc., and model and design your own experiment to determine if the building design suits the needs of its users. Start with photographs of your site, describe your site, describe your senario and hypothesis. Then use an agent-based pedistrian simulation to visualize your experiment's results.
 
