@@ -92,6 +92,10 @@ I then updated the simulation with agents that resembled people and resimulated 
 
 To analyze the data and display stats, I then added graphs for both traffic and intensity, and added a pedestrian density function.
 
+To change the parameters, I varied the speed from an initial speed of .3 to .7 meters per second, to 1 to 1.5 meters per second, as I feel like in the beginning of a maze that the rate would be increased given the lack of path choices for this maze initially.  
+
+Additionally, I added groups within the simulation as often times many people will go to social activities such as this with friends (initial conditions for group as follows: put a group size between 1-4 with uniform discreet distribution, set the interarrival time to within 1 second to simulate group arriving together, put the group formation as front, as there is often one person leading the group).
+
 ~~~
 
 
