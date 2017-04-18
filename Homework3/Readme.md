@@ -86,7 +86,12 @@ ANS: I completed the tutorials with no major issues (screenshot included below; 
 ~~~
 ANS: I first searched via google for an image of a maze, and then imported it to AnyLogic (maze obtained from MIT.edu; see references below).  During initial probelm solving, I constructed the maze and populated it with agents, but realized that the agents were simply taking the path of least resistance to the exit, and not taking any dead-end turns.  I posted a question via Piazaa regarding this issue, and saw that other students had used the pedSelect node to work around this problem (MacArthur, Keith; see references below).  
 
-I used the method of emplacing multiple pedSelect nodes (linked to target lines which represented path decisions; see screen shot below); it should be noted, for all pedSelects I assumed that due to the difficulty of the maze, that agents would have an evenly distributed to chance to choose any path, after being redirected to the pedSelect node where a wrong decision was made.  I then populated the maze with 5 agents per minute (leaving all other settings at default)
+I used the method of emplacing multiple pedSelect nodes (linked to target lines which represented path decisions; see screen shot below); it should be noted, for all pedSelects I assumed that due to the difficulty of the maze, that agents would have an evenly distributed to chance to choose any path, after being redirected to the pedSelect node where a wrong decision was made.  I then populated the maze with 5 agents per minute (leaving all other settings at default); approximately 230 agents would be able to complete the maze within 60 minutes (see screenshot below).
+
+I then updated the simulation with agents that resembled people and resimulated in 3d (see screenshots below).
+
+To analyze the data and display stats, I then added graphs for both traffic and intensity, and added a pedestrian density function.
+
 ~~~
 
 
