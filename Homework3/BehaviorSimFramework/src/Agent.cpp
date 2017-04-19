@@ -313,8 +313,14 @@ vec2 SIMAgent::Seek()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//From notes in class; Sarah helped identify issues and reformat the Seek function
 	vec2 tmp;
-
+	tmp = goal - GPos;
+	tmp.Normalize();
+	thetad = atan2(tmp[1], tmp[0]);
+	thetad = thetad + M_PI;
+	float vd = SIMAgent::MaxVelocity;
+	tmp = vec2((cos(thetad)*vd), (sin(thetad)*vd));
 	return tmp;
 }
 
@@ -331,8 +337,13 @@ vec2 SIMAgent::Flee()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//From notes in class; Sarah helped reformat
 	vec2 tmp;
-
+	tmp = goal - GPos;
+	tmp.Normalize();
+	thetad = atan2(tmp[1], tmp[0]);
+	float vd = SIMAgent::MaxVelocity;
+	tmp = vec2((cos(thetad)*vd), sin(thetad)*vd);
 	return tmp;
 }
 
@@ -350,7 +361,22 @@ vec2 SIMAgent::Arrival()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//From notes in class; Sarah helped reformat this function
 	vec2 tmp;
+	tmp = goal - GPos;
+	double dist = tmp.Length();
+	vd = tmp.Length() * KArrival;
+	thetad = atan2(tmp[1], tmp[0]);
+	thetad += M_PI;
+
+	if (dist > 0.0)
+	{
+		return vec2((cos(thetad)*vd), (sin(thetad)*vd));
+	}
+
+	float M = SIMAgent::KArrival;
+	float vn = (M * vd / radius);
+	return (vec2((cos(thetad)*vn), sin(thetad)*vn));
 
 	return tmp;
 }
