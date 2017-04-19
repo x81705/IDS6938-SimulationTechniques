@@ -497,7 +497,7 @@ vec2 SIMAgent::Cohesion()
 }
 
 /*
-*	Flocking behavior
+*	Flocking behavior-
 *  Utilize the Separation, Cohesion and Alignment behaviors to determine the desired velocity vector
 *  You need to compute the desired velocity and desired orientation
 *  Store them into vd and thetad respectively
