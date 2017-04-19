@@ -102,6 +102,14 @@ Additionally, I added groups within the simulation as often times many people wi
 **(c) - 30 points**: Model and analyze a building (or floor/outdoor space/stadium) on campus. (There is help on piazza how to find rough building plans - we expect something plausible). Create a senario: evacuation, daily office routine, special event, normal egress.... etc., and model and design your own experiment to determine if the building design suits the needs of its users. Start with photographs of your site, describe your site, describe your senario and hypothesis. Then use an agent-based pedistrian simulation to visualize your experiment's results.
 
 ~~~
+ANS: I first obtained digital photgraphs of the floor plan of the Partnership II's first floor.  I also walked through the first floor and the perimeter of the building to confirm all office locations/exits.  I then imported the image files to AnyLogic, and began to trace the floor plan.
+
+After creating the floor plan for the first floor, I then demarcated different areas where people will be working, and set the probability equally for agents using a pedSelect node (equal distributions within each of the 11 areas (.09)).
+
+
+~~~
+
+~~~
 References
 
 Unknown Author.  Unknown Date.  Maze-Dessert .PNG file utilized for maze, found via a google search.  MIT.Edu.  Retrieved from https://scratch.mit.edu/projects/95364380/.
