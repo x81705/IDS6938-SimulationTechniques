@@ -1216,9 +1216,17 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[comfortableSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[uniform(.5, 1)]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[uniform(1, 1.5)]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[diameter]]></Name>
@@ -1228,9 +1236,16 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[groupSize]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[uniform_discr(1, 4)]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[groupMemberInterarrivalTime]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[uniform(1)]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[groupFormation]]></Name>
