@@ -227,31 +227,36 @@ void SIMAgent::InitValues()
 	SIMAgent::KNoise, SIMAgent::KWander, SIMAgent::KAvoid, SIMAgent::TAvoid, SIMAgent::RNeighborhood,
 	SIMAgent::KSeparate, SIMAgent::KAlign, SIMAgent::KCohesion.
 	*********************************************/
-	Kv0 = 0.0;
-	Kp1 = 0.0;
-	Kv1 = 0.0;
-	KArrival = 0.0;
-	KDeparture = 0.0;
-	KNoise = 0.0;
-	KWander = 0.0;
-	KAvoid = 0.0;
-	TAvoid = 0.0;
-	RNeighborhood = 0.0;
-	KSeparate = 0.0;
-	KAlign = 0.0;
-	KCohesion = 0.0;
+	//Next Section completed with Sarah's help
+	Kv0 = 10.0;
+	Kp1 = 200.0;
+	Kv1 = 32.0;
+	KArrival = 0.5;
+	KDeparture = 15.0;
+	KNoise = 10.0;
+	KWander = 8.0;
+	KAvoid = 1.0;
+	TAvoid = 20.0;
+	RNeighborhood = 800.0;
+	KSeparate = 1000.0;
+	KAlign = 20.0;
+	KCohesion = 0.5;
 }
 
 /*
 *	You should apply the control rules given desired velocity vd and desired orientation thetad.
 */
-void SIMAgent::Control()
+void SIMAgent::Control() //from Piazaa
 {
-	/*********************************************
-	// TODO: Add code here
-	*********************************************/
+	Truncate(vd, -SIMAgent::MaxVelocity, SIMAgent::MaxVelocity);
+	input[0] = SIMAgent::Mass * SIMAgent::Kv0 * (vd - state[2]);
+	Truncate(input[0], -SIMAgent::MaxForce, SIMAgent::MaxForce);
 
+	double dangle = AngleDiff(state[1], thetad);
+	input[1] = SIMAgent::Inertia * (Kp1 * dangle - Kv1 * state[3]);
+	Truncate(input[1], -SIMAgent::MaxTorque, SIMAgent::MaxTorque);
 }
+
 
 /*
 *	Compute derivative vector given input and state vectors
@@ -262,7 +267,11 @@ void SIMAgent::FindDeriv()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
-
+	//Completed with help from Sarah; found in Agent.h file
+	deriv[0] = state[2];
+	deriv[1] = state[3]; //velocity
+	deriv[2] = input[0] / Mass;
+	deriv[3] = input[1] / Inertia - state[3];
 }
 
 /*
@@ -270,12 +279,25 @@ void SIMAgent::FindDeriv()
 *  Compute global position and store it in GPos
 *  Perform validation check to make sure all values are within MAX values
 */
-void SIMAgent::UpdateState()
+void SIMAgent::UpdateState() //from Piazaa
 {
-	/*********************************************
-	// TODO: Add code here
-	*********************************************/
+	for (int i = 0; i < dimState; i++) {
+		state[i] += deriv[i] * deltaT;
+	}
+	state[0] = 0.0;
 
+	ClampAngle(state[1]);//help from Keith to reformat this line
+	Truncate(state[2], -SIMAgent::MaxVelocity, SIMAgent::MaxVelocity);
+
+	vec2 GVelocity;
+	GVelocity[0] = state[2] * cos(state[1]);
+	GVelocity[1] = state[2] * sin(state[1]);
+	GPos += GVelocity;
+
+	Truncate(GPos[0], -1.0 * env->groundSize, env->groundSize);
+	Truncate(GPos[1], -1.0 * env->groundSize, env->groundSize);
+
+	Truncate(state[3], -SIMAgent::MaxAngVel, SIMAgent::MaxAngVel);
 }
 
 /*
