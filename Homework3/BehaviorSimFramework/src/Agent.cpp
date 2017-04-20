@@ -227,9 +227,9 @@ void SIMAgent::InitValues()
 	SIMAgent::KNoise, SIMAgent::KWander, SIMAgent::KAvoid, SIMAgent::TAvoid, SIMAgent::RNeighborhood,
 	SIMAgent::KSeparate, SIMAgent::KAlign, SIMAgent::KCohesion.
 	*********************************************/
-	//Next Section completed with Sarah's help
+	//Help from Sarah with regards to trying initial values
 	Kv0 = 10.0;
-	Kp1 = 200.0;
+	Kp1 = 150.0; //Alex mentioned changing to negative possibility for seek
 	Kv1 = 32.0;
 	KArrival = 0.5;
 	KDeparture = 15.0;
@@ -313,7 +313,7 @@ vec2 SIMAgent::Seek()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
-	//From notes in class; Sarah helped identify issues and reformat the Seek function
+	//From notes in class; Sarah helped identify issues and reformat the Seek function, and Alex helped with Kp arrival values
 	vec2 tmp;
 	tmp = goal - GPos;
 	tmp.Normalize();
@@ -395,8 +395,22 @@ vec2 SIMAgent::Departure()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//Sarah helped with this function; explained it was very similar to arrival function
 	vec2 tmp;
+	tmp = goal - GPos;
+	double dist = tmp.Length();
+	vd = tmp.Length() * KDeparture;
+	thetad = atan2(tmp[1], tmp[0]);
+	thetad += M_PI;
 
+	if (dist > 0.0)
+	{
+		return vec2((cos(thetad)*vd), (sin(thetad)*vd));
+	}
+
+	float M = SIMAgent::KDeparture;
+	float vn = (M * vd / radius);
+	return (vec2((cos(thetad)*vn), sin(thetad)*vn));
 	return tmp;
 }
 
@@ -414,8 +428,13 @@ vec2 SIMAgent::Wander()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//ALex helped with this code; explained random number generator for angles and showed where to find equations on webcourses; helped fix formating errors
 	vec2 tmp;
+	float angle = float(rand() % 360) / 180.0 * M_PI;
+	thetad = angle;
+	vd = SIMAgent::MaxVelocity;
 
+	tmp = vec2((cos(thetad)*vd)*KNoise, sin(thetad)*vd*KNoise)*KWander; //Sarah
 	return tmp;
 }
 
