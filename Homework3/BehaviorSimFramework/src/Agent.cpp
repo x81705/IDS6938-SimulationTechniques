@@ -533,7 +533,7 @@ vec2 SIMAgent::Flocking()
 }
 
 /*
-*	Flocking behavior
+*	Leader behavior
 *  Utilize the Separation, Arrival behaviors to determine the desired velocity vector
 *  You need to find the leader, who is always the first agent in SIMAgent::agents
 *  You need to compute the desired velocity and desired orientation
