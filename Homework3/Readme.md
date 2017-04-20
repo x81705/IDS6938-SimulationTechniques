@@ -1,4 +1,4 @@
-# Charlie Timm
+# Charlie Timm-
 
 # Homework 3 : Agent Based Simulation Assignment 
 
