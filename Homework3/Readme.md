@@ -63,10 +63,7 @@ help with general problem solution for B/C (to no avail, program is still not ou
 All help received from Alex is documented in visual studio files.
 
 
-Netterville, William. Face to face conversations on 27MAR17
-during study group. For Part II, William helped with the 
-formulation of the transition matrix and where to input 
-code from piazaa.  All help received from William is 
+Matthews, Sarah. Multiple face to face/digital conversations from 13APR-26APR17. For Part I, Sarahm helped me with multiple function syntax/formatting and value manipulation.  All help received from Sarah is 
 documented in visual studio files.
 ~~~
 
@@ -119,11 +116,7 @@ regarding assignment, 9MAR-29MAR17. For Part II, Alex provided
 help with general problem solution for B/C (to no avail, program is still not outputting).  
 All help received from Alex is documented in visual studio files.
 
-MacArthur, Keith.  For Part 2, I posted a question in Piazaa on April 12th, 2017 titled "AnyLogic Agen Behavior" regarding randomizing agent paths in the maze.  Keith replied by showing that a potential solution is the utilization of ped select outputs, which I then utilized in my maze. 
+MacArthur, Keith.  Face to face/online correspondence.  For Part 2, I posted a question in Piazaa on April 12th, 2017 titled "AnyLogic Agen Behavior" regarding randomizing agent paths in the maze.  Keith replied by showing that a potential solution is the utilization of ped select outputs, which I then utilized in my maze.  Additionally, during a study session on April 20th, 2017, Keith showed me how to format the input for freefunction into an event.  
 
-Netterville, William. Face to face conversations on 27MAR17
-during study group. For Part II, William helped with the 
-formulation of the transition matrix and where to input 
-code from piazaa.  All help received from William is 
-documented in visual studio files.
+
 ~~~
