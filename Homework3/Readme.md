@@ -8,8 +8,8 @@
 [University of Central Florida](http://www.ist.ucf.edu/grad/)
 This is the framework for homework #3. 
 
-The assignment is due: **Monday, April  24 at 11:59PM (EST)**
-With Final Alibi, due date is: **Tuesday, April 25 at 11:59PM (EST)**
+The assignment is due: **Tuesday, April  25 at 11:59PM (EST)**
+With Final Alibi, due date is: **Wednesday, April 26 at 11:59PM (EST)**
 Total Alibi Days Used (prior to this project): **2**
 
 # Introduction
