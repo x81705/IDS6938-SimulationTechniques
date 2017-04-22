@@ -227,11 +227,11 @@ void SIMAgent::InitValues()
 	SIMAgent::KNoise, SIMAgent::KWander, SIMAgent::KAvoid, SIMAgent::TAvoid, SIMAgent::RNeighborhood,
 	SIMAgent::KSeparate, SIMAgent::KAlign, SIMAgent::KCohesion.
 	*********************************************/
-	//Help from Sarah with regards to trying/manipulating initial values
+	//Help from Alex/Sarah with regards to decreasing/increasing/manipulating initial values
 	Kv0 = 10.0;
-	Kp1 = 150.0; //Alex mentioned changing to negative possibility for seek
-	Kv1 = 32.0;
-	KArrival = 0.5;
+	Kp1 = -50.0; 
+	Kv1 = 15.0;
+	KArrival = 0.03; 
 	KDeparture = 15.0;
 	KNoise = 10.0;
 	KWander = 8.0;
@@ -271,7 +271,7 @@ void SIMAgent::FindDeriv()
 	deriv[0] = state[2];
 	deriv[1] = state[3]; //velocity
 	deriv[2] = input[0] / Mass;
-	deriv[3] = input[1] / Inertia - state[3];
+	deriv[3] = input[1] / Inertia;// -state[3]; //Alex helped with this
 }
 
 /*
@@ -316,12 +316,20 @@ vec2 SIMAgent::Seek()
 	//From notes in class; Sarah helped identify issues and reformat the Seek function, and Alex helped with Kp arrival values
 	vec2 tmp;
 	tmp = goal - GPos;
-	tmp.Normalize();
+	vd = SIMAgent::MaxVelocity;
+
+	thetad = atan2(tmp[1], tmp[0]);
+
+	return vec2(cos(thetad)*vd, sin(thetad) * vd); //Alex helped with simplification/reformating of above code
+
+
+	/*tmp.Normalize();
 	thetad = atan2(tmp[1], tmp[0]);
 	thetad = thetad + M_PI;
 	float vd = SIMAgent::MaxVelocity;
 	tmp = vec2((cos(thetad)*vd), (sin(thetad)*vd));
 	return tmp;
+	*/
 }
 
 /*
@@ -341,7 +349,7 @@ vec2 SIMAgent::Flee()
 	vec2 tmp;
 	tmp = goal - GPos;
 	tmp.Normalize();
-	thetad = atan2(tmp[1], tmp[0]);
+	thetad = atan2(tmp[1], tmp[0]) + M_PI; //Alex helped with inverting this
 	float vd = SIMAgent::MaxVelocity;
 	tmp = vec2((cos(thetad)*vd), sin(thetad)*vd);
 	return tmp;
@@ -364,7 +372,16 @@ vec2 SIMAgent::Arrival()
 	//From notes in class; Sarah helped reformat this function
 	vec2 tmp;
 	tmp = goal - GPos;
-	double dist = tmp.Length();
+
+	vd = tmp.Length()*KArrival;
+
+	Truncate(vd, 0, SIMAgent::MaxVelocity);//Alex helped with reformating/simplifying this function, and adding Truncate
+	tmp.Normalize();
+	thetad = atan2(tmp[1], tmp[0]);
+
+	return vec2(cos(thetad)* vd, sin(thetad) * vd);
+
+	/*double dist = tmp.Length();
 	vd = tmp.Length() * KArrival;
 	thetad = atan2(tmp[1], tmp[0]);
 	thetad += M_PI;
@@ -377,8 +394,9 @@ vec2 SIMAgent::Arrival()
 	float M = SIMAgent::KArrival;
 	float vn = (M * vd / radius);
 	return (vec2((cos(thetad)*vn), sin(thetad)*vn));
-
 	return tmp;
+	*/
+
 }
 
 /*
@@ -474,9 +492,12 @@ vec2 SIMAgent::Separation()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
+	/*vec2 sep(0.0, 0.0);
+
 	tmp = goal - GPos;
-	sep = (tmp / abs(tmp))*KSeparate;
+	vec2 sep = (tmp / tmp.Length())*KSeparate;*/
 	return tmp;
+	
 }
 
 /*
@@ -493,6 +514,8 @@ vec2 SIMAgent::Alignment()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
+
+	tmp.Normalize();
 
 	return tmp;
 }
@@ -511,7 +534,6 @@ vec2 SIMAgent::Cohesion()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
-
 
 	return tmp;
 }
