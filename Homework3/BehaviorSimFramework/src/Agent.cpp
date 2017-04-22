@@ -227,7 +227,7 @@ void SIMAgent::InitValues()
 	SIMAgent::KNoise, SIMAgent::KWander, SIMAgent::KAvoid, SIMAgent::TAvoid, SIMAgent::RNeighborhood,
 	SIMAgent::KSeparate, SIMAgent::KAlign, SIMAgent::KCohesion.
 	*********************************************/
-	//Help from Sarah with regards to trying initial values
+	//Help from Sarah with regards to trying/manipulating initial values
 	Kv0 = 10.0;
 	Kp1 = 150.0; //Alex mentioned changing to negative possibility for seek
 	Kv1 = 32.0;
@@ -474,7 +474,8 @@ vec2 SIMAgent::Separation()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
-
+	tmp = goal - GPos;
+	sep = (tmp / abs(tmp))*KSeparate;
 	return tmp;
 }
 
