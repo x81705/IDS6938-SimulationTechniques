@@ -1,6 +1,5 @@
 # Charlie Timm
 
-
 # Homework 3 : Agent Based Simulation Assignment 
 
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
@@ -99,7 +98,7 @@ I first searched via google for an image of a maze, and then imported it to AnyL
 
 To analyze the data and display stats, I added a pedestrian density function, and then added graphs for both traffic and intensity, in which traffic is the number of pedestrians crossing the ped flow statistics lines in an hour (model time), and intensity is defined as the traffic divided by the line length.
 
-I innitially populated the maze with 5 agents per minute (leaving all other settings at default) and then through running the simulation ten times and recording the number of agents that exited the maze, I found an average of approximately 230 agents would be able to complete the maze within 60 minutes (see screenshot below).  
+I initially populated the maze with 5 agents per minute (leaving all other settings at default) and then through running the simulation ten times and recording the number of agents that exited the maze, I found an average of approximately 230 agents would be able to complete the maze within 60 minutes (see screenshot below).  
 
 Please use this YouTube link to view the simulation during initial conditions:
 (http://www.youtube.com/)
@@ -109,7 +108,9 @@ I also found that areas 1 and 2 consistently had the highest concentration of tr
 
 PARAMETER CHANGE
 
-To change the parameters, I varied the speed from an initial speed of .3 to .7 meters per second, to 1 to 1.5 meters per second, as I feel like in the beginning of a maze that the rate would be increased given the lack of path choices for this maze initially.  Additionally, I added groups within the simulation as often times many people will go to social activities such as this with friends (initial conditions for group as follows: put a group size between 1-4 with uniform discreet distribution, set the interarrival time to within 1 second to simulate group arriving together, put the group formation as front, as there is often one person leading the group).
+To change the parameters, I varied the speed from an initial speed of .3 to .7 meters per second, to 1 to 1.5 meters per second, as I feel like in the beginning of a maze that the rate would be increased given the lack of path choices for this maze initially; I then decreased the rate to .5 to 1 meter per second, again, with consideration for the the assumption of medium lighting levels and the difficulty of the maze.  
+
+Additionally, I added groups within the simulation as often times many people will go to social activities such as this with friends (initial conditions for group as follows: put a group size between 1-4 with uniform discreet distribution, set the interarrival time to within 1 second to simulate group arriving together, put the group formation as front, as there is often one person leading the group).
 
 ANALYSIS 2
 
