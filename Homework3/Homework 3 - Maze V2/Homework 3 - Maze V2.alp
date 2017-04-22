@@ -41,7 +41,7 @@
 				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
 				<RotateAnimationVertically>false</RotateAnimationVertically>
 				<VelocityCode Class="CodeUnitValue">
-					<Code><![CDATA[10]]></Code>
+					<Code><![CDATA[3]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
 			</AgentProperties>
@@ -1217,7 +1217,7 @@
 						<Parameter>
 							<Name><![CDATA[comfortableSpeed]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[uniform(.5, 1)]]></Code>
+								<Code><![CDATA[uniform(1, 1.5)]]></Code>
 								<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 							</Value>
 						</Parameter>
@@ -4119,7 +4119,7 @@
 				<DensityMap>
 					<Id>1492538078606</Id>
 					<Name><![CDATA[densityMap]]></Name>
-					<X>730</X><Y>260</Y>
+					<X>700</X><Y>240</Y>
 					<Label><X>-15</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4387,7 +4387,7 @@
 				<Text>
 					<Id>1492539521222</Id>
 					<Name><![CDATA[text7]]></Name>
-					<X>880</X><Y>220</Y>
+					<X>1140</X><Y>180</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4398,7 +4398,7 @@
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[Intensity:]]></Text>
+					<Text><![CDATA[Intensity Graph]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
@@ -4409,7 +4409,7 @@
 				<Text>
 					<Id>1492539546979</Id>
 					<Name><![CDATA[text6]]></Name>
-					<X>120</X><Y>240</Y>
+					<X>-140</X><Y>240</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4428,12 +4428,34 @@
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+				<Text>
+					<Id>1492819134159</Id>
+					<Name><![CDATA[text8]]></Name>
+					<X>-203</X><Y>193</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Traffic Graph]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>12</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Shapes>
 			<Controls>
 				<Control Type="Window3D">
 					<Id>1492537767009</Id>
 					<Name><![CDATA[window3d]]></Name>
-					<X>40</X><Y>630</Y>
+					<X>240</X><Y>600</Y>
 					<Width>500</Width>
 					<Height>300</Height>
 					<MakeDefaultViewArea>true</MakeDefaultViewArea>
@@ -4448,7 +4470,7 @@
     			<TimePlot>
 					<Id>1492538883038</Id>
 					<Name><![CDATA[trafficplot]]></Name>
-					<X>0</X><Y>240</Y>
+					<X>-500</X><Y>180</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4465,15 +4487,15 @@
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>260</Width>
-					<Height>360</Height>
+					<Width>720</Width>
+					<Height>420</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>180</Width>
-						<Height>270</Height>
+						<Width>640</Width>
+						<Height>300</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -4481,7 +4503,7 @@
 					<Legend>
 						<Place>SOUTH</Place>
 						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
+						<Size>60</Size>
 					</Legend>
 					<Labels>
 						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
@@ -4640,7 +4662,7 @@
     			<TimePlot>
 					<Id>1492539583645</Id>
 					<Name><![CDATA[intensityplot]]></Name>
-					<X>760</X><Y>240</Y>
+					<X>760</X><Y>180</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4657,15 +4679,15 @@
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>260</Width>
-					<Height>360</Height>
+					<Width>720</Width>
+					<Height>420</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>180</Width>
-						<Height>270</Height>
+						<Width>640</Width>
+						<Height>280</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -4673,7 +4695,7 @@
 					<Legend>
 						<Place>SOUTH</Place>
 						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
+						<Size>80</Size>
 					</Legend>
 					<Labels>
 						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
