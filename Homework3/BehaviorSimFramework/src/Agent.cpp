@@ -491,12 +491,41 @@ vec2 SIMAgent::Separation()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
-	//help from Keith constructing this
-	
+	//help from Keith and Roberto constructing this
+
 	vec2 tmp;
-	vec2 sum = vec2(0, 0);
+	vec2 agentsV = vec2(0.0, 0.0);
+	float agentX = 0.0;
+	float agentY = 0.0;
+	vec2 agentPosVec;
+	vec2 VelSeparate;
 
 	for (int i = 0; i < agents.size(); i++)
+	{
+		agentX = GPos[0] - agents[i]->GPos[0];
+		agentY = GPos[1] - agents[i]->GPos[1];
+		agentPosVec = vec2(agentX, agentY);
+
+		if (((agentX != 0.0) || (agentY != -.0)) && (agentPosVec.Length() < RNeighborhood))
+		{
+			agentsV[0] += (agentX / (agentPosVec.Length() * agentPosVec.Length()));
+			agentsV[1] += (agentY / (agentPosVec.Length() * agentPosVec.Length()));
+
+		}
+
+	}
+
+	VelSeparate = KSeparate * agentsV;
+
+	thetad = atan2(VelSeparate[1], VelSeparate[0]);
+
+	vd = VelSeparate.Length();
+
+	tmp = vec2((cos(thetad) * vd), (sin(thetad) * vd));
+
+	//vec2 sum = vec2(0, 0);
+
+	/*for (int i = 0; i < agents.size(); i++)
 	{
 		vec2 distance = agents[i]->GPos - GPos;
 
@@ -504,23 +533,19 @@ vec2 SIMAgent::Separation()
 		{
 			continue;
 		}
-		else
+		/*else
 		{
-			GPos[0] - agents.insert[0]->GPos, GPos[1] - agents.insert[1]->GPos;
-			vec2 distance2 = GPos[0] - agents.insert[0]->GPos, GPos[1] - agents.insert[1]->GPos;
+			GPos[0] - agents.insert[0]->GPos[0], GPos[1] - agents.insert[1]->GPos[1];
+			vec2 distance2 = GPos[0] - agents.insert[0]->GPos[0], GPos[1] - agents.insert[1]->GPos[1];
 			distance2.Normalize();
 		}
-
-	}
-	
-	
-	/*vec2 sep(0.0, 0.0);
-	tmp = goal - GPos;
-	vec2 sep = (tmp / tmp.Length())*KSeparate;*/
-
+		*/
 	return tmp;
-	
+
 }
+	
+	
+
 
 /*
 *	Alignment behavior
@@ -535,9 +560,42 @@ vec2 SIMAgent::Alignment()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//help from Roberto
 	vec2 tmp;
+	vec2 agentsV = Arrival();
+	float agentX = 0.0;
+	float agentY = 0.0;
+	float agentNum = 0.0;
+	vec2 agentPosVec;
+	vec2 VelAlignment;
+	vec2 normAgentV;
 
-	tmp.Normalize();
+
+	for (int i = 0; i < agents.size(); i++)
+	{
+		agentX = GPos[0] - agents[i]->GPos[0];
+		agentY = GPos[1] - agents[i]->GPos[1];
+		agentPosVec = vec2(agentX, agentY);
+
+		if (((agentX != 0.0) || (agentY != -.0)) && (agentPosVec.Length() < RNeighborhood))
+		{
+			agentsV[0] += cos(agents[i]->state[1]) * agents[i]->state[2];
+			agentsV[1] += sin(agents[i]->state[1]) * agents[i]->state[2];
+
+			normAgentV += agentsV.Normalize();
+
+			agentNum += 1;
+		}
+
+	}
+
+	VelAlignment = (KAlign * normAgentV);
+	
+	thetad = atan2(VelAlignment[1], VelAlignment[0]);
+
+	vd = VelAlignment.Length();
+
+	tmp = vec2((cos(thetad) * vd), (sin(thetad) * vd));
 
 	return tmp;
 }
@@ -555,7 +613,37 @@ vec2 SIMAgent::Cohesion()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//Roberto helped with formation of this function
 	vec2 tmp;
+	vec2 agentsV = vec2(0.0, 0.0);
+	float agentX = 0.0;
+	float agentY = 0.0;
+	vec2 agentPosVec;
+	vec2 VCohesion;
+	float agentNum = 0.0;
+
+	for (int i = 0; i < agents.size(); i++)
+	{
+		agentX = GPos[0] - agents[i]->GPos[0];
+		agentY = GPos[1] - agents[i]->GPos[1];
+		agentPosVec = vec2(agentX, agentY);
+
+		if (agentPosVec.Length() < RNeighborhood)
+		{
+			agentsV[0] += GPos[0] - agents[i]->GPos[0];
+			agentsV[1] += GPos[1] - agents[i]->GPos[1];
+
+			agentNum += 1;
+		}
+
+	}
+
+	VCohesion = KCohesion * ((agentsV / agents.size()) - GPos); //maybe change agentNum to agents.size()
+	thetad = atan2(VCohesion[1], VCohesion[0]);
+	
+	vd = VCohesion.Length();
+
+	tmp = vec2((cos(thetad) * vd), (sin(thetad) * vd));
 
 	return tmp;
 }
@@ -567,12 +655,21 @@ vec2 SIMAgent::Cohesion()
 *  Store them into vd and thetad respectively
 *  return a vec2 that represents the goal velocity with its direction being thetad and its norm being vd
 */
+//Roberto helped with this function
 vec2 SIMAgent::Flocking()
 {
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
+	vec2 vFlock;
+
+	vFlock = KSeparate * Separation() + KCohesion * Cohesion() + KAlign * Alignment();
+	thetad = atan2(vFlock[1], vFlock[0]);
+	
+	vd = vFlock.Length();
+
+	tmp = vec2((cos(thetad) * vd), (sin(thetad) * vd));
 
 	return tmp;
 }
@@ -590,7 +687,17 @@ vec2 SIMAgent::Leader()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//Robert helped with this function
 	vec2 tmp;
+	vec2 vLeader;
+
+	vLeader = KSeparate * Separation() + KArrival * Arrival();
+
+	thetad = atan2(vLeader[1], vLeader[0]);
+
+	vd = vLeader.Length();
+
+	tmp = vec2((cos(thetad) * vd), (sin(thetad) * vd));
 
 	return tmp;
 }
