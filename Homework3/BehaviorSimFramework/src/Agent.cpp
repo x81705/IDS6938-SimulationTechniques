@@ -491,11 +491,33 @@ vec2 SIMAgent::Separation()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//help from Keith constructing this
+	
 	vec2 tmp;
-	/*vec2 sep(0.0, 0.0);
+	vec2 sum = vec2(0, 0);
 
+	for (int i = 0; i < agents.size(); i++)
+	{
+		vec2 distance = agents[i]->GPos - GPos;
+
+		if (distance[0] == 0 && distance[1] == 0)
+		{
+			continue;
+		}
+		else
+		{
+			GPos[0] - agents.insert[0]->GPos, GPos[1] - agents.insert[1]->GPos;
+			vec2 distance2 = GPos[0] - agents.insert[0]->GPos, GPos[1] - agents.insert[1]->GPos;
+			distance2.Normalize();
+		}
+
+	}
+	
+	
+	/*vec2 sep(0.0, 0.0);
 	tmp = goal - GPos;
 	vec2 sep = (tmp / tmp.Length())*KSeparate;*/
+
 	return tmp;
 	
 }
