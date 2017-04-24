@@ -108,10 +108,18 @@ To analyze the data and display stats, I added a pedestrian density function, an
 
 I initially populated the maze with 5 agents per minute (leaving all other settings at default) and then through running the simulation ten times and recording the number of agents that exited the maze, I found an average of approximately 230 agents would be able to complete the maze within 60 minutes (see screenshot below).  
 
-I then took screenshots every 900 seconds (or 15 minutes, model time) to analyze the data, and ran the simulation ten times.
+I then took screenshots every 900 seconds (or every 15 minutes (+- 5 seconds), model time) to analyze the data, and ran the simulation ten times.  The screenshots below show the coalated data, and indicate XYZ.
 
-Please use this YouTube link to view the simulation during initial conditions:
-(http://www.youtube.com/)
+One of the big takeaways from this was the average (mean) total number of agents/customers that made it through the maze after ten simulations, which I calculated to be 244.4 agents (summed each trial, and then divided by 10).  This number could be used to calculate the number of employees needed to properly man the amusement park.
+
+For the 900 second mark, the major consistency was that the high pedestrian density marker was at the target line 1 marker, with 7 out of ten simulations displaying an orange/red in the pedestrian statistics function, and the TL2 statistics in one of the top two positions for both traffic and intensity graphs (see screenshots; the first indicates all target lines, the second shows the data taken at 900 seconds from each of the ten simulations).
+
+For the 1800 second data, while there was still major activity in/around the TL2 corridor (7 out of 10 displaying significant traffic/intensity), the area of higher traffic/intensity based on the pedestrian traffic density heat map was in vicinity of the TL7 statsitics line (9 of 10 displaying orange/red, even though the T7 statistics line does not feature prominently in any of the graphs); this is likely due to the fact that all agents must pass through this corridor, and that at this time in the simulation there are simply more agents in this general area (see screenshots below; the first indicates the area of highest pedestrian density based off the heat map, and the second shows all data taken at 1800 seconds from each of the ten simulations).  Additionally, there was increased density in vicinity of TL10 (5 of 10 displaying orange/red on the heat map).
+
+For the 2700 second data, the data remained relatively similar to the 1800 second data, with the two main areas of traffic/intensity/density being in the vicinity of TL2 and TL7.  Additionally, there was increased density measure in the vicinity of TL10, with 6 of 1- displaying orange/red on the heat map).
+
+For the 3600 second data, the data remained relatively similar to the 1800 second data, with the two main areas of traffic/intensity/density being in the vicinity of TL2 and TL7.  Additionally, there was increased density measure in the vicinity of TL10, with 6 of 1- displaying orange/red on the heat map).
+
 I also found that areas 1 and 2 consistently had the highest concentration of traffic; this could be used in emergency planning, and also mitigation factors such as fire extinguishers/sprinkler emplacement.
 
 PARAMETER CHANGE
@@ -127,7 +135,10 @@ FINAL ANALYSIS
 The most striking differences I saw were....
 The most significant finding was...
 This could be used for...
-
+Please use this YouTube link to view the simulation during initial conditions:
+(http://www.youtube.com/)
+Please use this YouTube link to view the simulation during modified conditions:
+(http://www.youtube.com/)
 
 ~~~
 
