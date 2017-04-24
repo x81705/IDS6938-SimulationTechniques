@@ -41,7 +41,7 @@
 				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
 				<RotateAnimationVertically>false</RotateAnimationVertically>
 				<VelocityCode Class="CodeUnitValue">
-					<Code><![CDATA[3]]></Code>
+					<Code><![CDATA[2]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
 			</AgentProperties>
@@ -1217,14 +1217,14 @@
 						<Parameter>
 							<Name><![CDATA[comfortableSpeed]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[uniform(1, 1.5)]]></Code>
+								<Code><![CDATA[uniform(1, 2)]]></Code>
 								<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[uniform(1, 1.5)]]></Code>
+								<Code><![CDATA[uniform(.3, .7)]]></Code>
 								<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 							</Value>
 						</Parameter>

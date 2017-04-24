@@ -1,7 +1,6 @@
 # Charlie Timm
 
 
-
 # Homework 3 : Agent Based Simulation Assignment 
 
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
@@ -40,6 +39,9 @@ You will need to set deriv[0], deriv[1], deriv[2], deriv[3]. Compute derivative 
 You also must implement *SIMAgent::InitValues()*: Try to figure out appropriate values for control and behavior settings. You need to find out appropriate values for: *SIMAgent::Kv0, SIMAgent::Kp1, SIMAgent::Kv1, SIMAgent::KArrival, SIMAgent::KDeparture,
 SIMAgent::KNoise,	SIMAgent::KWander, SIMAgent::KAvoid, SIMAgent::TAvoid, SIMAgent::RNeighborhood, SIMAgent::KSeparate, SIMAgent::KAlign, SIMAgent::KCohesion.*
 
+~~~
+ANS: See Visual Studio file for all behavior/function coding.
+~~~
 
 **(b) - 20 points**: In this part of the assignment you will need to implement 6 types of individual behaviors and 5 types of group behaviors. Create the following behaviors through appropriate computation of V<sub> d</sub>  and θ<sub>d</sub>  commands:
 * Seek
@@ -50,7 +52,7 @@ SIMAgent::KNoise,	SIMAgent::KWander, SIMAgent::KAvoid, SIMAgent::TAvoid, SIMAgen
 * Obstacle Avoidance
 
 ~~~
-ANS: See Visual Studio for all behavior/function coding.
+ANS: See Visual Studio file for all behavior/function coding.
 ~~~
 
 **(c) - 20 points**: Implement the functions for the following group behaviors: 
@@ -92,20 +94,24 @@ ANS: I completed the tutorials with no major issues (screenshot included below; 
 **(b) - 20 points**: Create a maze. Generate the pdm, stats, and animations like before. Vary [parameters in your agents](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/_PL/reference/Attributes.html) to give them different behaviors and show the pedistrians change how they navigate the maze.
 ~~~
 ANS: 
-INTRODUCTION/ASSUMPTIONS
+INTRODUCTION/ASSUMPTIONS/INIITAL CONDITIONS
 This maze would replicate something similar to mazes commonly found in amusement parks around the globe.  There are two areas in which the agents can "see" dead ends and do not choose this path (see screenshot below); we are making the assumption that this maze is conducted in a medium light levels, and that agents will be able to generally see the path in front of them.  We will also assume that due to the difficulty of the maze, that after choosing a wrong path, agents will be redirected back to the decision point, and will then have an equal probability of choosing all paths.
+
+Additionally, we will assume that this maze will replicate peak hours, with 5 agents arriving per minute (additionally, initial speed of .3 to .7 meters per second distributed uniformly, and a comfortable speed of 1 to 2 meters per second distributed unifromly, with no limit on agent number; will assume that the maze is very popular and that it is a weekend/federal holiday where the maximum traffic will occur).  
 
 CONSTRUCTION OF THE MAZE/INITIAL CONDITIONS 
 I first searched via google for an image of a maze, and then imported it to AnyLogic (maze obtained from MIT.edu; see references below).  During initial probelm solving, I constructed the maze and populated it with agents, but realized that the agents were simply taking the path of least resistance to the exit, and not taking any dead-end turns.  I posted a question via Piazaa regarding this issue, and saw that other students had used the pedSelect node to work around this problem (MacArthur, Keith; see references below). I utilized this method of emplacing multiple pedSelect nodes (linked to target lines) to simulate agents choosing a path based on equal probability.   
 
+
+ANALYSIS
 To analyze the data and display stats, I added a pedestrian density function, and then added graphs for both traffic and intensity, in which traffic is the number of pedestrians crossing the ped flow statistics lines in an hour (model time), and intensity is defined as the traffic divided by the line length.
 
 I initially populated the maze with 5 agents per minute (leaving all other settings at default) and then through running the simulation ten times and recording the number of agents that exited the maze, I found an average of approximately 230 agents would be able to complete the maze within 60 minutes (see screenshot below).  
 
+I then took screenshots every 900 seconds (or 15 minutes, model time) to analyze the data, and ran the simulation ten times.
+
 Please use this YouTube link to view the simulation during initial conditions:
 (http://www.youtube.com/)
-
-ANALYSIS
 I also found that areas 1 and 2 consistently had the highest concentration of traffic; this could be used in emergency planning, and also mitigation factors such as fire extinguishers/sprinkler emplacement.
 
 PARAMETER CHANGE
