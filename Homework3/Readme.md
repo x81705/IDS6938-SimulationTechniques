@@ -1,6 +1,5 @@
 # Charlie Timm
 
-
 # Homework 3 : Agent Based Simulation Assignment 
 
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
@@ -107,34 +106,34 @@ I initially populated the maze with 5 agents per minute (leaving all other setti
 
 I then took screenshots every 1200 seconds (or every 20 minutes (+- 5 seconds), model time) to analyze the data, and ran the simulation ten times.  The screenshots below show the coalated data for each trial, with the intensity and traffic timeplots at the completion of each individual simulation.  The traffic density maps represent data from left to right at 1200, 2400, and the 3600 second model time.
 ~~~
-## Trial 1 
+## Simulation 1 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/trial1.PNG?raw=true)
 
-## Trial 2 
+## Simulation 2 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/trial2.PNG?raw=true)
 
-## Trial 3 
+## Simulation 3 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/trial3.PNG?raw=true)
 
-## Trial 4 
+## Simulation 4 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/trial4.PNG?raw=true)
 
-## Trial 5 
+## Simulation 5 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/trial5.PNG?raw=true)
 
-## Trial 6 
+## Simulation 6 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/trial6.PNG?raw=true)
 
-## Trial 7 
+## Simulation 7 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/trial7.PNG?raw=true)
 
-## Trial 8 
+## Simulation 8 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/trial8.PNG?raw=true)
 
-## Trial 9 
+## Simulation 9 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/trial9.PNG?raw=true)
 
-## Trial 10 
+## Simulation 10 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/trial10.PNG?raw=true)
 
 ~~~
@@ -216,16 +215,16 @@ Please use this YouTube link to view the simulation with changed parameters (bot
 **(c) - 30 points**: Model and analyze a building (or floor/outdoor space/stadium) on campus. (There is help on piazza how to find rough building plans - we expect something plausible). Create a senario: evacuation, daily office routine, special event, normal egress.... etc., and model and design your own experiment to determine if the building design suits the needs of its users. Start with photographs of your site, describe your site, describe your senario and hypothesis. Then use an agent-based pedistrian simulation to visualize your experiment's results.
 
 ~~~
-CONSTRUCTION/INITIAL CONDITIONS/SCENARIO
+CONSTRUCTION/INITIAL CONDITIONS/FIRE EVACUATION SCENARIO
 ANS: I first obtained digital photgraphs of the floor plan of the Partnership II's first floor.  I also walked through the first floor and the perimeter of the building to confirm all office locations/exits.  I then imported the image files to AnyLogic, and began to trace the floor plan.
 
 After creating the floor plan for the first floor, I then demarcated different areas where people will be working based on number of offices and generally anecdotal observations during my time at UCF, and set the probability equally for agents using a pedSelect node with equal distributions of the agents going to one of five areas (see screenshot).  I also emplaced attractors in the area to ensure that the agents would go in the vicinity of the areas of higher pedestrian traffic.
 
-For the initial conditions, I left the agents at the default speeds (.5 to 1 uniformly distributed for comfotable speed, and .3 to .7 uniformly distributed for initial speed), placed the number of arrivals at 10 per minute, and limited the arrivals to 60.
+For the initial conditions, I left the agents at default speeds (.5 to 1 uniformly distributed for comfotable speed, and .3 to .7 uniformly distributed for initial speed), placed the number of arrivals at 10 per minute, and limited the arrivals to 60 (again, based on anecdotal evidence on how many people I have seen in the first floor during visits).  There will be 60 agents at the time of the scenario start, with no additional agents arriving during the evacuation.
 
 My scenario revolves around an early morning fire that begins in the robotics lab; as such this exit will be blocked, and agents will have to utilize exits to make it to designated safe zones, which I designated all personnel in areas 1, 3, and 4 to utilize Safe Area 1, and those agents working in area 2 to utilize Safe Area 2 (assume both are 400' away as specified by the UCF Fireplan, see references).  The fire will begin (and simultaneously a fire alarm will sound) at 10 minutes in model time (I created an event utilized the free function to send the agents to the safe aeras; Keith helped me with calling function, see references below).  I have inputted ped flow statistics throughout the building and in front of every exit to measure the flow, traffic, intensity, and density of the simulation (see screenshot below).
 
-Although the UCF Fire Plan states that less than 5-10 minutes would be rated excellent for a fire drill (a "prompt and orderly evacuation"), in an actual fire depending on a multitude of variables, smoke inhalation can quickly incapacitate individuals within a few minutes (Kulig, 2008).  Therefore, in the effort to measure a worst case scenario, I will assume the fire is extremely deadly and  will measure exit rates at 2, 3, and 4 minutes after the fire alarm sounds and assume that any agents left within the building after the 4 minute mark will be casualties that must be attended to by emergency personnel.
+Although the UCF Fire Plan states that less than 5-10 minutes would be rated excellent for a fire drill (a "prompt and orderly evacuation"), in an actual fire depending on a multitude of variables, smoke inhalation can quickly incapacitate individuals within a few minutes (Kulig, 2008).  Therefore, in the effort to measure a worst case scenario, I will assume the fire is extremely deadly and  will measure exit rates at 2, 3, and 4 minutes (+/- 5 seconds) after the fire alarm sounds and assume that any agents left within the building after the 4 minute mark will be casualties that must be attended to by emergency personnel.
 ~~~
 
 ## Fire Evacuation - Model
@@ -233,9 +232,58 @@ Although the UCF Fire Plan states that less than 5-10 minutes would be rated exc
 
 ~~~
 ANALYSIS
+I took screenshots of the pedestrian traffic at approximately 595 seconds, 720 seconds, 780 seconds, and 840 seconds, and ran the simulation ten times (+/- 5 seconds for each screenshot).  I also captured data via traffic and intensity timeplots (1 sample per second for 900 samples for all ped statistcs as indicated in the model above; due to the nature of the scenario, I stopped collecting data after the 15 minute mark in model time (or 5 minutes after the evacuation)).  Please see the screenshots below for each separate dataset.  These datasets are followed by coalated datasets of each density map, and both intensity and traffic plots.
+~~~
+## Fire Evacuation - Simulation 1
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial1.PNG?raw=true)
 
+## Fire Evacuation - Simulation 2
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
 
+## Fire Evacuation - Simulation 3
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial3.PNG?raw=true)
 
+## Fire Evacuation - Simulation 4
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial4.PNG?raw=true)
+
+## Fire Evacuation - Simulation 5
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial5.PNG?raw=true)
+
+## Fire Evacuation - Simulation 6
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial6.PNG?raw=true)
+
+## Fire Evacuation - Simulation 7
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial7.PNG?raw=true)
+
+## Fire Evacuation - Simulation 8
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial8.PNG?raw=true)
+
+## Fire Evacuation - Simulation 9
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial9.PNG?raw=true)
+
+## Fire Evacuation - Simulation 10
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial10.PNG?raw=true)
+
+## Fire Evacuation - Simulation Density Map Data (595 Seconds)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+
+## Fire Evacuation - Simulation Density Map Data (660 Seconds)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+
+## Fire Evacuation - Simulation Density Map Data (720 Seconds)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+
+## Fire Evacuation - Simulation Density Map Data (780 Seconds)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+
+## Fire Evacuation - Simulation Density Map Data (840 Seconds)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+
+## Fire Evacuation - Simulation Traffic Timeplot Data
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+
+## Fire Evacuation - Simulation Intensity Timeplot Data
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
 
 ~~~
 References
