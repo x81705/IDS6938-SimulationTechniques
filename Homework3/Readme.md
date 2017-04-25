@@ -144,6 +144,7 @@ target line 7 again had the most density (8 instances of red/orange coloration) 
 
 Taking this data, the areas of highest pedestrian density based off the heat maps are the target line 2, target line 3, and target line 7 (see screenshot below).  Through this data, we can predict where people will be at a certain time given the initial conditions, and also potentially reconstruct the maze (i.e., potentially wider walls in the areas to facilitate traffic flow and lessen density).  This data is also useful in the event of an emergency, as we can focus our efforts on sending emergency personnel to the areas of highest density, and essentially create an algorithm to save the maximum number of lives.
 ~~~
+
 ## Pedestrian Density Map - 1200 Seconds 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/heatdensity1.PNG?raw=true)
 
@@ -156,8 +157,6 @@ Taking this data, the areas of highest pedestrian density based off the heat map
 ## Pedestrian Density Map - All Data 
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/heatdensity4.PNG?raw=true)
 
-## Pedestrian Density Map - All Data 
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/heatdensity4.PNG?raw=true)
 ~~~
 ANALYSIS - Traffic Intensity Timeplots
 I also coalated the data for the intensity timeplots.  In 80% of the samples, the yellow, red, and green target lines (target lines 2, 1, and 3) consistently displayed the highest traffic intensity over time (see screenshots below).  
@@ -196,10 +195,10 @@ To change the parameters, I varied the initial speed of .3 to .7 meters per seco
 ~~~
 
 ## Parameter Change 1 - Pedestrian Rate of Speed 
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/parameterchange1.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/paramterchange1.PNG?raw=true)
 
 ## Parameter Change 1 - Areas of Focus
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/parameterchange2.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/paramterchange2.PNG?raw=true)
 
 ~~~
 PARAMETER CHANGE 2 & ANALYSIS
@@ -212,8 +211,6 @@ Please use this YouTube link to view the simulation during initial conditions:
 
 Please use this YouTube link to view the simulation with changed parameters (both increased rate of speed and groups):
 [Maze Simulation - Changed Parameters](https://youtu.be/LJ8en4xgwvg)
-
-~~~
 
 
 **(c) - 30 points**: Model and analyze a building (or floor/outdoor space/stadium) on campus. (There is help on piazza how to find rough building plans - we expect something plausible). Create a senario: evacuation, daily office routine, special event, normal egress.... etc., and model and design your own experiment to determine if the building design suits the needs of its users. Start with photographs of your site, describe your site, describe your senario and hypothesis. Then use an agent-based pedistrian simulation to visualize your experiment's results.
