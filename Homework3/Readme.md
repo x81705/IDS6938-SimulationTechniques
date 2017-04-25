@@ -109,9 +109,9 @@ To analyze the data and display stats, I added a pedestrian density function, an
 
 I initially populated the maze with 5 agents per minute (leaving all other settings at default) and then through running the simulation ten times and recording the number of agents that exited the maze, I found an average of approximately 230 agents would be able to complete the maze within 60 minutes (see screenshot below).  
 
-I then took screenshots every 900 seconds (or every 15 minutes (+- 5 seconds), model time) to analyze the data, and ran the simulation ten times.  The screenshots below show the coalated data, and indicate XYZ.
+I then took screenshots every 1200 seconds (or every 20 minutes (+- 5 seconds), model time) to analyze the data, and ran the simulation ten times.  The screenshots below show the coalated data, both as each individual simulation, and also the heat density maps at the 20 min, 40 min, 60 min, and overall comparison.
 
-One of the big takeaways from this was the average (mean) total number of agents/customers that made it through the maze after ten simulations, which I calculated to be 244.4 agents (summed each trial, and then divided by 10).  This number could be used to calculate the number of employees needed to properly man the amusement park.
+One of the big takeaways from this was the average (mean) total number of agents/customers that made it through the maze after ten simulations, which I calculated to be 244.7 agents will finish the maze within an hour (summed each trial (263, 248, 222, 254, 248, 239, 261, 242, 238, 232) and then divided by 10), and that 290.3 will enter the maze within an hour (summed each trial (317, 295, 274, 299, 292, 287, 300, 292, 276, 271) and then divided by 10).  This number could be used to calculate the number of employees needed to properly man the amusement park, and could also be used to project customer throughput/flow through the maze.
 
 For the 900 second mark, the major consistency was that the high pedestrian density marker was at the target line 1 marker, with 7 out of 10 simulations displaying an orange/red in the pedestrian statistics function, and the TL2 statistics in one of the top two positions for both traffic and intensity graphs (see screenshots; the first indicates all target lines, the second shows the data taken at 900 seconds from each of the ten simulations).
 
@@ -123,11 +123,15 @@ For the 3600 second data, again the data remained relatively similar in that the
 
 I also found that areas 1 and 2 consistently had the highest concentration of traffic; this could be used in emergency planning, and also mitigation factors such as fire extinguishers/sprinkler emplacement.
 
-PARAMETER CHANGE
+PARAMETER CHANGE/ANALYSIS
 
-To change the parameters, I varied the speed from an initial speed of .3 to .7 meters per second, to 1 to 1.5 meters per second, as I feel like in the beginning of a maze that the rate would be increased given the lack of path choices for this maze initially; I then decreased the rate to .5 to 1 meter per second, again, with consideration for the the assumption of medium lighting levels and the difficulty of the maze.  
+To change the parameters, I varied the initial speed of .3 to .7 meters per second (uniformly distributed) to 1 to 1.25 meters per second, as I feel that in the beginning of the maze the rate would be increased due to lack of path choices for this specific maze; I then decreased the comfortable rate from 1 to 2 meters per second (uniformly distributed) to .5 to 1 meter per second, with consideration that the maze operators might want to decrease the light levels from medium to low, thus increasing the difficulty of the maze.
+-After changing this parameter, it is apparent that the density graph has more intensity throughout the simulation, and it also appears that the T2L is not as prominently featured in regards to traffic/intensity (see graphs below), and that there is a much more even distribution overall.
 
-Additionally, I added groups within the simulation as often times many people will go to social activities such as this with friends (initial conditions for group as follows: put a group size between 1-4 with uniform discreet distribution, set the interarrival time to within 1 second to simulate group arriving together, put the group formation as front, as there is often one person leading the group).
+
+Additionally, I added groups within the simulation as often times many people will go to social activities such as this with friends (initial conditions for group as follows: put a group size between 1-2 with uniform discreet distribution, set the interarrival time to within 1 second to simulate group arriving together, put the group formation as front, as there is often one person leading the group).
+-After trying this, at approximately 362 seconds into the simulation, there began to form pockets of agents that would group, presumably stuck in various locations in the maze; this indicates that the maze was not constructed for large groups, and that potentially the creators of the maze should consider widening the walls to avoid potential fire hazard/emergency evacuation issues.  See the screenshots below for more data at 1200, 2400, and 3600 seconds.  
+
 
 ANALYSIS 2
 
