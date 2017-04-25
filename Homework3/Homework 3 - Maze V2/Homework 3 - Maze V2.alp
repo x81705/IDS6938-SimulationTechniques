@@ -1233,6 +1233,9 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[createGroups]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[groupSize]]></Name>
