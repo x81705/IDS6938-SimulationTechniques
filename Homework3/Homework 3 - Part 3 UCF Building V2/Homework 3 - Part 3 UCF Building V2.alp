@@ -6042,7 +6042,7 @@ pedWait4.freeAll();]]></Action>
 				<Text>
 					<Id>1492714823640</Id>
 					<Name><![CDATA[text6]]></Name>
-					<X>960</X><Y>20</Y>
+					<X>960</X><Y>0</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6064,7 +6064,7 @@ pedWait4.freeAll();]]></Action>
 				<Text>
 					<Id>1492714871070</Id>
 					<Name><![CDATA[text7]]></Name>
-					<X>960</X><Y>380</Y>
+					<X>960</X><Y>420</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6143,14 +6143,14 @@ pedWait4.freeAll();]]></Action>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Width>960</Width>
-					<Height>340</Height>
+					<Height>400</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
 						<Width>880</Width>
-						<Height>250</Height>
+						<Height>300</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -6158,7 +6158,7 @@ pedWait4.freeAll();]]></Action>
 					<Legend>
 						<Place>SOUTH</Place>
 						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
+						<Size>40</Size>
 					</Legend>
 					<Labels>
 						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
@@ -6272,7 +6272,7 @@ pedWait4.freeAll();]]></Action>
     			<TimePlot>
 					<Id>1492713595134</Id>
 					<Name><![CDATA[plot1]]></Name>
-					<X>544</X><Y>362</Y>
+					<X>540</X><Y>420</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6290,14 +6290,14 @@ pedWait4.freeAll();]]></Action>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Width>960</Width>
-					<Height>340</Height>
+					<Height>418</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
 						<Width>880</Width>
-						<Height>250</Height>
+						<Height>310</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -6305,7 +6305,7 @@ pedWait4.freeAll();]]></Action>
 					<Legend>
 						<Place>SOUTH</Place>
 						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
+						<Size>40</Size>
 					</Legend>
 					<Labels>
 						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
