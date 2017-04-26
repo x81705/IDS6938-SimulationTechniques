@@ -178,7 +178,7 @@ Similar to the intensity timeplots, I also coalated the data for the traffic tim
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/traffic2.PNG?raw=true)
 
 ~~~
-CONCLUSION/FINAL ANALYSIS
+FINAL ANALYSIS INITIAL CONDITIONS
 This data, used in concert with the data above, is simply another way for the maze operators to predict where people will be, and at what roughly what time they will be there.  This can again be used for maintenance purposes and emergency situations.  Based on the intensity, density, and traffic data, the areas that management should focus on are the areas in vicinity of target lines 2, 3, 7 (see screenshot below).
 
 Additionally, one of the other big takeaways from this was the average (mean) total number of agents/customers that made it through the maze after ten simulations, which I calculated to be 244.7 agents will finish the maze within an hour (summed each trial (263, 248, 222, 254, 248, 239, 261, 242, 238, 232) and then divided by 10), and that 290.3 will enter the maze within an hour (summed each trial (317, 295, 274, 299, 292, 287, 300, 292, 276, 271) and then divided by 10).  This number could be used to calculate the number of employees needed to properly man the amusement park, and could also be used to project customer throughput/flow through the maze.
@@ -202,6 +202,7 @@ To change the parameters, I varied the initial speed of .3 to .7 meters per seco
 ~~~
 PARAMETER CHANGE 2 & ANALYSIS
 Additionally, with  I added groups within the simulation as often times many people will go to social activities such as this with friends (initial conditions for group as follows: put a group size between 1-2 with uniform discreet distribution, set the interarrival time to within 1 second to simulate group arriving together, and put the group formation as front, as there is often one person leading the group).
+
 -After trying this, at approximately 362 seconds into the simulation, there began to form pockets of agents that would group, presumably stuck in various locations in the maze; this indicates that the maze was not constructed for large groups, and that potentially the creators of the maze should consider widening the walls to avoid potential fire hazard/emergency evacuation issues.  Another solution is to have an attendant simply spacing individuals approximately 10-15 seconds apart to decrease the occurrence of traffic jams.  Bottom line, this simuation has identified a problem that if caught during the design/development phase, could ultimately save the maze operators a significant amount of money.
 ~~~
 
@@ -264,20 +265,71 @@ I took screenshots of the pedestrian traffic at approximately 595 seconds, 720 s
 ## Fire Evacuation - Simulation 10
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial10.PNG?raw=true)
 
+~~~
+ANALYSIS - Pedestrian Density Maps
+Displayed below are the pedestrian density maps at 595 seconds (prior to the fier occurring), at 660 seconds (one minute after alarms sounds), at 720 seconds (two minutes after), 780 seconds (three minutes after), and at 840 seconds (four minutes after).  Again, after the four minute mark, I will consider all personnel within the building to be casualties that can only be evacuated via emergency personnel.  
+
+At 595 seconds, it is apparent that the agents are simply settled in their work areas.  As would be expected, hallway 1 and 2 have high density in all of the charts just prior to the fire, and the agents are fairly evenly distributed, but areas 2 and four have a larger density/number of workers (see screenshot below).
+~~~
+
 ## Fire Evacuation - Simulation Density Map Data (595 Seconds)
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firedensity1.PNG?raw=true)
+
+## Fire Evacuation - Focus (595 Seconds)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/fire595.PNG?raw=true)
+
+~~~
+At the 660 second mark, there is an increased density in hallway 1, and also high densities in vicinity of exit 5 and 1 (see screenshots below).  There is also a greater density seen in vicinity of exit 4.  This makes sense and likely replicates reality, as the most convenient exits to get to safe zone 1 are located at the front of the building and side (making hallway 1 the most viable path), with less agents leaving through the back to safe zone 2 (see screenshots below).  Additionally, there is a mean of 23.1 agent exits, where an exit is defined as making it to either safe zone.
+~~~
 
 ## Fire Evacuation - Simulation Density Map Data (660 Seconds)
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firedensity2.PNG?raw=true)
+
+## Fire Evacuation - Focus (660 Seconds)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/fire660.PNG?raw=true)
+
+~~~
+As the simulation progresses to 720 seconds, the density maps suggest that hallway 1 continued to be the main method of escape, with exits 1 and 5 again being the exit of choice for agents.  Exit 4 density stayed relatively high as well, servicing those agents that work in the back of the building.  The mean of agent exits (including the number of agents who exited at/before the 660 second mark) was 50.5.
+~~~
 
 ## Fire Evacuation - Simulation Density Map Data (720 Seconds)
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firedensity3.PNG?raw=true)
+
+## Fire Evacuation - Focus (720 Seconds)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/fire720.PNG?raw=true)
+
+~~~
+At 780 seconds, there were no significant changes to the heat maps.  This is also reflected in the fact that there were a very low number of increase in exits for each simulation (6 total agent exits across 10 simulations).  The mean of agent exits (including numbers of agents from the 660 and 720 marks) was 51.1.  Additionally, it appears that the greatest concentration of agents that are "stuck" are located in the area 2 offices (see screenshot below).
+~~~
 
 ## Fire Evacuation - Simulation Density Map Data (780 Seconds)
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firedensity4.PNG?raw=true)
+
+## Fire Evacuation - Focus (780 Seconds)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/fire780.PNG?raw=true)
+
+~~~
+As the simulation reaches the 840 second mark, the density maps generally show heat areas in hallway 1, the area 2 office area, and exits 1 and 5.  Again, a low number of agents (only 4 agent) exited during this minute across 10 simulations.  The mean of agent exits (including all previous exits) was  51.5, and the mean of agents that became casualties was 7.5.  Looking at simulations 1, 4, 6, and 10, which had the lowest exit/highest casualty rates (at 9, 18, 9, and 9 casualties), it appears that the area 2 office area, and potentially hallway 1 are not wide enough to support a mass exodus.  To combat this problem, potentially the area 2 office area could be redesigned, or the area could be converted to storage to remove great amounts of traffic in the area.
+~~~
 
 ## Fire Evacuation - Simulation Density Map Data (840 Seconds)
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firedensity5.PNG?raw=true)
+
+## Fire Evacuation - Focus (840 Seconds)
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/fire840.PNG?raw=true)
+
+~~~
+ANALYSIS - Intensity and Traffic Timeplots
+
+In regards to the intensity and traffic timeplot data (see screenshot below)
+~~~
+
+~~~
+FINAL ANALYSIS
+The data displayed above can be used in a myriad of different ways.  A human life is an extremely valuable thing and the administrators of P2 should consider that potentially the halls and the offices in area 2 could not sustain a 0 casualty outcome given the current blueprint of the building.  The next step is to first get live data (in the form of a fire drill), and see if this data is accurate.  If it is accurate, then steps should be taken to convert the office space in area 2 to storage space (or some other type of function that decreases pedestrian activity in the area).  Also, it is unlikely that the hallways could be widened, but if the budget allows, potentially removing non-load bearing walls in the center "island" office area (part of areas 1 and 2) and modular walls could increase traffic flow through halls 1 and 2.  This data could also be used to increase fire mitigation measure such as fire extinguishers and sprinklers down these halls, as they are the most viable means of exit and should be as clear as possible to facilitate pedestrian traffic to safety zones.  An additional step for building administration could include rehearsing fire drills monthly to decrease the amount of time in the building which will thus increase survivability.  
+
+
+~~~
 
 ## Fire Evacuation - Simulation Traffic Timeplot Data
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
