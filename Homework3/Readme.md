@@ -33,8 +33,23 @@ You also must implement *SIMAgent::InitValues()*: Try to figure out appropriate 
 SIMAgent::KNoise,	SIMAgent::KWander, SIMAgent::KAvoid, SIMAgent::TAvoid, SIMAgent::RNeighborhood, SIMAgent::KSeparate, SIMAgent::KAlign, SIMAgent::KCohesion.*
 
 ~~~
-ANS: See Visual Studio file for all behavior/function coding.
+ANS:  See screenshots below. 
+For additional clarification please see
+visual studio file in repository.
 ~~~
+
+## SIMAGENT:: Initial Values
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/code1.PNG?raw=true)
+
+## SIMAGENT:: Control()
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/code2.PNG?raw=true)
+
+## SIMAGENT:: FindDeriv()
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/code3.PNG?raw=true)
+
+## SIMAGENT:: UpdateState()
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/code4.PNG?raw=true)
+
 
 **(b) - 20 points**: In this part of the assignment you will need to implement 6 types of individual behaviors and 5 types of group behaviors. Create the following behaviors through appropriate computation of V<sub> d</sub>  and θ<sub>d</sub>  commands:
 * Seek
@@ -45,8 +60,21 @@ ANS: See Visual Studio file for all behavior/function coding.
 * Obstacle Avoidance
 
 ~~~
-ANS: See Visual Studio file for all behavior/function coding.
+ANS:  See video link below for
+a display of agent behaviors
+(see references for documentation
+of help in this section). Currently 
+issues with obstacle avoidance; trying 
+to measure distance from agents to the 
+obstacles, and seeing if in obstacles
+radius, to implement KAvoid
+(this idea/help is from Joe
+Wileman, see references).
+For additional clarification please see
+visual studio file in repository.
 ~~~
+[Agent Behavior Video - Part B](https://youtu.be/2mx9oSv_yVc)
+
 
 **(c) - 20 points**: Implement the functions for the following group behaviors: 
 * Seperation
@@ -54,10 +82,19 @@ ANS: See Visual Studio file for all behavior/function coding.
 * Alignment 
 * Flocking
 * Leader Following
-* 
+
 ~~~
-ANS: See Visual Studio for all behavior/function coding.
+ANS:  See video link below for
+a display of agent behaviors
+(see references for documentation
+of help in this section). Currently 
+slight issues with all behaviors,
+but there is functionality present.
+For additional clarification please see
+visual studio file in repository.
 ~~~
+[Agent Group Behavior Video - Part C](https://youtu.be/glUA3wHB-GM)
+
 
 ~~~
 References
