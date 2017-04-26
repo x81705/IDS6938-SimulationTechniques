@@ -485,12 +485,12 @@ vec2 SIMAgent::Avoid()
 	//vd = SIMAgent::MaxVelocity;
 
 
-		if (dist) = env->obstacles)
+		/*if (dist) = env->obstacles)
 		{
 			SIM::AgentRaidus*KAvoid;
 		}
+		*/
 
-	}
 
 	return tmp;
 }
