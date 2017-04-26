@@ -64,18 +64,31 @@ References
 
 Almodovar, Alex. Multiple conversations 
 (both in-person and via email/text) 
-regarding assignment, 9MAR-29MAR17. 
-For Part II, Alex provided help with general 
-problem solution for B/C (to no avail, 
-program is still not outputting).  
-All help received from Alex is documented 
+regarding assignment, 10APR-26APR17. 
+Alex provided help with reformatting
+my functions for part B, and catching
+syntax/logic errors within the functions.
+All help received from Alex is document in 
+visual studio files.
+
+Cabrera, Roberto.  Face to face conversation
+on 24APR17.  Roberto helped me with part C,
+and helped me to understand how to input/translate
+the code from webcourses into C++.  All help
+received from Roberto is documented in visual
+studio files.
+
+MacArthur, Keith.  Face to face conversation
+on 24APR17.  Keith helped me to understand
+the process of coding the separation function.
+All help received from Keith is documented 
 in visual studio files.
 
-
 Matthews, Sarah. Multiple face to face/digital 
-conversations from 13APR-26APR17. For Part I, 
+conversations from 10APR-26APR17. For Part I, 
 Sarahm helped me with multiple function 
-syntax/formatting and value manipulation.  
+syntax/formatting, derivative computation,
+and initial value manipulation.  
 All help received from Sarah is 
 documented in visual studio files.
 ~~~
