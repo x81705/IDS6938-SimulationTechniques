@@ -825,11 +825,32 @@ Please use this YouTube link to view the fire evacuation simulation:
 ~~~
 References
 
-Unknown Author.  Unknown Date.  Maze-Dessert .PNG file utilized for maze, found via a google search.  MIT.Edu.  Retrieved from https://scratch.mit.edu/projects/95364380/.
+Unknown Author.  Unknown Date.  
+Maze-Dessert .PNG file utilized for 
+maze, found via a google search.  
+MIT.Edu.  Retrieved from 
+https://scratch.mit.edu/projects/95364380/.
 
-Kulig, Meghan.  April 2008.  Firefighters Highlight Dangers of Smoke.  WEAU.COM.  Retreieved from http://www.weau.com/home/headlines/17398994.html. 
+Kulig, Meghan.  April 2008.  
+Firefighters Highlight Dangers of Smoke.
+WEAU.COM.  Retreieved from 
+http://www.weau.com/home/headlines/17398994.html. 
 
-MacArthur, Keith.  Face to face/online correspondence.  For Part 2, I posted a question in Piazaa on April 12th, 2017 titled "AnyLogic Agent Behavior" regarding randomizing agent paths in the maze.  Keith replied by showing that a potential solution is the utilization of ped select outputs, which I then utilized in my maze.  Additionally, during a study session on April 20th, 2017, Keith showed me how to format the input for freefunction into an event. 
+MacArthur, Keith.  Face to face/online
+correspondence.  For Part 2, I posted 
+a question in Piazaa on April 12th, 
+2017 titled "AnyLogic Agent Behavior" 
+regarding randomizing agent paths in the 
+maze.  Keith replied by showing that a 
+potential solution is the utilization of 
+ped select outputs, which I then utilized 
+in my maze.  Additionally, during a study 
+session on April 20th, 2017, Keith showed
+me how to format the input for freefunction 
+into an event. 
 
-UCF Office of Emergency Mangement.  March 2015.  University of Central Florida Fire Plan.  Retreived from https://emergency.ucf.edu/Plans/Fire%20Plan.pdf. 
+UCF Office of Emergency Mangement.  
+March 2015.  University of Central Florida
+Fire Plan.  Retreived from 
+https://emergency.ucf.edu/Plans/Fire%20Plan.pdf. 
 ~~~
