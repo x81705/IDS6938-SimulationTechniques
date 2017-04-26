@@ -87,10 +87,17 @@ in visual studio files.
 
 Matthews, Sarah. Multiple face to face/digital 
 conversations from 10APR-26APR17. For Part I, 
-Sarahm helped me with multiple function 
+Sarah helped me with multiple function 
 syntax/formatting, derivative computation,
 and initial value manipulation.  
 All help received from Sarah is 
+documented in visual studio files.
+
+Wileman, Joseph. Conversation via email 
+from 25APR-26APR17. For Part I, 
+Joe helped me with general formatting 
+for the separate and
+avoid functions.  All help from Joe
 documented in visual studio files.
 ~~~
 
