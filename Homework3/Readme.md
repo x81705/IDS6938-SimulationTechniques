@@ -324,6 +324,12 @@ ANALYSIS - Intensity and Traffic Timeplots
 In regards to the intensity and traffic timeplot data (see screenshot below)
 ~~~
 
+## Fire Traffic Timeplot 
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetraffic.PNG?raw=true)
+
+## Fire Intensity Timeplot
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/fireintensity.PNG?raw=true)
+
 ~~~
 FINAL ANALYSIS
 The data displayed above can be used in a myriad of different ways.  A human life is an extremely valuable thing and the administrators of P2 should consider that potentially the halls and the offices in area 2 could not sustain a 0 casualty outcome given the current blueprint of the building.  The next step is to first get live data (in the form of a fire drill), and see if this data is accurate.  If it is accurate, then steps should be taken to convert the office space in area 2 to storage space (or some other type of function that decreases pedestrian activity in the area).  Also, it is unlikely that the hallways could be widened, but if the budget allows, potentially removing non-load bearing walls in the center "island" office area (part of areas 1 and 2) and modular walls could increase traffic flow through halls 1 and 2.  This data could also be used to increase fire mitigation measure such as fire extinguishers and sprinklers down these halls, as they are the most viable means of exit and should be as clear as possible to facilitate pedestrian traffic to safety zones.  An additional step for building administration could include rehearsing fire drills monthly to decrease the amount of time in the building which will thus increase survivability.  
