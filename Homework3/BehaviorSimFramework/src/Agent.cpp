@@ -473,8 +473,25 @@ vec2 SIMAgent::Avoid()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//Joe Wileman helped me with thinking about/through the formation of this function
 	vec2 tmp;
-	
+	tmp = goal - GPos;
+	double dist = tmp.Length();
+	vd = SIMAgent::MaxVelocity;
+	thetad = atan2(tmp[1], tmp[0]);
+	return vec2(cos(thetad)*vd, sin(thetad) * vd);
+
+	//if tmp < radius()
+	//vd = SIMAgent::MaxVelocity;
+
+
+		if (dist) = env->obstacles)
+		{
+			SIM::AgentRaidus*KAvoid;
+		}
+
+	}
+
 	return tmp;
 }
 
@@ -560,7 +577,7 @@ vec2 SIMAgent::Alignment()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
-	//help from Roberto
+	//help from Roberto during construction
 	vec2 tmp;
 	vec2 agentsV = Arrival();
 	float agentX = 0.0;
@@ -655,7 +672,7 @@ vec2 SIMAgent::Cohesion()
 *  Store them into vd and thetad respectively
 *  return a vec2 that represents the goal velocity with its direction being thetad and its norm being vd
 */
-//Roberto helped with this function
+//Roberto helped with the creation of this function
 vec2 SIMAgent::Flocking()
 {
 	/*********************************************
@@ -687,7 +704,7 @@ vec2 SIMAgent::Leader()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
-	//Robert helped with this function
+	//Robert helped with construction of this function
 	vec2 tmp;
 	vec2 vLeader;
 
