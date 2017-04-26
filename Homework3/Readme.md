@@ -304,8 +304,9 @@ target line 7 (see screenshot below).
 Through this data, we can predict where 
 people will be at a certain time given 
 the initial conditions, and also potentially 
-reconstruct the maze (i.e., potentially 
-wider walls in the areas to facilitate 
+reconstruct the maze (i.e., if construction
+material allows, potentially 
+widen walls in the areas to facilitate 
 traffic flow and lessen density).  This 
 data is also useful in the event of an 
 emergency, as we can focus our efforts 
@@ -487,7 +488,8 @@ person leading the group).
 362 seconds into the simulation, there
 began to form pockets of agents that 
 would group, presumably stuck in 
-various locations in the maze; this
+various locations in the maze (see video
+link below); this
 indicates that the maze was not
 constructed for large groups, and that
 potentially the creators of the maze 
@@ -518,12 +520,12 @@ Please use this YouTube link to view the simulation with changed parameters (bot
 ~~~
 CONSTRUCTION/INITIAL CONDITIONS/FIRE EVACUATION SCENARIO
 ANS: I first obtained digital photgraphs 
-of the floor plan of the Partnership II's
+of the floor plan of Partnership II's
 first floor.  I also walked through the 
 first floor and the perimeter of the 
 building to confirm all office 
 locations/exits.  I then imported the 
-image files to AnyLogic, and began 
+image file to AnyLogic, and began 
 to trace the floor plan.
 
 After creating the floor plan for 
@@ -535,7 +537,7 @@ during my time at UCF, and set the
 probability equally for agents 
 using a pedSelect node with equal 
 distributions of the agents going 
-to one of five areas (see screenshot).
+to one of five areas (see screenshot below).
 I also emplaced attractors in the 
 area to ensure that the agents would
 go in the vicinity of the areas 
@@ -598,6 +600,11 @@ that any agents left within the
 building after the 4 minute mark 
 will be casualties that must be
 attended to by emergency personnel.
+
+My initial hypothesis is that 50%
+of personnel in each simulation
+will make it to the 
+safe zones by the 4 minute mark.
 ~~~
 
 ## Fire Evacuation - Model
@@ -666,7 +673,8 @@ seconds (three minutes after), and at
 Again, after the four minute mark, 
 I will consider all personnel within 
 the building to be casualties that 
-can only be evacuated via emergency personnel.  
+can only be evacuated via emergency personnel
+invovlement.  
 
 At 595 seconds, it is apparent
 that the agents are simply settled
@@ -676,7 +684,8 @@ density in all of the charts just
 prior to the fire, and the agents 
 are fairly evenly distributed, but 
 areas 2 and four have a larger 
-density/number of workers 
+density/number of workers than
+the other work areas
 (see screenshot below).
 ~~~
 
@@ -763,7 +772,7 @@ generally show heat areas in
 hallway 1, the area 2 office area,
 and exits 1 and 5.  Again, a low 
 number of agents (only 4 agent) 
-exited during this minute across
+exited during this minute through the
 10 simulations.  The mean of 
 agent exits (including all previous
 exits) was  51.5, and the mean of 
@@ -803,7 +812,7 @@ the density likely due to a wider
 dispersion of pedestrians going to
 separate work areas).  The exits with the
 highest traffic/intensity were consistenly 
-exit 1 and exit 4, as rmirrored in the 
+exit 1 and exit 4, as mirrored in the 
 pedestrian density map data above.
 ~~~
 
@@ -815,10 +824,21 @@ pedestrian density map data above.
 
 ~~~
 FINAL ANALYSIS
+My initial hypotheis that only 50%
+of personnel would escape by the 4
+minute mark in the simulation was significantly
+incorrect; the mean based off final
+numbers at the 840 second mark is actually
+85.83% exit rate.  That being said, a successful
+rate in my opinion is a 100% exit rate due to 
+the fact that human life is extremely valuable.
+
 The data displayed above can 
 be used in a myriad of different 
-ways.  A human life is an extremely
-valuable thing and the administrators 
+ways, but efforts should be focused
+on increasing survivability in 
+the event of a catastrophe.  
+The administrators 
 of P2 should consider that
 potentially the halls and the 
 offices in area 2 could not facilitate
@@ -827,13 +847,14 @@ thus could not feasibly sustain
 a 0 casualty outcome given the current
 blueprint of the building.  Based on 
 the data I collected, UCF administrators
-in responsibility of PII should focus
-their attention on office area 2 and 
+responsible for PII should focus
+their attention on mitigating risk in
+office area 2 and 
 hall 1 (see screenshot below).
 
 The next step
 is to first get live data (in the form of 
-a fire drill), and see if this 
+a fire drill), and see if this simulation 
 data is accurate.  If it is accurate, 
 then steps should be taken to convert 
 the office space in area 2 to storage 
@@ -848,8 +869,9 @@ the center "island" office area
 walls could increase traffic flow 
 through halls 1 and 2.  This data could
 also be used to increase fire mitigation
-measure such as fire extinguishers
-and sprinklers down these halls, as they
+measures such as fire extinguishers
+and sprinklers emplacement down these halls,
+as these paths
 are the most viable means of exit and
 should be as clear as possible to
 facilitate pedestrian traffic to safety
@@ -862,7 +884,6 @@ will thus increase survivability.
 
 ## Fire Evacuation - Administrative Focus Areas
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/fireoverall.PNG?raw=true)
-
 
 
 Please use this YouTube link to view the fire evacuation simulation:
