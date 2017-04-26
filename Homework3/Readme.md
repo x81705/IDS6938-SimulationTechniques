@@ -285,6 +285,9 @@ I took screenshots of the pedestrian traffic at approximately 595 seconds, 720 s
 ## Fire Evacuation - Simulation Intensity Timeplot Data
 ![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
 
+
+Please use this YouTube link to view the fire evacuation simulation:
+[P2 Fire Evacuation Simulation](https://youtu.be/e4CFg1bAB2Y)
 ~~~
 References
 
