@@ -74,6 +74,7 @@ Wileman, see references).
 For additional clarification please see
 visual studio file in repository.
 ~~~
+Please use this YouTube link to view Agent Behavior:
 [Agent Behavior Video - Part B](https://youtu.be/2mx9oSv_yVc)
 
 
@@ -94,6 +95,7 @@ but there is functionality present.
 For additional clarification please see
 visual studio file in repository.
 ~~~
+Please use this YouTube link to view Agent Group Behavior:
 [Agent Group Behavior Video - Part C](https://youtu.be/glUA3wHB-GM)
 
 
