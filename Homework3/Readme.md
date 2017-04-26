@@ -733,8 +733,20 @@ of traffic in the area.
 
 ~~~
 ANALYSIS - Intensity and Traffic Timeplots
-
-In regards to the intensity and traffic timeplot data (see screenshot below)
+The traffic and intensity timeplots generally
+parrallel what the density maps told us
+in the analysis above.  Without taking 
+into consideration the entryline, 
+the traffic and intensity 
+plots both show the highest rates 
+in hallway 1,
+and also hallway 4 (not reflected in 
+the density likely due to a wider
+dispersion of pedestrians going to
+separate work areas).  The exits with the
+highest traffic/intensity were consistenly 
+exit 1 and exit 4, as rmirrored in the 
+pedestrian density map data above.
 ~~~
 
 ## Fire Traffic Timeplot 
@@ -755,7 +767,13 @@ offices in area 2 could not facilitate
 quick evacuation (under 4 minutes) and
 thus could not feasibly sustain
 a 0 casualty outcome given the current
-blueprint of the building.  The next step
+blueprint of the building.  Based on 
+the data I collected, UCF administrators
+in responsibility of PII should focus
+their attention on office area 2 and 
+hall 1 (see screenshot below).
+
+The next step
 is to first get live data (in the form of 
 a fire drill), and see if this 
 data is accurate.  If it is accurate, 
@@ -784,32 +802,22 @@ amount of time in the building which
 will thus increase survivability.  
 ~~~
 
-## Fire Evacuation - Simulation Traffic Timeplot Data
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
+## Fire Evacuation - Administrative Focus Areas
+![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/fireoverall.PNG?raw=true)
 
-## Fire Evacuation - Simulation Intensity Timeplot Data
-![](https://github.com/x81705/IDS6938-SimulationTechniques/blob/master/Homework3/images/firetrial2.PNG?raw=true)
 
 
 Please use this YouTube link to view the fire evacuation simulation:
 [P2 Fire Evacuation Simulation](https://youtu.be/e4CFg1bAB2Y)
+
 ~~~
 References
 
 Unknown Author.  Unknown Date.  Maze-Dessert .PNG file utilized for maze, found via a google search.  MIT.Edu.  Retrieved from https://scratch.mit.edu/projects/95364380/.
-
-Almodovar, Alex. Multiple conversations (both in-person and via email/text) 
-regarding assignment, 9MAR-29MAR17. For Part II, Alex provided 
-help with general problem solution for B/C (to no avail, program is still not outputting).  
-All help received from Alex is documented in visual studio files.
 
 Kulig, Meghan.  April 2008.  Firefighters Highlight Dangers of Smoke.  WEAU.COM.  Retreieved from http://www.weau.com/home/headlines/17398994.html. 
 
 MacArthur, Keith.  Face to face/online correspondence.  For Part 2, I posted a question in Piazaa on April 12th, 2017 titled "AnyLogic Agent Behavior" regarding randomizing agent paths in the maze.  Keith replied by showing that a potential solution is the utilization of ped select outputs, which I then utilized in my maze.  Additionally, during a study session on April 20th, 2017, Keith showed me how to format the input for freefunction into an event. 
 
 UCF Office of Emergency Mangement.  March 2015.  University of Central Florida Fire Plan.  Retreived from https://emergency.ucf.edu/Plans/Fire%20Plan.pdf. 
-
-~~~
-
-
 ~~~
