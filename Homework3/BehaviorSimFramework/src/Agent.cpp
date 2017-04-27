@@ -473,7 +473,7 @@ vec2 SIMAgent::Avoid()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
-	//Joe Wileman helped me with thinking about/through the formation of this function; currently not functioning properly
+	//Joe Wileman helped me with thinking about/through the formation of this function; currently not functioning properly, commented out after multiple variations
 	vec2 tmp;
 	tmp = goal - GPos;
 	double dist = tmp.Length();

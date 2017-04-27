@@ -106,7 +106,8 @@ Almodovar, Alex. Multiple conversations
 (both in-person and via email/text) 
 regarding assignment, 10APR-26APR17. 
 Alex provided help with reformatting
-my functions for part B, and catching
+my functions for part B, derivatives,
+and catching
 syntax/logic errors within the functions.
 All help received from Alex is document in 
 visual studio files.
@@ -901,7 +902,7 @@ https://scratch.mit.edu/projects/95364380/.
 
 Kulig, Meghan.  April 2008.  
 Firefighters Highlight Dangers of Smoke.
-WEAU.COM.  Retreieved from 
+WEAU.COM.  Retrieved from 
 http://www.weau.com/home/headlines/17398994.html. 
 
 MacArthur, Keith.  Face to face/online
@@ -914,11 +915,11 @@ potential solution is the utilization of
 ped select outputs, which I then utilized 
 in my maze.  Additionally, during a study 
 session on April 20th, 2017, Keith showed
-me how to format the input for freefunction 
+me how to format the input for free function 
 into an event. 
 
 UCF Office of Emergency Mangement.  
 March 2015.  University of Central Florida
-Fire Plan.  Retreived from 
+Fire Plan.  Retrieved from 
 https://emergency.ucf.edu/Plans/Fire%20Plan.pdf. 
 ~~~
